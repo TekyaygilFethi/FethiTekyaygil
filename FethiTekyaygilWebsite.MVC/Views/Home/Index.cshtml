@@ -1,0 +1,226 @@
+﻿@model FethiTekyaygilWebsite.Data.Models.ResponseModels.IndexModels.IndexResponseModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Styles{
+    <!--#region _Entrance Styles-->
+    <link href="~/lib/freelancer/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/lib/freelancer/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" />
+    <link href="~/lib/freelancer/css/freelancer.min.css" rel="stylesheet" />
+    <!--#endregion-->
+    <!--#region _Experience Styles-->
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <link rel="stylesheet" href="~/lib/timeline/assets/css/style.css">
+    <script src="~/lib/slider/js/modernizr.js"></script>
+    <!--#endregion-->
+    <!--#region _Projects Styles-->
+    <link rel="stylesheet" href="~/lib/slider/css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="~/lib/slider/css/style.css"> <!-- Resource style -->
+    <!--#endregion-->
+    <!--#region _PersonalTalents Styles-->
+    <link href="~/lib/progress/gauge.css" rel="stylesheet" />
+    <!--#endregion-->
+    <!--#region Contact Styles-->
+    <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="~/lib/contactMe/contact-me.css" rel="stylesheet" />
+    <!--#endregion-->
+    <!--#region AboutMe Styles-->
+    <!--#endregion-->
+}
+
+@await Component.InvokeAsync("Entrance")
+<div class="mytextdiv" id="developer">
+    <div class="mytexttitle">
+        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("DeveloperSeperator")&nbsp;
+    </div>
+    <div class="divider"></div>
+</div>
+@await Component.InvokeAsync("Developer")
+<div class="mytextdiv" id="Timeline">
+    <div class="mytexttitle">
+        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("TimelineSeperator")&nbsp;
+    </div>
+    <div class="divider"></div>
+</div>
+@await Component.InvokeAsync("Timeline")
+<div class="mytextdiv" id="Projects">
+    <div class="mytexttitle">
+        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ProjectsSeperator")&nbsp;
+    </div>
+    <div class="divider"></div>
+</div>
+@await Component.InvokeAsync("Projects")
+
+@await Component.InvokeAsync("PersonalTalents")
+
+<div class="mytextdiv" id="Hobbies">
+    <div class="mytexttitle">
+        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("HobbiesSeperator")&nbsp;
+    </div>
+    <div class="divider"></div>
+</div>
+@await Component.InvokeAsync("AboutMe")
+
+<div class="mytextdiv" id="ContactMe">
+    <div class="mytexttitle">
+        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ContactMeSeperator")&nbsp;
+    </div>
+    <div class="divider"></div>
+</div>
+@await Component.InvokeAsync("ContactMe")
+<div class="mytextdiv" id="FollowMe">
+    <div class="mytexttitle">
+        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("FollowMeSeperator")&nbsp;
+    </div>
+    <div class="divider"></div>
+</div>
+@await Component.InvokeAsync("FollowMe")
+
+
+
+
+@section Scripts{
+    <!--#region _Entrance Scripts-->
+    <script src="~/lib/freelancer/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/lib/freelancer/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="~/lib/freelancer/js/freelancer.min.js"></script>
+    <script src="~/lib/t.js-master/t.js"></script>
+    <script src="~/lib/entrance/entrance.js"></script>
+    <!--#endregion-->
+    <!--#region _Timeline Scripts-->
+    <script src="~/lib/timeline/assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+    <script src="~/lib/timeline/assets/js/swipe-content.js"></script> <!-- A Vanilla JavaScript plugin to detect touch interactions -->
+    <script src="~/lib/timeline/assets/js/main.js"></script>
+    <!--#endregion-->
+    <!--#region _Projects Scripts -->
+    <script src="~/lib/slider/js/jquery.mobile.custom.min.js"></script> <!-- Resource jQuery -->
+    <script src="~/lib/slider/js/main.js"></script> <!-- Resource jQuery -->
+    <!--#endregion-->
+    <!--#region _PersonalTalents Scripts-->
+    <script src="~/lib/progress/gauge.min.js"></script>
+    <script src="~/lib/viewport-detection/viewport-detect.js"></script>
+    <link href="~/lib/communication/communication.css" rel="stylesheet" />
+
+    <script>
+        function glowElement(sender)
+        {
+            $('[name=' + sender.attributes[4].nodeValue + ']').toggleClass('active');
+            //sender.attributes[3]+=' active';
+            //$('.ion-social-github-outline').toggleClass('active');
+
+            //sender.toggleClass('active');
+        }
+
+        function unglowElement(sender) {
+            $('[name=' + sender.attributes[4].nodeValue + ']').toggleClass('active');
+        }
+
+
+        $(function () {
+
+
+            $('#carouselExampleCaption').on('slide.bs.carousel', function () {
+                $('#carouselExampleCaption .active #video').prop('muted', true);
+            });
+
+            $("#carouselExampleCaption").on('slid.bs.carousel', function () {
+                $('#carouselExampleCaption .active #video').prop('muted', false);
+            });
+
+
+            $('#TRLang').click(function () {
+                $.ajax({
+                    url: '@Url.Action("ChangeLanguage","Home")',
+                    data: { Language: "TR" },
+                    method: 'POST',
+                    success: function (response) {
+                        if (response.isSuccess) {
+                            window.location.reload();
+                        } else {
+                            alert(response.Message);
+                        }
+                    }
+                });
+            });
+
+                $('#ENLang').click(function () {
+                $.ajax({
+                    url:'@Url.Action("ChangeLanguage","Home")',
+                    data:{ Language: "EN" },
+                    method: 'POST',
+                    success: function (response) {
+                        if (response.isSuccess) {
+                            window.location.reload();
+                        } else {
+                            alert(response.Message);
+                        }
+                    }
+                });
+            });
+
+                    $('#btnSend').click(function () {
+                var lang=$('#Language').text();
+
+                var nameError = "";
+                var mailError = "";
+                var msgError = "";
+
+                if (lang == "TR") {
+                    nameError = "Lütfen adınızı girin!";
+                    mailError = "Lütfen mailinizi girin!";
+                    msgError = "Lütfen mesajınızı girin!";
+                } else {
+                    nameError = "Please enter your name!";
+                    mailError = "Please enter your mail!";
+                    msgError = "Please enter your message!";
+                }
+
+                var name = $('#formName').val();
+                var mail = $('#formMail').val();
+                var message = $('#formMessage').val();
+
+                $.ajax({
+                    url:'@Url.Action("SendContact","Contact")',
+                    data: JSON.stringify( { "Name": name, "Email": mail, "Message": message }),
+                    method: "POST",
+                    contentType: "application/json",
+                    success: function (response) {
+                        $('#formName').val('');
+                        $('#formMail').val('');
+                        $('#formMessage').val('');
+
+                        if (response.isSuccess) {
+                            $('#formUpdate').html('<div class="alert alert-primary" role="alert">Mesajınız gönderildi!</div >')
+                        }
+                        else {
+                            $('#formUpdate').html('<div class="alert alert-danger" role="alert">Mesajınız gönderilirken hata oluştu!</div >')
+                        }
+                    }
+                });
+            });
+
+
+            $.ajax({
+                url: '@Url.Action("GetWorkTalents","Home")',
+                method:'GET',
+                dataType: 'json',
+                success: function (response) {
+                    if (response.isSuccess) {
+                        for (var i = 0; i < response.item.length; i++) {
+                            var data = response.item[i];
+                            $('#wtArea').append('<div id="gauge-' + data.name + '" class="gauge-container three revealer"><span id="' + data.rate + '">'+data.name+'</span></div>');
+                        }
+                    }
+                },
+                error: function () {
+                    alert("Hata!");
+                }
+            });
+
+        });
+    </script>
+    <!--#endregion-->
+    <!--#region _AboutMe Scripts-->
+    <!--#endregion-->
+}

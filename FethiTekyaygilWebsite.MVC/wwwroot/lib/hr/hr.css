@@ -1,0 +1,64 @@
+﻿
+.una {
+    text-align: center;
+    display: block;
+    line-height: 1px;
+    height: 1px;
+    margin: 2rem 0;
+    background: #B3B04F;
+}
+
+    .una:before, .una:after {
+        content: '\2021';
+        font-size: 2rem;
+        color: #B3B04F;
+        position: absolute;
+        transform: rotate(90deg);
+    }
+
+    .una:before {
+        left: 0;
+    }
+
+    .una:after {
+        right: 0;
+    }
+
+p {
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+    p + p {
+        margin-top: 2rem;
+    }
+
+.una + p:before {
+    content: '\00A7';
+    color: #B3B04F;
+    font-size: 4rem;
+    position: absolute;
+    top: -4.8rem;
+    left: 50%;
+    transform: rotate(90deg);
+    transform-origin: center;
+    opacity: .6;
+}
+
+.mytextdiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mytexttitle {
+    flex-grow: 0;
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.divider {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #9f9f9f;
+}

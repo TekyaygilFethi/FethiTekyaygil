@@ -1,0 +1,74 @@
+﻿@model FethiTekyaygilWebsite.Data.Models.ResponseModels.PersonalTalentModels.GetPersonalTalentModel
+
+@{
+    Layout = null;
+}
+
+<div class="mytextdiv" id="Languages">
+    <div class="mytexttitle">
+        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("LanguagesSeperator")&nbsp;
+    </div>
+    <div class="divider"></div>
+</div>
+<!--#region Dil-->
+
+@foreach (var lang in Model.TempLanguages)
+{
+    <br />
+    <div class="card text-center border-dark">
+        <div class="card-header text-black border-dark">
+            @lang.Name
+        </div>
+        <div class="card-body">
+            <div class="card-deck">
+                @foreach (var cat in lang.TempLanguageCategory)
+                {
+                    <div class="card border-info">
+                        <div class="card-header bg-info text-white">@cat.Name</div>
+                        <div class="card-body">@cat.Degree</div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <br />
+}
+<!--#endregion-->
+<br />
+<!--#region Communication Talents-->
+<div class="mytextdiv" id="CommunicationTalents">
+    <div class="mytexttitle">
+        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("CommunicationSkillsSeperator")&nbsp;
+    </div>
+    <div class="divider"></div>
+</div>
+
+<div class="row">
+    @foreach (var md in Model.CommunicationTalents)
+    {
+        <div class="col-sm-3">
+            <div class="card" style="height:340px">
+                <img src="@Url.Content(@md.ImageUrl)" class="card-img-top" alt="" style="height:220px">
+                <div class="card-body">
+                    @*<div class="card__picture card__picture--@Model.CommunicationTalents.IndexOf(md)">
+                        </div>*@
+                    <div class="mt-5">@md.CommTalent</div>
+                </div>
+            </div>
+        </div>
+
+    }
+</div>
+<br />
+<!--#endregion-->
+
+<div class="mytextdiv" id="WorkTalents">
+    <div class="mytexttitle">
+        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("WorkSkillsSeperator")&nbsp;
+    </div>
+    <div class="divider"></div>
+</div>
+<!--#region Work Talents-->
+<div class="card-deck ml-2" id="wtArea" style="display:inline-block"></div>
+
+<!--#endregion-->

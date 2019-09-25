@@ -1,0 +1,82 @@
+﻿@model List<FethiTekyaygilWebsite.Data.Models.ResponseModels.ProjectModels.GetProjectsModel>
+
+@{
+    Layout = null;
+
+    var counter = 0;
+}
+
+
+<div class="shadow p-3 mb-5 bg-white rounded">
+    <div class="cd-slider-wrapper">
+        <ul class="cd-slider">
+            @foreach (var project in Model)
+            {
+                @if (counter == Model.Count - 1)
+                {
+                    <li class="is-visible">
+                        <div class="cd-half-block image"></div>
+                        <div class="cd-half-block content">
+                            <div>
+                                <h2>@project.Name</h2>
+                                <p>
+                                    @project.Explanation
+                                </p>
+                                @if (project.IsMobile)
+                                {
+                                    <a href="@project.Link" target="_blank" class="btn">
+                                        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ProjectsPlayStore")
+                                    </a>
+                                    <a href="@project.Link2" target="_blank" class="btn">
+                                        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ProjectsAppStore")
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a href="@project.Link" target="_blank" class="btn">
+                                        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ProjectsSourceCodes")
+                                    </a>
+
+                                }
+                            </div>
+                        </div>
+                    </li> <!-- .cd-half-block.content -->
+                }
+                else
+                {
+                    <li>
+                        <div class="cd-half-block image"></div>
+
+                        <div class="cd-half-block content light-bg">
+                            <div>
+                                <h2>@project.Name</h2>
+                                <p>
+                                    @project.Explanation
+                                </p>
+                                @if (project.IsMobile)
+                                {
+                                    <a href="@project.Link" target="_blank" class="btn">
+                                        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ProjectsPlayStore")
+                                    </a>
+                                    <a href="@project.Link2" target="_blank" class="btn">
+                                        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ProjectsAppStore")
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a href="@project.Link" target="_blank" class="btn">
+                                        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ProjectsSourceCodes")
+                                    </a>
+
+                                }
+                            </div>
+                        </div> <!-- .cd-half-block.content -->
+                    </li>
+                }
+                counter++;
+            }
+
+
+        </ul> <!-- .cd-slider -->
+    </div>
+</div>

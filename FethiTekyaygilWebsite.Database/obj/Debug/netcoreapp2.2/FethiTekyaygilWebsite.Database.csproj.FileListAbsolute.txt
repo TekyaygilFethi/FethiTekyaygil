@@ -1,0 +1,12 @@
+E:\Projeler\VS\FethiTekyaygilWebsite\FethiTekyaygilWebsite.Database\bin\Debug\netcoreapp2.2\FethiTekyaygilWebsite.Database.deps.json
+E:\Projeler\VS\FethiTekyaygilWebsite\FethiTekyaygilWebsite.Database\bin\Debug\netcoreapp2.2\FethiTekyaygilWebsite.Database.dll
+E:\Projeler\VS\FethiTekyaygilWebsite\FethiTekyaygilWebsite.Database\obj\Debug\netcoreapp2.2\FethiTekyaygilWebsite.Database.csprojAssemblyReference.cache
+E:\Projeler\VS\FethiTekyaygilWebsite\FethiTekyaygilWebsite.Database\obj\Debug\netcoreapp2.2\FethiTekyaygilWebsite.Database.csproj.CoreCompileInputs.cache
+E:\Projeler\VS\FethiTekyaygilWebsite\FethiTekyaygilWebsite.Database\obj\Debug\netcoreapp2.2\FethiTekyaygilWebsite.Database.AssemblyInfoInputs.cache
+E:\Projeler\VS\FethiTekyaygilWebsite\FethiTekyaygilWebsite.Database\obj\Debug\netcoreapp2.2\FethiTekyaygilWebsite.Database.AssemblyInfo.cs
+E:\Projeler\VS\FethiTekyaygilWebsite\FethiTekyaygilWebsite.Database\bin\Debug\netcoreapp2.2\FethiTekyaygilWebsite.Data.dll
+E:\Projeler\VS\FethiTekyaygilWebsite\FethiTekyaygilWebsite.Database\bin\Debug\netcoreapp2.2\FethiTekyaygilWebsite.Database.pdb
+E:\Projeler\VS\FethiTekyaygilWebsite\FethiTekyaygilWebsite.Database\bin\Debug\netcoreapp2.2\FethiTekyaygilWebsite.Data.pdb
+E:\Projeler\VS\FethiTekyaygilWebsite\FethiTekyaygilWebsite.Database\obj\Debug\netcoreapp2.2\FethiTekyaygilWebsite.Database.csproj.CopyComplete
+E:\Projeler\VS\FethiTekyaygilWebsite\FethiTekyaygilWebsite.Database\obj\Debug\netcoreapp2.2\FethiTekyaygilWebsite.Database.dll
+E:\Projeler\VS\FethiTekyaygilWebsite\FethiTekyaygilWebsite.Database\obj\Debug\netcoreapp2.2\FethiTekyaygilWebsite.Database.pdb
