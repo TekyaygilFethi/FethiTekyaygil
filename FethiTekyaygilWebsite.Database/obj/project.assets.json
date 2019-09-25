@@ -3686,11 +3686,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projeler\\VS\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Database\\FethiTekyaygilWebsite.Database.csproj",
+      "projectUniqueName": "C:\\Users\\IDECON5\\source\\repos\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Database\\FethiTekyaygilWebsite.Database.csproj",
       "projectName": "FethiTekyaygilWebsite.Database",
-      "projectPath": "E:\\Projeler\\VS\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Database\\FethiTekyaygilWebsite.Database.csproj",
+      "projectPath": "C:\\Users\\IDECON5\\source\\repos\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Database\\FethiTekyaygilWebsite.Database.csproj",
       "packagesPath": "C:\\Users\\IDECON5\\.nuget\\packages\\",
-      "outputPath": "E:\\Projeler\\VS\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Database\\obj\\",
+      "outputPath": "C:\\Users\\IDECON5\\source\\repos\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Database\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3709,8 +3709,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "E:\\Projeler\\VS\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Data\\FethiTekyaygilWebsite.Data.csproj": {
-              "projectPath": "E:\\Projeler\\VS\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Data\\FethiTekyaygilWebsite.Data.csproj"
+            "C:\\Users\\IDECON5\\source\\repos\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Data\\FethiTekyaygilWebsite.Data.csproj": {
+              "projectPath": "C:\\Users\\IDECON5\\source\\repos\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Data\\FethiTekyaygilWebsite.Data.csproj"
             }
           }
         }

@@ -2971,11 +2971,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projeler\\VS\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Data\\FethiTekyaygilWebsite.Data.csproj",
+      "projectUniqueName": "C:\\Users\\IDECON5\\source\\repos\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Data\\FethiTekyaygilWebsite.Data.csproj",
       "projectName": "FethiTekyaygilWebsite.Data",
-      "projectPath": "E:\\Projeler\\VS\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Data\\FethiTekyaygilWebsite.Data.csproj",
+      "projectPath": "C:\\Users\\IDECON5\\source\\repos\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Data\\FethiTekyaygilWebsite.Data.csproj",
       "packagesPath": "C:\\Users\\IDECON5\\.nuget\\packages\\",
-      "outputPath": "E:\\Projeler\\VS\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Data\\obj\\",
+      "outputPath": "C:\\Users\\IDECON5\\source\\repos\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

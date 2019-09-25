@@ -3777,11 +3777,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projeler\\VS\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Business\\FethiTekyaygilWebsite.Business.csproj",
+      "projectUniqueName": "C:\\Users\\IDECON5\\source\\repos\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Business\\FethiTekyaygilWebsite.Business.csproj",
       "projectName": "FethiTekyaygilWebsite.Business",
-      "projectPath": "E:\\Projeler\\VS\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Business\\FethiTekyaygilWebsite.Business.csproj",
+      "projectPath": "C:\\Users\\IDECON5\\source\\repos\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Business\\FethiTekyaygilWebsite.Business.csproj",
       "packagesPath": "C:\\Users\\IDECON5\\.nuget\\packages\\",
-      "outputPath": "E:\\Projeler\\VS\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Business\\obj\\",
+      "outputPath": "C:\\Users\\IDECON5\\source\\repos\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Business\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3800,11 +3800,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "E:\\Projeler\\VS\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Database\\FethiTekyaygilWebsite.Database.csproj": {
-              "projectPath": "E:\\Projeler\\VS\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Database\\FethiTekyaygilWebsite.Database.csproj"
+            "C:\\Users\\IDECON5\\source\\repos\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Database\\FethiTekyaygilWebsite.Database.csproj": {
+              "projectPath": "C:\\Users\\IDECON5\\source\\repos\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Database\\FethiTekyaygilWebsite.Database.csproj"
             },
-            "E:\\Projeler\\VS\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Data\\FethiTekyaygilWebsite.Data.csproj": {
-              "projectPath": "E:\\Projeler\\VS\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Data\\FethiTekyaygilWebsite.Data.csproj"
+            "C:\\Users\\IDECON5\\source\\repos\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Data\\FethiTekyaygilWebsite.Data.csproj": {
+              "projectPath": "C:\\Users\\IDECON5\\source\\repos\\FethiTekyaygilWebsite\\FethiTekyaygilWebsite.Data\\FethiTekyaygilWebsite.Data.csproj"
             }
           }
         }

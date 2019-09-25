@@ -1,7 +1,4 @@
 ﻿@model FethiTekyaygilWebsite.Data.Models.ResponseModels.IndexModels.IndexResponseModel
-@{
-    ViewData["Title"] = "Home Page";
-}
 
 @section Styles{
     <!--#region _Entrance Styles-->
@@ -30,7 +27,7 @@
 }
 
 @await Component.InvokeAsync("Entrance")
-<div class="mytextdiv" id="developer">
+<div class="mytextdiv" id="Developer">
     <div class="mytexttitle">
         @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("DeveloperSeperator")&nbsp;
     </div>
@@ -76,7 +73,12 @@
     <div class="divider"></div>
 </div>
 @await Component.InvokeAsync("FollowMe")
-
+<div class="mytextdiv" id="Support">
+    <div class="mytexttitle">
+        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("FollowMeSeperator")&nbsp;
+    </div>
+    <div class="divider"></div>
+</div>
 
 
 

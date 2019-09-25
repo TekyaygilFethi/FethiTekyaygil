@@ -28,7 +28,8 @@ namespace FethiTekyaygilWebsite.Data.Language
             { "FollowMeSeperator","Follow Me"},
             { "LanguageChangeError","You already vieweing this page at this language!"},
             {"HobbyNavigator","Use <b> The Tiny Arrows That Takes Place At Left and Right</b> to navigate." },
-            {"HobbySwipeNavigator","Or touch <b>left or right corner</b> of the screen to navigate." }
+            {"HobbySwipeNavigator","Or touch <b>left or right corner</b> of the screen to navigate." },
+            { "SupportSeperator","Support"}
         };
 
 
@@ -55,7 +56,8 @@ namespace FethiTekyaygilWebsite.Data.Language
             { "FollowMeSeperator","Beni Takip Edin"},
             { "LanguageChangeError","Sayfayı zaten bu dilde görüntülüyorsunuz!"},
             {"HobbyNavigator","Navigasyon için <b>Sağda ve Solda Yer Alan Küçük Ok Tuşlarını</b> kullanınız." },
-            {"HobbySwipeNavigator","Veya ekranın <b>sağ ve sol kısmına</b> dokunun." }
+            {"HobbySwipeNavigator","Veya ekranın <b>sağ ve sol kısmına</b> dokunun." },
+            { "SupportSeperator","Destek"}
         };
 
         public static string GetString(string key)
