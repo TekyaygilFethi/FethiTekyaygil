@@ -14,8 +14,8 @@ namespace FethiTekyaygilWebsite.Database.DatabaseContextFolder
     public class DatabaseContextSelector
     {
         private static readonly string MySQLConnectionString = @"server=localhost;database=FethiTekyaygilWebsiteDatabase;user=root;password=Idecon1*";
-        //private static readonly string MSSQLConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=FethiTekyaygilWebsiteDatabase;Integrated Security=True";
-        private static readonly string MSSQLConnectionString = @"Server=236176ca-4c58-44c4-9dea-aad30092f879.sqlserver.sequelizer.com;Database=db236176ca4c5844c49deaaad30092f879;User ID=cmcjjbeuyyvslsha;Password=KF7uWtSa8iLUgjhnBFrQgpn4zDUMi5tyJwbshWXTSewmAyPXYLq4zG4usc4rGfZd;";
+        private static readonly string MSSQLConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=FethiTekyaygilWebsiteDatabase;Integrated Security=True";
+
 
         public static string GetConnectionString(DatabaseProvider provider)
         {

@@ -82,3 +82,4 @@ C:\Users\IDECON5\source\repos\FethiTekyaygilWebsite\FethiTekyaygilWebsite.MVC\ob
 C:\Users\IDECON5\source\repos\FethiTekyaygilWebsite\FethiTekyaygilWebsite.MVC\obj\Debug\netcoreapp2.2\FethiTekyaygilWebsite.MVC.csproj.CopyComplete
 C:\Users\IDECON5\source\repos\FethiTekyaygilWebsite\FethiTekyaygilWebsite.MVC\obj\Debug\netcoreapp2.2\FethiTekyaygilWebsite.MVC.dll
 C:\Users\IDECON5\source\repos\FethiTekyaygilWebsite\FethiTekyaygilWebsite.MVC\obj\Debug\netcoreapp2.2\FethiTekyaygilWebsite.MVC.pdb
+C:\Users\IDECON5\source\repos\FethiTekyaygilWebsite\FethiTekyaygilWebsite.MVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Support\_Support.g.cshtml.cs
