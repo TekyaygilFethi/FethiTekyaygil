@@ -1,0 +1,39 @@
+﻿@model FethiTekyaygilWebsite.Data.Models.RequestModels.ContactModels.AddContactModel
+@{
+    Layout = null;
+}
+
+<div class="card" id="contactCard">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="map-container" class="z-depth-1-half" style="height: 300px">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192697.79327614844!2d28.872096552050536!3d41.005495809334874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zxLBzdGFuYnVsLCBUw7xya2l5ZQ!5e0!3m2!1str!2s!4v1535126657930" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-6 mt-3" style="opacity:1">
+                <div>
+                    <div class="form-group">
+                        @*@Html.EditorFor(model => model.Name, new { htmlAttributes=new { @placeholder="İsim",@id="formName",@class="form-control"}})*@
+                        <input type="text" class="form-control" name="Name" value="" placeholder="@FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ContactFormName")" id="formName" data-val="true" data-val-required="This field is required.">
+                        @Html.ValidationMessageFor(model => model.Name)
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="Email" value="" placeholder="@FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ContactFormMail")" id="formMail" data-val="true" data-val-required="This field is required.">
+                        @*@Html.EditorFor(model => model.Email, new { htmlAttributes = new { @placeholder = "E-posta", @id = "formMail", @class = "form-control" } })*@
+                        @Html.ValidationMessageFor(model => model.Email)
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" placeholder="@FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ContactFormMessage")" name="Message" style="height:150px" id="formMessage" data-val="true" data-val-required="This field is required."></textarea>
+                        @*@Html.EditorFor(model => model.Message, new { htmlAttributes = new { @placeholder = "Mesajınız", @id = "formMessage", @class = "form-control" } })*@
+                        @Html.ValidationMessageFor(model => model.Message)
+                    </div>
+                    <button class="btn btn-blue text-whitemt-5" type="button" name="button" id="btnSend">
+                        <i class="fa fa-paper-plane" aria-hidden="true"></i> @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ContactFormSend")
+                    </button>
+                    <div id="formUpdate"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

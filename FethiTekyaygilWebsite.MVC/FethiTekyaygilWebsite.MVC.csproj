@@ -1,0 +1,63 @@
+<Project Sdk="Microsoft.NET.Sdk.Web" DefaultTargets="Publish">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+	<PublishDir>$(OutDir)_PublishedWebsites\NetCoreWebApp\</PublishDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\lib\timeline\index.html" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="bootstrap" Version="4.3.1" />
+    <PackageReference Include="FontAwesome" Version="4.7.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.jQuery.Unobtrusive.Ajax" Version="3.2.6" />
+    <PackageReference Include="Microsoft.jQuery.Unobtrusive.Validation" Version="3.2.11" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\FethiTekyaygilWebsite.Business\FethiTekyaygilWebsite.Business.csproj" />
+    <ProjectReference Include="..\FethiTekyaygilWebsite.Data\FethiTekyaygilWebsite.Data.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+    <Folder Include="Views\Shared\Components\Support\" />
+    <Folder Include="wwwroot\Content\Media\AboutMe\" />
+    <Folder Include="wwwroot\Content\Media\Language\" />
+    <Folder Include="wwwroot\Content\Media\Project\" />
+    <Folder Include="wwwroot\lib\freelancer\" />
+    <Folder Include="wwwroot\lib\Vide\" />
+    <Folder Include="wwwroot\lib\presentr-master\" />
+    <Folder Include="wwwroot\lib\NewFolder\" />
+    <Folder Include="wwwroot\lib\timeline\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="wwwroot\Content\Media\Developer\fethi.JPG" />
+    <None Include="wwwroot\Content\Media\Education\AU.jpg" />
+    <None Include="wwwroot\Content\Media\Education\BAAL.JPG" />
+    <None Include="wwwroot\Content\Media\Education\EA.jpg" />
+    <None Include="wwwroot\Content\Media\Education\NH.jpg" />
+    <None Include="wwwroot\Content\Media\Education\OK.jpg" />
+    <None Include="wwwroot\Content\Media\Experience\BBLogo.png" />
+    <None Include="wwwroot\Content\Media\Experience\GGSoftLogo.jpg" />
+    <None Include="wwwroot\Content\Media\Experience\IdeconLogo.png" />
+    <None Include="wwwroot\Content\Media\Experience\PragmaLogo.png" />
+  </ItemGroup>
+
+</Project>

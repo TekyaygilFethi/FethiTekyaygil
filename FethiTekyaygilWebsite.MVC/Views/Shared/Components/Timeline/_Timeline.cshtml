@@ -1,0 +1,96 @@
+﻿@model List<FethiTekyaygilWebsite.Data.Models.ResponseModels.TimelineModels.TimelineResponseModel>
+@{
+    Layout = null;
+    int counter = 0;
+}
+
+<div class="shadow p-3 mb-5 bg-white rounded">
+    <section class="cd-h-timeline js-cd-h-timeline margin-bottom-md">
+        <div class="cd-h-timeline__container container">
+            <div class="cd-h-timeline__dates">
+                <div class="cd-h-timeline__line">
+                    <ol>
+                        @foreach (var timeline in Model)
+                        {
+                            var isEducation = timeline.IsEducation;
+                            var startDate = isEducation == true ? timeline.StartDate.Year.ToString() : timeline.StartDate.ToString("MM/yyyy");
+                            var endDate = isEducation == false ? (timeline.EndDate == null ? "Still continue" : timeline.EndDate.Value.ToString("MM/yyyy")) : (timeline.EndDate == null ? "Still continue" : timeline.EndDate.Value.Year.ToString()); //resources klasöründen dile göre al
+                            @if (counter == Model.Count - 1)
+                            {
+                                <li><a href="#0" data-date="@timeline.StartDate.ToString("dd'/'MM'/'yyyy")" class="cd-h-timeline__date cd-h-timeline__date--selected">@startDate - @endDate</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="#0" data-date="@timeline.StartDate.ToString("dd'/'MM'/'yyyy")" class="cd-h-timeline__date">@startDate - @endDate</a></li>
+                            }
+                            counter++;
+                        }
+                        @{ counter = 0;}
+                    </ol>
+
+                    <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
+                </div>
+            </div>
+            <ul>
+                <li><a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--prev cd-h-timeline__navigation--inactive"> @Html.Raw("<") </a></li>
+                <li><a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--next">></a></li>
+            </ul>
+        </div>
+
+        <div class="cd-h-timeline__events">
+            <ol>
+
+                @foreach (var timeline in Model)
+                {
+                    @if (counter == Model.Count - 1)
+                    {
+                        <li class="cd-h-timeline__event cd-h-timeline__event--selected text-component">
+                            <div class="photo" style="display: flex;justify-content: center;align-items: center;">
+                                <div class="shadow p-3 mb-5 bg-white rounded" style="display:inline-block;"><a href="@timeline.WebSite" target="_blank"> <img src="@Url.Content(timeline.ImageName)" style="height:200px" /></a></div>
+                            </div>
+                            <div class="cd-h-timeline__event-content container">
+                                <h2 class="cd-h-timeline__event-title">@timeline.Institution</h2>
+                                <em class="cd-h-timeline__event-date">@timeline.Position</em>
+                                <p class="cd-h-timeline__event-description color-contrast-medium">
+
+                                    @Html.Raw(timeline.Explanation)
+                                    <br />
+                                    <div align="right">@timeline.Address</div>
+                                </p>
+                            </div>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="cd-h-timeline__event text-component">
+                            <div class="photo" style="display: flex;justify-content: center;align-items: center;">
+                                <div class="shadow p-3 mb-5 bg-white rounded" style="display:inline-block;"><a href="@timeline.WebSite" target="_blank"> <img src="@Url.Content(timeline.ImageName)" style="height:200px" /></a></div>
+                            </div>
+
+                            <div class="cd-h-timeline__event-content container">
+                                <h2 class="cd-h-timeline__event-title">@timeline.Institution</h2>
+                                <em class="cd-h-timeline__event-date">@timeline.Position</em>
+                                <p class="cd-h-timeline__event-description color-contrast-medium">
+                                    @Html.Raw(timeline.Explanation)
+
+                                    <br />
+                                    <div align="right">@timeline.Address</div>
+                                </p>
+                            </div>
+                        </li>
+                    }
+                    counter++;
+                }
+
+            </ol>
+        </div>
+    </section>
+</div>
+
+@*@section Scripts{
+    <script src="~/lib/timeline/assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+    <script src="~/lib/timeline/assets/js/main.js"></script>
+    <script src="~/lib/timeline/assets/js/swipe-content.js"></script> <!-- A Vanilla JavaScript plugin to detect touch interactions -->
+    <script src="~/lib/slider/js/modernizr.js"></script>
+}*@
+@*</div>*@

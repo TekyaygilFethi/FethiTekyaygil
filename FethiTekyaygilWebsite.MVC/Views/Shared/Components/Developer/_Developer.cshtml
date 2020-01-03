@@ -1,0 +1,23 @@
+﻿@model FethiTekyaygilWebsite.Data.Models.ResponseModels.DeveloperModels.DeveloperResponseModel
+
+@{
+    Layout = null;
+}
+
+
+<div id="developer" class="shadow p-3 mb-5 bg-white rounded">
+    <div class="row no-gutters">
+        <div class="col-md-2">
+            <img src="@Url.Content(Model.ImageName)" class="card-img" alt="Fethi Tekyaygil" style="width:90%;padding-left:20px;margin-left: -10px;">
+        </div>
+        <div class="col-md-10">
+            <div class="card-body">
+                <h5 class="card-title" style="font-weight:bold">@Model.NameSurname<br /> @Model.Title<br /><a href="mailto:tekyaygil.fethi@gmail.com"> @Model.Email</a></h5>
+                <p class="card-text" style="padding-top:60px">
+                    @Model.AboutMe
+                </p>
+                @*<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>*@
+            </div>
+        </div>
+    </div>
+</div>

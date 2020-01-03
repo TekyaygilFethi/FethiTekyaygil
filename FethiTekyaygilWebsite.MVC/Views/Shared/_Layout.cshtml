@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html scroll-behaviour="smooth">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fethi Tekyaygil</title>
+    <!--#Diğer CSSler-->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/lib/mdbootstrap/css/mdb.min.css" rel="stylesheet" />
+    <link href="~/lib/mdbootstrap/css/style.min.css" rel="stylesheet" />
+    <!--#endregion-->
+    <!--#region HR Style-->
+    <link href="~/lib/hr/hr.css" rel="stylesheet" />
+    <!--#endregion-->
+    @RenderSection("Styles", required: false)
+
+
+</head>
+<body style="background-color:#e4e2e2">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow mb-3" style="background-color:#33b5e5">
+            <div class="container">
+                <a class="navbar-brand" href="#">Fethi Tekyaygil</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1 align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#Developer"> @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("DeveloperSeperator")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#Timeline"> @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("TimelineSeperator")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#Projects">@FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ProjectsSeperator")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#Languages">@FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("LanguagesSeperator")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#CommunicationTalents">@FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("CommunicationSkillsSeperator")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#WorkTalents">@FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("WorkSkillsSeperator")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#Hobbies">@FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("HobbiesSeperator")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#ContactMe">@FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ContactMeSeperator")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#FollowMe">@FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("FollowMeSeperator")</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#Support">@FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("SupportSeperator")</a>
+                        </li>
+                        <li>
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <div class="dropdown" align="right">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display:contents">
+                                            <img src="~/Content/Media/Language/@FethiTekyaygilWebsite.Data.GlobalDatas.Globals.LanguageWithExt" />
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item text-center" id="TRLang"><img src="~/Content/Media/Language/TR.png" /></a>
+                                            <a class="dropdown-item text-center" id="ENLang"><img src="~/Content/Media/Language/EN.png" /></a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid" id="body">
+        @RenderBody()
+    </div>
+    <br />
+    <footer class="border-top footer text-muted" style="position:inherit">
+        <div class="container">
+            &copy; @DateTime.Now.Year - Fethi Tekyaygil
+        </div>
+    </footer>
+
+    @*<script src="~/lib/jquery/dist/jquery.js"></script>*@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-unobtrusive-ajax/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    @*<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>*@
+    @*<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>*@
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    @*<script src="~/lib/mdbootstrap/js/mdb.min.js"></script>*@
+    @*<script src="~/js/site.js"></script>*@
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
