@@ -1,72 +1,89 @@
 ﻿<!DOCTYPE html>
-<html scroll-behaviour="smooth">
+<html scroll-behaviour="smooth" style="height:initial">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fethi Tekyaygil</title>
-    <!--#Diğer CSSler-->
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link href="~/lib/mdbootstrap/css/mdb.min.css" rel="stylesheet" />
-    <link href="~/lib/mdbootstrap/css/style.min.css" rel="stylesheet" />
-    <!--#endregion-->
-    <!--#region HR Style-->
-    <link href="~/lib/hr/hr.css" rel="stylesheet" />
-    <!--#endregion-->
-    @RenderSection("Styles", required: false)
+    <meta name="description" content="Fethi Tekyaygil">
 
+    <meta name="keyword" content=".NET, .net, dotnet, core, c#, internet, dijitalleşme, dapper, entity framework, de facto, defacto,
+          ggsoft, idecon, python, sql, t-sql, mssql, pc, computer, bilgisayar, engineering, mühendislik, computer engineering, bilgisayar mühendisliği,  altinbas universitesi, nilufer hatun,
+          Büyük veri">
+
+
+    <meta name="author" content="fethitekyaygil.com">
+
+    <title>Fethi Tekyaygil</title>
+    <script defer>document.getElementsByTagName("html")[0].className += " js";</script>
+    <!--#Diğer CSSler-->
+    <noscript id="deferred-styles">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link href="~/lib/mdbootstrap/css/mdb.min.css" rel="stylesheet" />
+        <link href="~/lib/mdbootstrap/css/style.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <!--#endregion-->
+        <!--#region HR Style-->
+        <!--#endregion-->
+
+        <link href="~/lib/hr/hr.css" rel="stylesheet" />
+        @RenderSection("Styles", required: false)
+    </noscript>
 
 </head>
 <body style="background-color:#e4e2e2">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow mb-3" style="background-color:#33b5e5">
-            <div class="container">
-                <a class="navbar-brand" href="#">Fethi Tekyaygil</a>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow" style="background-color:#33b5e5">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img width="20%" src="@Url.Content("~/Content/Media/Navbar/navbar.ico")" alt="Fethi Tekyaygil" /></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1 align-items-center">
+                    <ul class="navbar-nav flex-grow-2 align-items-center">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#Developer"> @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("DeveloperSeperator")</a>
+                            <a class="nav-link text-dark text-center" href="#Developer"> @Localizer["DeveloperSeperator"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#Timeline"> @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("TimelineSeperator")</a>
+                            <a class="nav-link text-dark text-center" href="#Timeline"> @Localizer["TimelineSeperator"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#Projects">@FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ProjectsSeperator")</a>
+                            <a class="nav-link text-dark text-center" href="#Projects">@Localizer["ProjectsSeperator"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#Languages">@FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("LanguagesSeperator")</a>
+                            <a class="nav-link text-dark text-center" href="#Languages">@Localizer["LanguagesSeperator"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#CommunicationTalents">@FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("CommunicationSkillsSeperator")</a>
+                            <a class="nav-link text-dark text-center" href="#CommunicationTalents">@Localizer["CommunicationSkillsSeperator"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#WorkTalents">@FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("WorkSkillsSeperator")</a>
+                            <a class="nav-link text-dark text-center" href="#WorkTalents">@Localizer["WorkSkillsSeperator"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#Hobbies">@FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("HobbiesSeperator")</a>
+                            <a class="nav-link text-dark text-center" href="#Hobbies">@Localizer["HobbiesSeperator"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#ContactMe">@FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ContactMeSeperator")</a>
+                            <a class="nav-link text-dark text-center" href="#ContactMe">@Localizer["ContactMeSeperator"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#FollowMe">@FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("FollowMeSeperator")</a>
+                            <a class="nav-link text-dark text-center" href="#FollowMe">@Localizer["FollowMeSeperator"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#Support">@FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("SupportSeperator")</a>
+                            <a class="nav-link text-dark text-center" href="#Support">@Localizer["SupportSeperator"]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark text-center" href="#CV">CV</a>
                         </li>
                         <li>
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item">
                                     <div class="dropdown" align="right">
                                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display:contents">
-                                            <img src="~/Content/Media/Language/@FethiTekyaygilWebsite.Data.GlobalDatas.Globals.LanguageWithExt" />
+                                            <img data-src=@Url.Content("/Content/Media/Language/"+(Context.Request.Path.Value.Contains("en-US")?"EN.png":"TR.png")) alt="lang" />
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item text-center" id="TRLang"><img src="~/Content/Media/Language/TR.png" /></a>
-                                            <a class="dropdown-item text-center" id="ENLang"><img src="~/Content/Media/Language/EN.png" /></a>
+                                            <a class="dropdown-item text-center" id="TRLang"><img class="lng" src=@Url.Content("/Content/Media/Language/TR.png") alt="tr" /></a>
+                                            <a class="dropdown-item text-center" id="ENLang"><img class="lng" src=@Url.Content("/Content/Media/Language/EN.png") alt="en" /></a>
                                         </div>
                                     </div>
                                 </li>
@@ -87,17 +104,28 @@
         </div>
     </footer>
 
-    @*<script src="~/lib/jquery/dist/jquery.js"></script>*@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/jquery-unobtrusive-ajax/jquery.unobtrusive-ajax.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-    @*<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>*@
-    @*<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>*@
-    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
-    @*<script src="~/lib/mdbootstrap/js/mdb.min.js"></script>*@
-    @*<script src="~/js/site.js"></script>*@
+    <script src="~/lib/jquery-unobtrusive-ajax/jquery.unobtrusive-ajax.js" defer></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" defer></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js" defer></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js" defer></script>
+    <script defer>
+        var loadDeferredStyles = function () {
+            var addStylesNode = document.getElementById("deferred-styles");
+            var replacement = document.createElement("div");
+            replacement.innerHTML = addStylesNode.textContent;
+            document.body.appendChild(replacement)
+            addStylesNode.parentElement.removeChild(addStylesNode);
+        };
+        var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+            webkitRequestAnimationFrame || msRequestAnimationFrame;
+        if (raf) raf(function () {
+            window.setTimeout(loadDeferredStyles, 0);
+        });
+        else window.addEventListener('load', loadDeferredStyles);
+    </script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

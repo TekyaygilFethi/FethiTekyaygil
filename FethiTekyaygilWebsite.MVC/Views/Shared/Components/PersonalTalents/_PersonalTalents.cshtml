@@ -1,74 +1,126 @@
-﻿@model FethiTekyaygilWebsite.Data.Models.ResponseModels.PersonalTalentModels.GetPersonalTalentModel
-
-@{
+﻿@{
     Layout = null;
 }
 
 <div class="mytextdiv" id="Languages">
     <div class="mytexttitle">
-        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("LanguagesSeperator")&nbsp;
+        @Localizer["LanguagesSeperator"]&nbsp;
     </div>
     <div class="divider"></div>
 </div>
-<!--#region Dil-->
+<br />
+<div class="card text-center border-dark">
+    <div class="card-header text-black border-dark">
+        @Localizer["LanguageName"]
+    </div>
+    <div class="card-body">
+        <div class="card-deck">
 
-@foreach (var lang in Model.TempLanguages)
-{
-    <br />
-    <div class="card text-center border-dark">
-        <div class="card-header text-black border-dark">
-            @lang.Name
-        </div>
-        <div class="card-body">
-            <div class="card-deck">
-                @foreach (var cat in lang.TempLanguageCategory)
-                {
-                    <div class="card border-info">
-                        <div class="card-header bg-info text-white">@cat.Name</div>
-                        <div class="card-body">@cat.Degree</div>
-                    </div>
-                }
+            <div class="card border-info">
+                <div class="card-header bg-info text-white">@Localizer["Speaking"]</div>
+                <div class="card-body">C2</div>
             </div>
+            <div class="card border-info">
+                <div class="card-header bg-info text-white">@Localizer["Reading"]</div>
+                <div class="card-body">C2</div>
+            </div>
+            <div class="card border-info">
+                <div class="card-header bg-info text-white">@Localizer["Listening"]</div>
+                <div class="card-body">C2</div>
+            </div>
+
         </div>
     </div>
-    <br />
-}
+</div>
+<br />
+
 <!--#endregion-->
 <br />
 <!--#region Communication Talents-->
 <div class="mytextdiv" id="CommunicationTalents">
     <div class="mytexttitle">
-        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("CommunicationSkillsSeperator")&nbsp;
+        @Localizer["CommunicationSkillsSeperator"]&nbsp;
     </div>
     <div class="divider"></div>
 </div>
 
 <div class="row">
-    @foreach (var md in Model.CommunicationTalents)
-    {
-        <div class="col-sm-3">
-            <div class="card" style="height:340px">
-                <img src="@Url.Content(@md.ImageUrl)" class="card-img-top" alt="" style="height:220px">
-                <div class="card-body">
-                    @*<div class="card__picture card__picture--@Model.CommunicationTalents.IndexOf(md)">
-                        </div>*@
-                    <div class="mt-5">@md.CommTalent</div>
-                </div>
+    <div class="col-sm-3">
+        <div class="card" style="height:340px">
+            <img data-src="@Url.Content("\\Content\\Media\\Communication\\VerbalNonVerbalCommunication.jpg")" class="card-img-top" alt="PT1" style="height:220px">
+            <div class="card-body">
+                @*<div class="card__picture card__picture--@Model.CommunicationTalents.IndexOf(md)">
+                    </div>*@
+                <div class="mt-5">@Localizer["PT1"]</div>
             </div>
         </div>
-
-    }
+    </div>
+    <div class="col-sm-3">
+        <div class="card" style="height:340px">
+            <img data-src="@Url.Content("\\Content\\Media\\Communication\\Speecher.jpg")" class="card-img-top" alt="PT2" style="height:220px">
+            <div class="card-body">
+                @*<div class="card__picture card__picture--@Model.CommunicationTalents.IndexOf(md)">
+                    </div>*@
+                <div class="mt-5">@Localizer["PT2"]</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="card" style="height:340px">
+            <img data-src="@Url.Content("\\Content\\Media\\Communication\\Listening.jpg")" class="card-img-top" alt="PT3" style="height:220px">
+            <div class="card-body">
+                @*<div class="card__picture card__picture--@Model.CommunicationTalents.IndexOf(md)">
+                    </div>*@
+                <div class="mt-5">@Localizer["PT3"]</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="card" style="height:340px">
+            <img data-src="@Url.Content("\\Content\\Media\\Communication\\Presentation.jpg")" class="card-img-top" alt="PT4" style="height:220px">
+            <div class="card-body">
+                @*<div class="card__picture card__picture--@Model.CommunicationTalents.IndexOf(md)">
+                    </div>*@
+                <div class="mt-5">@Localizer["PT4"]</div>
+            </div>
+        </div>
+    </div>
 </div>
 <br />
 <!--#endregion-->
 
 <div class="mytextdiv" id="WorkTalents">
     <div class="mytexttitle">
-        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("WorkSkillsSeperator")&nbsp;
+        @Localizer["WorkSkillsSeperator"]&nbsp;
     </div>
     <div class="divider"></div>
 </div>
 <!--#region Work Talents-->
-<div class="card-deck ml-2" id="wtArea" style="display:inline-block"></div>
+<div class="card-deck ml-2" id="wtArea" style="display:inline-block">
+    <div id="gauge-CSS" class="gauge-container three revealer"><span id="80">CSS</span></div>
+    <div id="gauge-Angular" class="gauge-container three revealer"><span id="35">Angular</span></div>
+    <div id="gauge-Python" class="gauge-container three revealer"><span id="65">Python</span></div>
+    <div id="gauge-DevExpress" class="gauge-container three revealer"><span id="86">DevExpress</span></div>
+    <div id="gauge-Bootstrap" class="gauge-container three revealer"><span id="80">Bootstrap</span></div>
+    <div id="gauge-Unity" class="gauge-container three revealer"><span id="20">Unity</span></div>
+    <div id="gauge-Dapper" class="gauge-container three revealer"><span id="85">Dapper</span></div>
+    <div id="gauge-HTML" class="gauge-container three revealer"><span id="90">HTML</span></div>
+    <div id="gauge-FlaskFramework" class="gauge-container three revealer"><span id="56">Flask Framework</span></div>
+    <div id="gauge-Photoshop" class="gauge-container three revealer"><span id="68">Photoshop</span></div>
+    <div id="gauge-JavaScript" class="gauge-container three revealer"><span id="70">JavaScript</span></div>
+    <div id="gauge-MSSQL" class="gauge-container three revealer"><span id="80">MSSQL</span></div>
+    <div id="gauge-MySQL" class="gauge-container three revealer"><span id="80">MySQL</span></div>
+    <div id="gauge-IIS" class="gauge-container three revealer"><span id="85">IIS</span></div>
+    <div id="gauge-Java" class="gauge-container three revealer"><span id="70">Java</span></div>
+    <div id="gauge-NETCORE" class="gauge-container three revealer"><span id="95">.NET CORE</span></div>
+    <div id="gauge-EntityFramework" class="gauge-container three revealer"><span id="95">Entity Framework</span></div>
+    <div id="gauge-C#" class="gauge-container three revealer"><span id="95">C#</span></div>
+    <div id="gauge-JQuery" class="gauge-container three revealer"><span id="80">JQuery</span></div>
+    <div id="gauge-MicrosoftOffice" class="gauge-container three revealer"><span id="100">Microsoft Office</span></div>
+    <div id="gauge-TFS" class="gauge-container three revealer"><span id="75">TFS</span></div>
+    <div id="gauge-ADO.NET" class="gauge-container three revealer"><span id="90">ADO.NET</span></div>
+    <div id="gauge-AGILE" class="gauge-container three revealer"><span id="100">AGILE</span></div>
+    <div id="gauge-oop" class="gauge-container three revealer"><span id="96">LINQ</span></div>
+</div>
 
 <!--#endregion-->

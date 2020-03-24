@@ -1,0 +1,14 @@
+﻿@{
+    Layout = null;
+    string lang = Context.Request.Path.Value.Contains("en-US") ? "EN" : "TR";
+}
+<div class="flexible-container-embed">
+    @if (lang == "EN")
+    {
+        <object data="@Url.Content("~/Content/CV/EN-CV.pdf")" type="application/pdf" width="100%" height="1200vw"></object>
+    }
+    else
+    {
+        <object data="@Url.Content("~/Content/CV/TR-CV.pdf")" type="application/pdf" width="100%" height="1200vw"></object>
+    }
+</div>

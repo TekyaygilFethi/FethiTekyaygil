@@ -1,82 +1,151 @@
-﻿@model List<FethiTekyaygilWebsite.Data.Models.ResponseModels.ProjectModels.GetProjectsModel>
-
-@{
+﻿@{
     Layout = null;
-
-    var counter = 0;
 }
-
 
 <div class="shadow p-3 mb-5 bg-white rounded">
     <div class="cd-slider-wrapper">
         <ul class="cd-slider">
-            @foreach (var project in Model)
-            {
-                @if (counter == Model.Count - 1)
-                {
-                    <li class="is-visible">
-                        <div class="cd-half-block image"></div>
-                        <div class="cd-half-block content">
-                            <div>
-                                <h2>@project.Name</h2>
-                                <p>
-                                    @project.Explanation
-                                </p>
-                                @if (project.IsMobile)
-                                {
-                                    <a href="@project.Link" target="_blank" class="btn">
-                                        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ProjectsPlayStore")
-                                    </a>
-                                    <a href="@project.Link2" target="_blank" class="btn">
-                                        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ProjectsAppStore")
-                                    </a>
-                                }
-                                else
-                                {
-                                    <a href="@project.Link" target="_blank" class="btn">
-                                        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ProjectsSourceCodes")
-                                    </a>
+            <li class="is-visible">
+                <div class="cd-half-block image"></div>
+                <div class="cd-half-block content">
+                    <div>
+                        <h2>@Localizer["FTWebsiteTitle"]</h2>
+                        <p>
+                            @Localizer["FTExplanation"]
+                        </p>
+                    </div>
+                </div>
+            </li> <!-- .cd-half-block.content -->
+            <li>
+                <div class="cd-half-block image"></div>
 
-                                }
-                            </div>
-                        </div>
-                    </li> <!-- .cd-half-block.content -->
-                }
-                else
-                {
-                    <li>
-                        <div class="cd-half-block image"></div>
+                <div class="cd-half-block content light-bg">
+                    <div>
+                        <h2>SpinNToss</h2>
+                        <p>
+                            @Localizer["SpinNTossExplanation"]
+                        </p>
+                        <a href="https://play.google.com/store/apps/details?id=com.PreGames.SpinNToss" target="_blank" class="btn">
+                            @Localizer["ShowPS"]
+                        </a>
+                        <a href="https://apps.apple.com/tr/app/spinntoss/id1476206319?l=tr" target="_blank" class="btn">
+                            @Localizer["ShowAS"]
+                        </a>
 
-                        <div class="cd-half-block content light-bg">
-                            <div>
-                                <h2>@project.Name</h2>
-                                <p>
-                                    @project.Explanation
-                                </p>
-                                @if (project.IsMobile)
-                                {
-                                    <a href="@project.Link" target="_blank" class="btn">
-                                        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ProjectsPlayStore")
-                                    </a>
-                                    <a href="@project.Link2" target="_blank" class="btn">
-                                        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ProjectsAppStore")
-                                    </a>
-                                }
-                                else
-                                {
-                                    <a href="@project.Link" target="_blank" class="btn">
-                                        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ProjectsSourceCodes")
-                                    </a>
+                    </div>
+                </div> <!-- .cd-half-block.content -->
+            </li>
+            <li>
+                <div class="cd-half-block image"></div>
 
-                                }
-                            </div>
-                        </div> <!-- .cd-half-block.content -->
-                    </li>
-                }
-                counter++;
-            }
+                <div class="cd-half-block content light-bg">
+                    <div>
+                        <h2>Catch Craze</h2>
+                        <p>
+                            @Localizer["CatchCrazeExplanation"]
+                        </p>
+                        <a href="https://play.google.com/store/apps/details?id=com.PREGAMES.CatchCraze" target="_blank" class="btn">
+                            @Localizer["ShowPS"]
+                        </a>
+                        <a href="https://apps.apple.com/tr/app/catchcraze/id1476065835?l=tr" target="_blank" class="btn">
+                            @Localizer["ShowAS"]
+                        </a>
 
-
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="cd-half-block image"></div>
+                <div class="cd-half-block content light-bg">
+                    <div>
+                        <h2>@Localizer["IdeconExpenseProjectTitle"]</h2>
+                        <p>
+                            @Localizer["IdeconExpenseProjectExplanation"]
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="cd-half-block image"></div>
+                <div class="cd-half-block content light-bg">
+                    <div>
+                        <h2>@Localizer["PythonExpenseProjectTitle"]</h2>
+                        <p>
+                            @Localizer["PythonExpenseProjectExplanation"]
+                        </p>
+                        <a href="https://github.com/TekyaygilFethi/PythonExpense" target="_blank" class="btn">
+                            @Localizer["ProjectsSourceCodes"]
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="cd-half-block image"></div>
+                <div class="cd-half-block content light-bg">
+                    <div>
+                        <h2>@Localizer["IdeconCashflowProjectTitle"]</h2>
+                        <p>
+                            @Localizer["IdeconCashflowProjectExplanation"]
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="cd-half-block image"></div>
+                <div class="cd-half-block content light-bg">
+                    <div>
+                        <h2>@Localizer["AydinUniversityStudentPortalTitle"]</h2>
+                        <p>
+                            @Localizer["AydinUniversityStudentPortalExplanation"]
+                        </p>
+                        <a href="https://github.com/TekyaygilFethi/AydinUniversityProject" target="_blank" class="btn">
+                            @Localizer["ProjectsSourceCodes"]
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="cd-half-block image"></div>
+                <div class="cd-half-block content light-bg">
+                    <div>
+                        <h2>@Localizer["NQueenTitle"]</h2>
+                        <p>
+                            @Localizer["NQueenExplanation"]
+                        </p>
+                        <a href="https://bitbucket.org/TekyaygilFethi/n-queens-problem-by-dfs/src/master/" target="_blank" class="btn">
+                            @Localizer["ProjectsSourceCodes"]
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="cd-half-block image"></div>
+                <div class="cd-half-block content light-bg">
+                    <div>
+                        <h2>@Localizer["XOXTitle"]</h2>
+                        <p>
+                            @Localizer["XOXExplanation"]
+                        </p>
+                        <a href="https://github.com/TekyaygilFethi/TicTacToe" target="_blank" class="btn">
+                            @Localizer["ProjectsSourceCodes"]
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="cd-half-block image"></div>
+                <div class="cd-half-block content light-bg">
+                    <div>
+                        <h2>@Localizer["GuessProjectTitle"]</h2>
+                        <p>
+                            @Localizer["GuessProjectExplanation"]
+                        </p>
+                        <a href="https://github.com/TekyaygilFethi/GuessGame" target="_blank" class="btn">
+                            @Localizer["ProjectsSourceCodes"]
+                        </a>
+                    </div>
+                </div>
+            </li>
         </ul> <!-- .cd-slider -->
     </div>
 </div>

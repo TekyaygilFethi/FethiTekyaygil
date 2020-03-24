@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AltinbasAddress" xml:space="preserve">
+    <value>Mahmutbey, Mahmutbey Dilmenler District Mahmutbey Campus No:26, 34218 Bağcılar/İstanbul</value>
+  </data>
+  <data name="AltinbasExplanation" xml:space="preserve">
+    <value>I started my university life with Kemerburgaz University Computer Engineering Department which I've won with 75% scholarship at 2014. During my education life at university which renamed as "Altınbaş" University, I've seen and experienced many vocatinal, social areas and had the chance of improving myself and my skills.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Vocational Lessons:&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; Relational Database Management Systems Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Software Engineering Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;C Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Java OOP Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Algorithms Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Operationg Systems Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Artificial Intelligence Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Web Services Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Web Technologies Course&lt;br/&gt;&lt;br/&gt;Projects:&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; NQueens Winforms Puzzle via using DFS Algorithm for Artificial Intelligence Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; TicTacToe Winforms game via using Min-Max Algorithm for Artificial Intelligence Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; Last Man Standing C# Console game for Artifical Intelligence Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; Shopping Site via using ASP.NET MVC and Entity Framework for Web Technologies Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; - For Design Project, A Student System that contains Forum, Grade Calculation and Screen Sharing features developed as ASP.NET MVC, WCF Service ans Winform Projects:&lt;br&gt;&lt;i class="fas fa-arrow-right" style="padding-left:10em"&gt;&lt;/i&gt;Entity Framework Code First, Generic Repository and Unit Of Work Patterns are used for database management operations.&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:10em"&gt;&lt;/i&gt;Bootstrap, JQuery, AJAX is used for front-end solutions &lt;br/&gt;</value>
+  </data>
+  <data name="AltinbasPosition" xml:space="preserve">
+    <value>Computer Engineering Department Bachelor Student</value>
+  </data>
+  <data name="AltinbasTitle" xml:space="preserve">
+    <value>Kemerburgaz / Altınbaş University</value>
+  </data>
+  <data name="BAALAddress" xml:space="preserve">
+    <value>Bahçeşehir 2. Section, Şelale District, Ata Street No 3/2, 34538 Başakşehir/İstanbul</value>
+  </data>
+  <data name="BAALExplanation" xml:space="preserve">
+    <value>Ath 12th grade, I continued my education life at Bahçeşehir Atatürk Anatolian High School</value>
+  </data>
+  <data name="BAALPosition" xml:space="preserve">
+    <value>High School Student</value>
+  </data>
+  <data name="BAALTitle" xml:space="preserve">
+    <value>Bahcesehir Ataturk Anatolian High School</value>
+  </data>
+  <data name="BahcelievlerAddress" xml:space="preserve">
+    <value>Çobançeşme District Sanayi Street No: 48</value>
+  </data>
+  <data name="BahcelievlerExplanation" xml:space="preserve">
+    <value>During my intern at IT Department of Bahçelievler Municipality, I had the chance of developing Fuel Track Winforms and Number Guess projects using Entity Framework, DevExpress and SQL technologies.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Developing Number Guess Project using C# Console Application.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Patricipated ASP.NET MVC projects.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Developed Fuel Tracking projects using Entity Framework ve WinForms.</value>
+  </data>
+  <data name="BahceliEvlerPosition" xml:space="preserve">
+    <value>.NET Developer Intern</value>
+  </data>
+  <data name="BahcelievlerTitle" xml:space="preserve">
+    <value>Bahçelievler Municipality</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Still continue</value>
+  </data>
+  <data name="DeFactoExplanation" xml:space="preserve">
+    <value>In DeFacto, I am currently developing ASP.NET CORE and Angular projects to HR department.</value>
+  </data>
+  <data name="DeFactoPosition" xml:space="preserve">
+    <value>Junior .NET Specialist</value>
+  </data>
+  <data name="DeFactoTitle" xml:space="preserve">
+    <value>DeFacto Technology</value>
+  </data>
+  <data name="EAIOAddress" xml:space="preserve">
+    <value>Esenkent, Enver Paşa District Onur Güvener Street No:1, 34510 Esenyurt/İstanbul</value>
+  </data>
+  <data name="EAIOExplanation" xml:space="preserve">
+    <value>I successfully graduated from Esenkent Atatürk Primary School which I transferred at the end of the first semester.&lt;br/&gt;&lt;b&gt;Gained Certificates:&lt;/b&gt;&lt;font color="red"&gt;&lt;i&gt;&lt;br/&gt; &lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; Honour Certificate at both of the semesters.&lt;/i&gt;&lt;/font&gt;</value>
+  </data>
+  <data name="EAIOPosition" xml:space="preserve">
+    <value>Primary School Student</value>
+  </data>
+  <data name="EAIOTitle" xml:space="preserve">
+    <value>Esenkent Atatürk Primary School</value>
+  </data>
+  <data name="GGSoftAddress" xml:space="preserve">
+    <value>İçerenköy, Kartal Street No:19, 34752 Ataşehir/İstanbul</value>
+  </data>
+  <data name="GGSoftExplanation" xml:space="preserve">
+    <value>Participated development of Paperwork product and ASP.NET MVC projects in that company which develops software with .NET technologies&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Development of Paperwork product.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Font Viewer ASP.NET MVC projects.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Participated Paperwork product's conversion to Silverlight tp ASP.NET MVC.&lt;br/&gt;</value>
+  </data>
+  <data name="GGSoftPosition" xml:space="preserve">
+    <value>.NET Developer</value>
+  </data>
+  <data name="IdeconAddress" xml:space="preserve">
+    <value>Oruç Reis District Tekstilkent Street No: 12 Koza Plaza A Blok Floor:14 Apartment: 51, 34235 Esenler</value>
+  </data>
+  <data name="IdeconExplanation" xml:space="preserve">
+    <value>I 've developed softwares by combining different technologies and set ups to servers at IDECON company which is a solution partner at Electronic Conversion Processes.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Developed Cashflow project using ASP.NET MVC Web API CORE and Dapper&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Developing "Expense" project that contains OCR reading and maching learning using Python Flask Framework, Google OCR and Spacy library.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Setting up and maintaining the eReconciliation and eStatement applications to our client companies' servers..&lt;br/&gt;</value>
+  </data>
+  <data name="IdeconPosition" xml:space="preserve">
+    <value>Technology Consultant</value>
+  </data>
+  <data name="IdeconTitle" xml:space="preserve">
+    <value>IDECON Consultancy Services A.Ş.</value>
+  </data>
+  <data name="NHIOAddress" xml:space="preserve">
+    <value>Teşvikiye, Vali Konağı Distinct Şakayık Street No:50, 34365 Şişli/İstanbul</value>
+  </data>
+  <data name="NHIOExplanation" xml:space="preserve">
+    <value>I started my education life at Nilüfer Hatun Primary School until first semester of 8th grade including the kidergarten.&lt;br/&gt;&lt;b&gt;Gained Certificates:&lt;/b&gt;&lt;i&gt;&lt;br/&gt; &lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; Participation certificate for attending 23th April National Sovereignty and Children's Day Event.&lt;br/&gt; &lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; Succession and participation certificate for school's social, educational and sportive events.&lt;br/&gt; &lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;)Participation certificate for reading contest named "10 Beautiful Piece".&lt;/i&gt;</value>
+  </data>
+  <data name="NHIOPosition" xml:space="preserve">
+    <value>Primary School Student</value>
+  </data>
+  <data name="NHIOTitle" xml:space="preserve">
+    <value>Nilüfer Hatun Primary School</value>
+  </data>
+  <data name="OkyanusAddress" xml:space="preserve">
+    <value>Esenkent, Talat Paşa District Yeşil Irmak Street No:1, 34510 Esenyurt/İstanbul</value>
+  </data>
+  <data name="OkyanusExplanation" xml:space="preserve">
+    <value>Okyanus College gave me the chance of improve myself at software and hardware areas and also give me friendships that is durable forever as the first school of my high school education&lt;br/&gt;&lt;b&gt;Gained Certificates:&lt;/b&gt;&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;2 Success Certificates.&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Participation certificate to the event of "Walking on the podium with the most model." which takes place at 26th May 2012 at Ora Arena.&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Participation certificate to English Drama Club&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Participation certificate to Computer Club&lt;br/&gt;</value>
+  </data>
+  <data name="OkyanusPosition" xml:space="preserve">
+    <value>High School Student</value>
+  </data>
+  <data name="OkyanusTitle" xml:space="preserve">
+    <value>Okyanus College</value>
+  </data>
+  <data name="PragmasoftAddress" xml:space="preserve">
+    <value>İçerenköy, Karaman Çiftliği Street Göksuyu Business Center No:64 Floor:3 Apartment:3, 34752 Ataşehir/İstanbul</value>
+  </data>
+  <data name="PragmasoftExplanation" xml:space="preserve">
+    <value>During my intern at Pragmasoft company, I had the chance of developing ASP.NET MVC WebApi project to Samsung company.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Developed a contest application using ASP.NET MVC WebApi and Entity Framework. In that application, users gains participation chance to the contest when they upload the photo of Samsung products' invoices they bought from that new Samsung product or another Samsung product. After draw, gifts and promotions are given to the contestants.</value>
+  </data>
+  <data name="PragmasoftPosition" xml:space="preserve">
+    <value>.NET Developer Intern</value>
+  </data>
+</root>

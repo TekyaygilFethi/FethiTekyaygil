@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-	<PublishDir>$(OutDir)_PublishedWebsites\NetCoreWebApp\</PublishDir>
+    <!--<AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>-->
+	<!--<PublishDir>$(OutDir)_PublishedWebsites\NetCoreWebApp\</PublishDir>-->
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,9 +13,11 @@
 
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="4.3.1" />
+    <PackageReference Include="Dapper" Version="2.0.30" />
     <PackageReference Include="FontAwesome" Version="4.7.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Localization" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.4">
       <PrivateAssets>all</PrivateAssets>
@@ -23,18 +25,11 @@
     </PackageReference>
     <PackageReference Include="Microsoft.jQuery.Unobtrusive.Ajax" Version="3.2.6" />
     <PackageReference Include="Microsoft.jQuery.Unobtrusive.Validation" Version="3.2.11" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
   </ItemGroup>
 
 
   <ItemGroup>
-    <ProjectReference Include="..\FethiTekyaygilWebsite.Business\FethiTekyaygilWebsite.Business.csproj" />
-    <ProjectReference Include="..\FethiTekyaygilWebsite.Data\FethiTekyaygilWebsite.Data.csproj" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <Folder Include="Helpers\" />
     <Folder Include="Views\Shared\Components\Support\" />
     <Folder Include="wwwroot\Content\Media\AboutMe\" />
     <Folder Include="wwwroot\Content\Media\Language\" />
@@ -42,7 +37,6 @@
     <Folder Include="wwwroot\lib\freelancer\" />
     <Folder Include="wwwroot\lib\Vide\" />
     <Folder Include="wwwroot\lib\presentr-master\" />
-    <Folder Include="wwwroot\lib\NewFolder\" />
     <Folder Include="wwwroot\lib\timeline\" />
   </ItemGroup>
 

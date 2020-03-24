@@ -1,50 +1,58 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO.Compression;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Localization.Routing;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.AspNetCore.Routing;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Net.Http.Headers;
 
 namespace FethiTekyaygilWebsite.MVC
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+        public IHostingEnvironment Environment { get; }
 
         public IConfiguration Configuration { get; }
+        public Startup(IHostingEnvironment env, IConfiguration config)
+        {
+            this.Environment = env;
+            this.Configuration = config;
+        }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
-
+            services.AddResponseCaching();
             services.AddCors();
             services.Configure<BrotliCompressionProviderOptions>(options =>
             {
                 options.Level = CompressionLevel.Optimal;
             });
 
+            //services.AddDbContext<GenericDatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MsSQL")));
+
+
+            services.AddLocalization(o =>
+            {
+                o.ResourcesPath = "Resources";
+            });
+
             services.AddResponseCompression(options =>
             {
                 options.EnableForHttps = true; options.Providers.Add<BrotliCompressionProvider>();
             });
-
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            //services.AddResponseCaching();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2).AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,17 +68,40 @@ namespace FethiTekyaygilWebsite.MVC
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+            app.UseResponseCaching();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            app.UseMvc(routes =>
+            var supportedCultures = new List<CultureInfo>
+                    {
+                    new CultureInfo("tr-TR"),
+                    new CultureInfo("en-US"),
+                    };
+
+            var localizationOptions = new RequestLocalizationOptions
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                SupportedCultures = supportedCultures,
+                SupportedUICultures = supportedCultures,
+                DefaultRequestCulture = new RequestCulture("tr-TR"),
+            };
+            var requestProvider = new RouteDataRequestCultureProvider();
+            localizationOptions.RequestCultureProviders.Insert(0, requestProvider);
+
+            app.UseRouter(routes =>
+            {
+                routes.MapMiddlewareRoute("{culture=tr-TR}/{*mvcRoute}", subApp =>
+                {
+                    subApp.UseRequestLocalization(localizationOptions);
+                    subApp.UseMvc(mvcRoutes =>
+                    {
+                        mvcRoutes.MapRoute(
+                        name: "default",
+                        template: "{culture=tr-TR}/{controller=Home}/{action=Index}/{id?}");
+                    });
+                });
             });
+            app.UseMvc();
         }
     }
 }

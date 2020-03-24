@@ -78,39 +78,43 @@ Slider
     }
 
     .cd-slider li:first-of-type .image {
-        background-image: url(../img/website.jpg);
+        background-image: url(../img/website.webp);
     }
 
     .cd-slider li:nth-of-type(2) .image {
-        background-image: url(../img/spinntoss.png);
+        background-image: url(../img/spinntoss.webp);
     }
 
     .cd-slider li:nth-of-type(3) .image {
-        background-image: url(../img/catchcraze.png);
+        background-image: url(../img/catchcraze.webp);
     }
 
     .cd-slider li:nth-of-type(4) .image {
-        background-image: url(../img/img-2.jpg);
+        background-image: url(../img/img-4.webp);
     }
 
     .cd-slider li:nth-of-type(5) .image {
-        background-image: url(../img/img-3.jpg);
+        background-image: url(../img/img-2.webp);
     }
 
     .cd-slider li:nth-of-type(6) .image {
-        background-image: url(../img/aydinuniversity.jpg);
-    }    
+        background-image: url(../img/img-3.webp);
+    }
 
     .cd-slider li:nth-of-type(7) .image {
-        background-image: url(../img/nqueens.jpg);
+        background-image: url(../img/aydinuniversity.webp);
     }
 
     .cd-slider li:nth-of-type(8) .image {
-        background-image: url(../img/tictactoe.jpg);
+        background-image: url(../img/nqueens.webp);
     }
 
     .cd-slider li:nth-of-type(9) .image {
-        background-image: url(../img/guess.jpg);
+        background-image: url(../img/tictactoe.webp);
+    }
+
+    .cd-slider li:nth-of-type(10) .image {
+        background-image: url(../img/guess.webp);
     }
 
     .cd-slider .image {

@@ -1,5 +1,4 @@
-﻿using FethiTekyaygilWebsite.Data.Language;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace FethiTekyaygilWebsite.MVC.ViewComponents
 {

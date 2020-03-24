@@ -1,0 +1,49 @@
+﻿/*Font-awesome integration*/
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/*Google font integration*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+#contact .row {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    #contact iframe {
+        margin-bottom: 15px;
+    }
+}
+
+.display-lg {
+    font-size: 12rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+element {
+    box-shadow: none;
+}
+#connectionCard {
+    background-color: rgba(245, 245, 245, 0.4);
+}
+
+    #connectionCard > .card-header, .card-footer .card-body !important {
+        opacity: 1
+    }
+
+
+#myGlower {
+    /*background-color: #ccc;*/
+    border: 1px solid transparent;
+    /*-webkit-transition: border 0.1s linear, box-shadow 0.1s linear;
+    -moz-transition: border 0.1s linear, box-shadow 0.1s linear;
+    transition: border 0.1s linear, box-shadow 0.1s linear;*/
+    /*width: 100px;
+    height: 100px;
+    margin: 50px;*/
+}
+
+    #myGlower.active {
+        border-color: blue;
+        -webkit-box-shadow: 0 0 5px blue;
+        -moz-box-shadow: 0 0 5px blue;
+        box-shadow: 0 0 5px blue;
+    }
+}

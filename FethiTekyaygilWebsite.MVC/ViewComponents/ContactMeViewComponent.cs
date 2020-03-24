@@ -1,6 +1,5 @@
-﻿using FethiTekyaygilWebsite.Data.GlobalDatas;
-using FethiTekyaygilWebsite.Data.Language;
-using FethiTekyaygilWebsite.Data.Models.RequestModels.ContactModels;
+﻿
+using FethiTekyaygilWebsite.MVC.Model.RequestModel;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;

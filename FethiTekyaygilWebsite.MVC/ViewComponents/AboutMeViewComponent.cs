@@ -1,26 +1,17 @@
-﻿using FethiTekyaygilWebsite.Business.ManagerFolder.ComplexManagerFolder;
-using FethiTekyaygilWebsite.Data.Models.ResponseModels.HobbyModels;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
+using System;
 using System.Collections.Generic;
 
 namespace FethiTekyaygilWebsite.MVC.ViewComponents
 {
     [ViewComponent]
+    [ResponseCache(Duration = 3600)]
     public class AboutMeViewComponent : ViewComponent
     {
         public IViewComponentResult Invoke()
         {
-            List<HobbyResponseModel> model = null;
-            using (var manager = new ComplexManager())
-            {
-                var response = manager.GetHobbies();
-                if (response.IsSuccess)
-                {
-                    model = response.Object;
-                }
-            }
-            return View("_AboutMe", model);
-
+            return View("_AboutMe");
         }
     }
 }

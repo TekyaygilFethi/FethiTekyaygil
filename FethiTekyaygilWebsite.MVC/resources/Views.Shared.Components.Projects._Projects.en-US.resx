@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AydinUniversityStudentPortalTitle" xml:space="preserve">
+    <value>Aydın University Student Portal</value>
+  </data>
+  <data name="CatchCrazeExplanation" xml:space="preserve">
+    <value>An Android and iOs game that based on timing and reflexes developed via using Unity and C#.</value>
+  </data>
+  <data name="FTExplanation" xml:space="preserve">
+    <value>This website developed via using ASP.NET CORE ve JQuery.</value>
+  </data>
+  <data name="FTWebsiteTitle" xml:space="preserve">
+    <value>Fethi Tekyaygil Website</value>
+  </data>
+  <data name="GuessProjectExplanation" xml:space="preserve">
+    <value>Guess Game is a console application that expect a prediction of pre-defined number by a system from user and give feedbacks about these predictions to increase prediction accuracy.</value>
+  </data>
+  <data name="GuessProjectTitle" xml:space="preserve">
+    <value>Number Guess Game</value>
+  </data>
+  <data name="IdeconCashflowProjectExplanation" xml:space="preserve">
+    <value>This application is a Cashflow web application developed via using ASP.NET MVC CORE WebAPI technology that allows companies and firms to track their Cashflow, making simulations as desired and preview the future predictions for next dates. For the database, MySQL is used and Dapper ORM is used for Data Access Layer.</value>
+  </data>
+  <data name="IdeconCashflowProjectTitle" xml:space="preserve">
+    <value>Idecon Cashflow Project</value>
+  </data>
+  <data name="IdeconExpenseProjectExplanation" xml:space="preserve">
+    <value>An IDECON application that can create expense records, send them to approval and manage them that supports invoice read from image in order to allow personnels to execute their expense operations much faster. SignalR, .NET CORE, Dapper technologies and N-Tier architecture had used at the backend of the project which is developed by me.   </value>
+  </data>
+  <data name="IdeconExpenseProjectTitle" xml:space="preserve">
+    <value>Idecon Personnel Expense Project</value>
+  </data>
+  <data name="NQueenExplanation" xml:space="preserve">
+    <value>NQueens Problem application is Winforms application that solves NQueens problem with DFS algorithm and takes Queen count from user as input.</value>
+  </data>
+  <data name="NQueenTitle" xml:space="preserve">
+    <value>NQueens Problem</value>
+  </data>
+  <data name="ProjectsSourceCodes" xml:space="preserve">
+    <value>See Source Codes</value>
+  </data>
+  <data name="PythonExpenseProjectExplanation" xml:space="preserve">
+    <value>A web service for companies' and firms' personels' expense processes developed via using Python Flask Framework and Spacy library with the purpose of Machine Learning. Application parses the info from an image of invoices and record it to database. Google OCR Api is used for reading the content of the image, Spacy NeR technology is used for these data's learning. MySQL is used for the database, SQLAlchemy is used for Data Access Layer.</value>
+  </data>
+  <data name="PythonExpenseProjectTitle" xml:space="preserve">
+    <value>Expense Project</value>
+  </data>
+  <data name="ShowAS" xml:space="preserve">
+    <value>See on App Store</value>
+  </data>
+  <data name="ShowPS" xml:space="preserve">
+    <value>See on Play Store</value>
+  </data>
+  <data name="SpinNTossExplanation" xml:space="preserve">
+    <value>An Android and iOs game that based on timing and reflexes developed via using Unity and C#.</value>
+  </data>
+  <data name="String1AydinUniversityStudentPortalExplanation" xml:space="preserve">
+    <value>Aydın University Student Portal is an application that provides Grade Calculation, Forum and studying via screen sharing functions to Aydın University Students. Applicaion is developed using ASP.NET MVC and MSSQL is used for database, Entity Framework is used for data access layer, RDP class is used for Screen Sharing</value>
+  </data>
+  <data name="XOXExplanation" xml:space="preserve">
+    <value>Winforms aplication of classic Tic Tac Toe game that plays on 3x3 plane which contains Min-Max Algorithm and which's difficulty can be set.</value>
+  </data>
+  <data name="XOXTitle" xml:space="preserve">
+    <value>Tic Tac Toe</value>
+  </data>
+</root>

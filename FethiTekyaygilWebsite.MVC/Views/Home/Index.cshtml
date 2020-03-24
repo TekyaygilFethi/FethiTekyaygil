@@ -1,15 +1,13 @@
-﻿@model FethiTekyaygilWebsite.Data.Models.ResponseModels.IndexModels.IndexResponseModel
-
-@section Styles{
+﻿@section Styles{
     <!--#region _Entrance Styles-->
     <link href="~/lib/freelancer/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="~/lib/freelancer/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" />
     <link href="~/lib/freelancer/css/freelancer.min.css" rel="stylesheet" />
+
     <!--#endregion-->
     <!--#region _Experience Styles-->
-    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+
     <link rel="stylesheet" href="~/lib/timeline/assets/css/style.css">
-    <script src="~/lib/slider/js/modernizr.js"></script>
     <!--#endregion-->
     <!--#region _Projects Styles-->
     <link rel="stylesheet" href="~/lib/slider/css/reset.css"> <!-- CSS reset -->
@@ -19,92 +17,108 @@
     <link href="~/lib/progress/gauge.css" rel="stylesheet" />
     <!--#endregion-->
     <!--#region Contact Styles-->
-    <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/lib/ionic/ionicons.min.css">
     <link href="~/lib/contactMe/contact-me.css" rel="stylesheet" />
     <!--#endregion-->
     <!--#region AboutMe Styles-->
     <!--#endregion-->
+    <link href="~/lib/communication/communication.css" rel="stylesheet" />
 }
-
+<br />
 @await Component.InvokeAsync("Entrance")
+<br />
 <div class="mytextdiv" id="Developer">
     <div class="mytexttitle">
-        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("DeveloperSeperator")&nbsp;
+        @Localizer["DeveloperSeperator"] &nbsp;
     </div>
     <div class="divider"></div>
 </div>
 @await Component.InvokeAsync("Developer")
+<br />
 <div class="mytextdiv" id="Timeline">
     <div class="mytexttitle">
-        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("TimelineSeperator")&nbsp;
+        @Localizer["TimelineSeperator"] &nbsp;
     </div>
     <div class="divider"></div>
 </div>
 @await Component.InvokeAsync("Timeline")
+<br />
 <div class="mytextdiv" id="Projects">
     <div class="mytexttitle">
-        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ProjectsSeperator")&nbsp;
+        @Localizer["ProjectsSeperator"] &nbsp;
     </div>
     <div class="divider"></div>
 </div>
 @await Component.InvokeAsync("Projects")
-
+<br />
 @await Component.InvokeAsync("PersonalTalents")
-
+<br />
 <div class="mytextdiv" id="Hobbies">
     <div class="mytexttitle">
-        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("HobbiesSeperator")&nbsp;
+        @Localizer["HobbiesSeperator"] &nbsp;
     </div>
     <div class="divider"></div>
 </div>
 @await Component.InvokeAsync("AboutMe")
-
+<br />
 <div class="mytextdiv" id="ContactMe">
     <div class="mytexttitle">
-        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("ContactMeSeperator")&nbsp;
+        @Localizer["ContactMeSeperator"] &nbsp;
     </div>
     <div class="divider"></div>
 </div>
 @await Component.InvokeAsync("ContactMe")
+<br />
 <div class="mytextdiv" id="FollowMe">
     <div class="mytexttitle">
-        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("FollowMeSeperator")&nbsp;
+        @Localizer["FollowMeSeperator"] &nbsp;
     </div>
     <div class="divider"></div>
 </div>
 @await Component.InvokeAsync("FollowMe")
+<br />
 <div class="mytextdiv" id="Support">
     <div class="mytexttitle">
-        @FethiTekyaygilWebsite.Data.Language.LanguageDictionary.GetString("SupportSeperator")&nbsp;
+        @Localizer["SupportSeperator"] &nbsp;
     </div>
     <div class="divider"></div>
 </div>
 @await Component.InvokeAsync("Support")
+<br />
+<div class="mytextdiv" id="CV">
+    <div class="mytexttitle">
+        CV&nbsp;
+    </div>
+    <div class="divider"></div>
+</div>
+@await Component.InvokeAsync("CV")
 
 
-@section Scripts{
+@section Scripts
+    {
     <!--#region _Entrance Scripts-->
-    <script src="~/lib/freelancer/vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="~/lib/freelancer/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="~/lib/freelancer/js/freelancer.min.js"></script>
-    <script src="~/lib/t.js-master/t.js"></script>
-    <script src="~/lib/entrance/entrance.js"></script>
+    <script src="~/lib/freelancer/vendor/jquery-easing/jquery.easing.min.js" defer></script>
+    <script src="~/lib/freelancer/vendor/magnific-popup/jquery.magnific-popup.min.js" defer></script>
+    <script src="~/lib/freelancer/js/freelancer.min.js" defer></script>
+    <script src="~/lib/t.js-master/t.js" defer></script>
+    <script src="~/lib/entrance/entrance.js" defer></script>
     <!--#endregion-->
     <!--#region _Timeline Scripts-->
-    <script src="~/lib/timeline/assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
-    <script src="~/lib/timeline/assets/js/swipe-content.js"></script> <!-- A Vanilla JavaScript plugin to detect touch interactions -->
-    <script src="~/lib/timeline/assets/js/main.js"></script>
+    <script src="~/lib/timeline/assets/js/util.js" defer></script> <!-- util functions included in the CodyHouse framework -->
+    <script src="~/lib/timeline/assets/js/swipe-content.js" defer></script> <!-- A Vanilla JavaScript plugin to detect touch interactions -->
+    <script src="~/lib/timeline/assets/js/main.js" defer></script>
     <!--#endregion-->
     <!--#region _Projects Scripts -->
-    <script src="~/lib/slider/js/jquery.mobile.custom.min.js"></script> <!-- Resource jQuery -->
-    <script src="~/lib/slider/js/main.js"></script> <!-- Resource jQuery -->
+    <script src="~/lib/slider/js/jquery.mobile.custom.min.js" defer></script> <!-- Resource jQuery -->
+    <script src="~/lib/slider/js/main.js" defer></script> <!-- Resource jQuery -->
     <!--#endregion-->
     <!--#region _PersonalTalents Scripts-->
-    <script src="~/lib/progress/gauge.min.js"></script>
-    <script src="~/lib/viewport-detection/viewport-detect.js"></script>
-    <link href="~/lib/communication/communication.css" rel="stylesheet" />
+    <script src="~/lib/progress/gauge.min.js" defer></script>
+    <script src="~/lib/viewport-detection/viewport-detect.js" defer></script>
+    @*<script async src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0/dist/lazyload.min.js" defer></script>*@
+    <script src="~/lib/lazyloading/lazyload.js" defer></script>
 
-    <script>
+    <script defer>
         function glowElement(sender)
         {
             $('[name=' + sender.attributes[4].nodeValue + ']').toggleClass('active');
@@ -121,6 +135,10 @@
 
         $(function () {
 
+            var ll = new LazyLoad({
+			    elements_selector: "img"
+            });
+            ll.update();
 
             $('#carouselExampleCaption').on('slide.bs.carousel', function () {
                 $('#carouselExampleCaption .active #video').prop('muted', true);
@@ -132,56 +150,79 @@
 
 
             $('#TRLang').click(function () {
-                $.ajax({
-                    url: '@Url.Action("ChangeLanguage","Home")',
-                    data: { Language: "TR" },
-                    method: 'POST',
-                    success: function (response) {
-                        if (response.isSuccess) {
-                            window.location.reload();
-                        } else {
-                            alert(response.Message);
-                        }
-                    }
-                });
-            });
-
-                $('#ENLang').click(function () {
-                $.ajax({
-                    url:'@Url.Action("ChangeLanguage","Home")',
-                    data:{ Language: "EN" },
-                    method: 'POST',
-                    success: function (response) {
-                        if (response.isSuccess) {
-                            window.location.reload();
-                        } else {
-                            alert(response.Message);
-                        }
-                    }
-                });
-            });
-
-                    $('#btnSend').click(function () {
-                var lang=$('#Language').text();
-
-                var nameError = "";
-                var mailError = "";
-                var msgError = "";
-
-                if (lang == "TR") {
-                    nameError = "Lütfen adınızı girin!";
-                    mailError = "Lütfen mailinizi girin!";
-                    msgError = "Lütfen mesajınızı girin!";
-                } else {
-                    nameError = "Please enter your name!";
-                    mailError = "Please enter your mail!";
-                    msgError = "Please enter your message!";
+                if (!window.location.pathname.includes("tr-TR")) {
+                    window.location.replace(window.location.origin + "/tr-TR");
+                    //window.location.href = window.location.origin + "/tr-TR";
                 }
+                else {
+                    alert('Seçili olan bir dil seçtiniz!');
+                }
+            });
 
-                var name = $('#formName').val();
+            $('#ENLang').click(function () {
+                if (!window.location.pathname.includes("en-US")) {
+                    window.location.replace(window.location.origin + "/en-US");
+                } else {
+                    alert("You've already chosen a selected language!");
+
+                }
+            });
+
+
+            $("#contactForm").validate({
+			// Doğrulama kurallarını belirliyoruz
+			rules: {
+				'formMail': {
+					required: true, // Doldurulması zorunlu
+					email: true // Geçerli bir E-posta adresi olmalı
+				},
+				'formName': {
+					required: true // Doldurulması zorunlu
+                    },
+                    'formMessage': {
+                        required: true
+                    }
+			},
+			messages: {
+				required: ' ddd',
+				email: 'eee '
+			},
+                submitHandler: function () {
+                    var name = $('#formName').val();
                 var mail = $('#formMail').val();
                 var message = $('#formMessage').val();
+                    var language = "";
+                    var link = $(location).attr("href");
 
+                    if (link.indexOf('en-US')>=0) {
+                        language = "EN";
+                    } else {
+                        language = "TR";
+                    }
+				$.ajax({
+                    url: '@Url.Action("SendContact","Contact")',
+                    data: JSON.stringify({ "Name": name, "Email": mail, "Message": message, "Language": language }),
+					method: "POST",
+                    contentType: "application/json",
+                    success: function (response) {
+                        if (response.isSuccess) {
+                            $('#formName').val('');
+                        $('#formMail').val('');
+                        $('#formMessage').val('');
+
+                            $('#formUpdate').html('<div class="alert alert-primary" role="alert">'+response.message+'</div >')
+                        } else {
+                            $('#formUpdate').html('<div class="alert alert-danger" role="alert">'+response.message+'</div >')
+                        }
+					},
+					error: function(xhr,status,error) {
+						$('#formUpdate').html('<div class="alert alert-danger" role="alert">'+error+'</div >')
+					}
+				});
+			}
+		});
+
+            @*$('#btnSend').click(function () {
                 $.ajax({
                     url:'@Url.Action("SendContact","Contact")',
                     data: JSON.stringify( { "Name": name, "Email": mail, "Message": message }),
@@ -200,10 +241,10 @@
                         }
                     }
                 });
-            });
+            });*@
 
 
-            $.ajax({
+            @*$.ajax({
                 url: '@Url.Action("GetWorkTalents","Home")',
                 method:'GET',
                 dataType: 'json',
@@ -218,7 +259,7 @@
                 error: function () {
                     alert("Hata!");
                 }
-            });
+            });*@
 
         });
     </script>
