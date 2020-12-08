@@ -51,6 +51,22 @@
 </div>
 @await Component.InvokeAsync("Projects")
 <br />
+<div class="mytextdiv" id="Certificates">
+    <div class="mytexttitle">
+        @Localizer["CertificatesSeperator"] &nbsp;
+    </div>
+    <div class="divider"></div>
+</div>
+@await Component.InvokeAsync("Certificates")
+<br />
+<div class="mytextdiv" id="Events">
+    <div class="mytexttitle">
+        @Localizer["EventsSeperator"] &nbsp;
+    </div>
+    <div class="divider"></div>
+</div>
+@await Component.InvokeAsync("Events")
+<br />
 @await Component.InvokeAsync("PersonalTalents")
 <br />
 <div class="mytextdiv" id="Hobbies">
@@ -221,46 +237,6 @@
 				});
 			}
 		});
-
-            @*$('#btnSend').click(function () {
-                $.ajax({
-                    url:'@Url.Action("SendContact","Contact")',
-                    data: JSON.stringify( { "Name": name, "Email": mail, "Message": message }),
-                    method: "POST",
-                    contentType: "application/json",
-                    success: function (response) {
-                        $('#formName').val('');
-                        $('#formMail').val('');
-                        $('#formMessage').val('');
-
-                        if (response.isSuccess) {
-                            $('#formUpdate').html('<div class="alert alert-primary" role="alert">Mesajınız gönderildi!</div >')
-                        }
-                        else {
-                            $('#formUpdate').html('<div class="alert alert-danger" role="alert">Mesajınız gönderilirken hata oluştu!</div >')
-                        }
-                    }
-                });
-            });*@
-
-
-            @*$.ajax({
-                url: '@Url.Action("GetWorkTalents","Home")',
-                method:'GET',
-                dataType: 'json',
-                success: function (response) {
-                    if (response.isSuccess) {
-                        for (var i = 0; i < response.item.length; i++) {
-                            var data = response.item[i];
-                            $('#wtArea').append('<div id="gauge-' + data.name + '" class="gauge-container three revealer"><span id="' + data.rate + '">'+data.name+'</span></div>');
-                        }
-                    }
-                },
-                error: function () {
-                    alert("Hata!");
-                }
-            });*@
-
         });
     </script>
     <!--#endregion-->

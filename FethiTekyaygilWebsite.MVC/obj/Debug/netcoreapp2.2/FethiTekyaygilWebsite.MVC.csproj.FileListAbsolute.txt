@@ -282,3 +282,17 @@ C:\Users\Fethi\source\repos\FethiTekyaygil\FethiTekyaygilWebsite.MVC\obj\Debug\n
 C:\Users\Fethi\source\repos\FethiTekyaygil\FethiTekyaygilWebsite.MVC\obj\Debug\netcoreapp2.2\FethiTekyaygilWebsite.MVC.dll
 C:\Users\Fethi\source\repos\FethiTekyaygil\FethiTekyaygilWebsite.MVC\obj\Debug\netcoreapp2.2\FethiTekyaygilWebsite.MVC.pdb
 C:\Users\Fethi\source\repos\FethiTekyaygil\FethiTekyaygilWebsite.MVC\obj\Debug\netcoreapp2.2\FethiTekyaygilWebsite.MVC.csproj.CopyComplete
+C:\Users\Fethi\source\repos\FethiTekyaygil\FethiTekyaygilWebsite.MVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Certificates\_Certificates.cshtml.g.cs
+C:\Users\Fethi\source\repos\FethiTekyaygil\FethiTekyaygilWebsite.MVC\obj\Debug\netcoreapp2.2\FethiTekyaygilWebsite.MVC.resources.Views.Shared.Components.Certificates._Certificates.en-US.resources
+C:\Users\Fethi\source\repos\FethiTekyaygil\FethiTekyaygilWebsite.MVC\obj\Debug\netcoreapp2.2\FethiTekyaygilWebsite.MVC.resources.Views.Shared.Components.Certificates._Certificates.tr-TR.resources
+C:\Users\Fethi\source\repos\FethiTekyaygil\FethiTekyaygilWebsite.MVC\obj\Debug\netcoreapp2.2\FethiTekyaygilWebsite.MVC.resources.Views.Shared.Components.Events._Events.en-US.resources
+C:\Users\Fethi\source\repos\FethiTekyaygil\FethiTekyaygilWebsite.MVC\obj\Debug\netcoreapp2.2\FethiTekyaygilWebsite.MVC.resources.Views.Shared.Components.Events._Events.tr-TR.resources
+C:\Users\Fethi\source\repos\FethiTekyaygil\FethiTekyaygilWebsite.MVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Events\_Events.cshtml.g.cs
+C:\Users\Fethi\source\repos\FethiTekyaygil\FethiTekyaygilWebsite.MVC\obj\Debug\netcoreapp2.2\Razor\Views\Admin\Messages.cshtml.g.cs
+C:\Users\Fethi\source\repos\FethiTekyaygil\FethiTekyaygilWebsite.MVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\References\_References.cshtml.g.cs
+C:\Users\Fethi\source\repos\FethiTekyaygil\FethiTekyaygilWebsite.MVC\obj\Debug\netcoreapp2.2\FethiTekyaygilWebsite.MVC.csprojAssemblyReference.cache
+C:\Users\Fethi\source\repos\FethiTekyaygil\FethiTekyaygilWebsite.MVC\obj\Debug\netcoreapp2.2\FethiTekyaygilWebsite.MVC.resources.Views.Shared.Components.Streams.en-US.resources
+C:\Users\Fethi\source\repos\FethiTekyaygil\FethiTekyaygilWebsite.MVC\obj\Debug\netcoreapp2.2\FethiTekyaygilWebsite.MVC.resources.Views.Shared.Components.Streams.tr-TR.resources
+C:\Users\Fethi\source\repos\FethiTekyaygil\FethiTekyaygilWebsite.MVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Streams\_Streams.cshtml.g.cs
+C:\Users\Fethi\source\repos\FethiTekyaygil\FethiTekyaygilWebsite.MVC\obj\Debug\netcoreapp2.2\Razor\Views\Videos\Index.cshtml.g.cs
+C:\Users\Fethi\source\repos\FethiTekyaygil\FethiTekyaygilWebsite.MVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_VideoLayout.cshtml.g.cs

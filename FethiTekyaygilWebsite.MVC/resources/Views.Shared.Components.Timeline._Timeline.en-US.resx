@@ -121,10 +121,10 @@
     <value>Mahmutbey, Mahmutbey Dilmenler District Mahmutbey Campus No:26, 34218 Bağcılar/İstanbul</value>
   </data>
   <data name="AltinbasExplanation" xml:space="preserve">
-    <value>I started my university life with Kemerburgaz University Computer Engineering Department which I've won with 75% scholarship at 2014. During my education life at university which renamed as "Altınbaş" University, I've seen and experienced many vocatinal, social areas and had the chance of improving myself and my skills.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Vocational Lessons:&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; Relational Database Management Systems Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Software Engineering Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;C Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Java OOP Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Algorithms Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Operationg Systems Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Artificial Intelligence Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Web Services Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Web Technologies Course&lt;br/&gt;&lt;br/&gt;Projects:&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; NQueens Winforms Puzzle via using DFS Algorithm for Artificial Intelligence Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; TicTacToe Winforms game via using Min-Max Algorithm for Artificial Intelligence Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; Last Man Standing C# Console game for Artifical Intelligence Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; Shopping Site via using ASP.NET MVC and Entity Framework for Web Technologies Course&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; - For Design Project, A Student System that contains Forum, Grade Calculation and Screen Sharing features developed as ASP.NET MVC, WCF Service ans Winform Projects:&lt;br&gt;&lt;i class="fas fa-arrow-right" style="padding-left:10em"&gt;&lt;/i&gt;Entity Framework Code First, Generic Repository and Unit Of Work Patterns are used for database management operations.&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:10em"&gt;&lt;/i&gt;Bootstrap, JQuery, AJAX is used for front-end solutions &lt;br/&gt;</value>
+    <value>In 2014, I entered university life with Kemerburgaz University Computer Engineering department, which I won with 75% scholarship. In my school, which changed its name to Altınbaş University during my education life, I had the opportunity to develop myself in professional and social fields.&lt;br/&gt;&lt;br/&gt;Vocational Lessons:&lt;br/&gt;- Relational Database Management Systems Course&lt;br/&gt;- Software Engineering Course&lt;br/&gt;- C Course&lt;br/&gt;- Java OOP Course&lt;br/&gt;- Algorithms Course&lt;br/&gt;- Operationg Systems Course&lt;br/&gt;- Artificial Intelligence Course&lt;br/&gt;- Web Services Course&lt;br/&gt;- Web Technologies Course&lt;br/&gt;&lt;br/&gt;Projects:&lt;br/&gt;- NQueens Winforms application solved via using DFS Algorithm. (Artificial Intelligence Course)&lt;br/&gt;-TicTacToe Winforms application created by using Min - Max Algorithm. (Artificial Intelligence Course)&lt;br/&gt;- Last Man Standing C# Console App. (Artifical Intelligence Course)&lt;br/&gt;- Shopping Site via using ASP.NET MVC and Entity Framework. (Web Technologies Course)&lt;br/&gt; - Application for Graduation Project, including Forum, Live Chat, Screen Sharing and Note Calculator: &lt;br&gt;- Entity Framework Code First, Generic Repository and Unit Of Work Design Patterns are used in the database section.&lt;br/&gt;- Bootstrap, jQuery and AJAX technologies were used for front - end development. &lt;br/&gt;</value>
   </data>
   <data name="AltinbasPosition" xml:space="preserve">
-    <value>Computer Engineering Department Bachelor Student</value>
+    <value>Computer Engineering Department Undergraduate Student</value>
   </data>
   <data name="AltinbasTitle" xml:space="preserve">
     <value>Kemerburgaz / Altınbaş University</value>
@@ -133,7 +133,7 @@
     <value>Bahçeşehir 2. Section, Şelale District, Ata Street No 3/2, 34538 Başakşehir/İstanbul</value>
   </data>
   <data name="BAALExplanation" xml:space="preserve">
-    <value>Ath 12th grade, I continued my education life at Bahçeşehir Atatürk Anatolian High School</value>
+    <value>At 12th grade, I continued my education life at Bahçeşehir Atatürk Anatolian High School</value>
   </data>
   <data name="BAALPosition" xml:space="preserve">
     <value>High School Student</value>
@@ -145,22 +145,35 @@
     <value>Çobançeşme District Sanayi Street No: 48</value>
   </data>
   <data name="BahcelievlerExplanation" xml:space="preserve">
-    <value>During my intern at IT Department of Bahçelievler Municipality, I had the chance of developing Fuel Track Winforms and Number Guess projects using Entity Framework, DevExpress and SQL technologies.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Developing Number Guess Project using C# Console Application.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Patricipated ASP.NET MVC projects.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Developed Fuel Tracking projects using Entity Framework ve WinForms.</value>
+    <value>- Number guessing game was made with C # Console Application.&lt;br/&gt;- Patricipated ASP.NET MVC projects.&lt;br/&gt;- Developed Fuel Tracking project using Entity Framework and WinForms.</value>
   </data>
   <data name="BahceliEvlerPosition" xml:space="preserve">
-    <value>.NET Developer Intern</value>
+    <value>.NET Software Specialist Intern</value>
   </data>
   <data name="BahcelievlerTitle" xml:space="preserve">
     <value>Bahçelievler Municipality</value>
+  </data>
+  <data name="CicekSepetiAddress" xml:space="preserve">
+    <value>Esentepe District, Kore Şehitleri Street, No.16/1 Ground Floor 34394 Zincirlikuyu/İstanbul</value>
+  </data>
+  <data name="CicekSepetiExplanation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CicekSepetiPosition" xml:space="preserve">
+    <value>Junior Backend Developer</value>
+  </data>
+  <data name="CicekSepetiTitle" xml:space="preserve">
+    <value>ÇiçekSepeti Technology</value>
   </data>
   <data name="Continue" xml:space="preserve">
     <value>Still continue</value>
   </data>
   <data name="DeFactoExplanation" xml:space="preserve">
-    <value>In DeFacto, I am currently developing ASP.NET CORE and Angular projects to HR department.</value>
+    <value>- Software solutions were developed for HR department using Angular and ASP.NET CORE.&lt;br/&gt;
+- Python, Data Science and Artificial Intelligence educations were given.</value>
   </data>
   <data name="DeFactoPosition" xml:space="preserve">
-    <value>Junior .NET Specialist</value>
+    <value>Fullstack Software Specialist &amp; Internal Trainer</value>
   </data>
   <data name="DeFactoTitle" xml:space="preserve">
     <value>DeFacto Technology</value>
@@ -169,7 +182,7 @@
     <value>Esenkent, Enver Paşa District Onur Güvener Street No:1, 34510 Esenyurt/İstanbul</value>
   </data>
   <data name="EAIOExplanation" xml:space="preserve">
-    <value>I successfully graduated from Esenkent Atatürk Primary School which I transferred at the end of the first semester.&lt;br/&gt;&lt;b&gt;Gained Certificates:&lt;/b&gt;&lt;font color="red"&gt;&lt;i&gt;&lt;br/&gt; &lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; Honour Certificate at both of the semesters.&lt;/i&gt;&lt;/font&gt;</value>
+    <value>I successfully graduated from Esenkent Atatürk Primary School, which I passed towards the end of the first half of the 8th grade, and laid the foundations of high school life solidly.&lt;br/&gt;Earned Certificates:&lt;br/&gt;- Honour Certificate at both of the semesters.</value>
   </data>
   <data name="EAIOPosition" xml:space="preserve">
     <value>Primary School Student</value>
@@ -181,16 +194,16 @@
     <value>İçerenköy, Kartal Street No:19, 34752 Ataşehir/İstanbul</value>
   </data>
   <data name="GGSoftExplanation" xml:space="preserve">
-    <value>Participated development of Paperwork product and ASP.NET MVC projects in that company which develops software with .NET technologies&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Development of Paperwork product.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Font Viewer ASP.NET MVC projects.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Participated Paperwork product's conversion to Silverlight tp ASP.NET MVC.&lt;br/&gt;</value>
+    <value>- In the company that develops software with .NET technologies, ASP.NET MVC projects and its own software Paperwork product was developed.&lt;br/&gt;- Font Viewer application was made with ASP.NET MVC.&lt;br/&gt;- Participated in converting Paperwork product from Silverlight to MVC.&lt;br/&gt;</value>
   </data>
   <data name="GGSoftPosition" xml:space="preserve">
-    <value>.NET Developer</value>
+    <value>Junior .NET Software Specialist</value>
   </data>
   <data name="IdeconAddress" xml:space="preserve">
     <value>Oruç Reis District Tekstilkent Street No: 12 Koza Plaza A Blok Floor:14 Apartment: 51, 34235 Esenler</value>
   </data>
   <data name="IdeconExplanation" xml:space="preserve">
-    <value>I 've developed softwares by combining different technologies and set ups to servers at IDECON company which is a solution partner at Electronic Conversion Processes.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Developed Cashflow project using ASP.NET MVC Web API CORE and Dapper&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Developing "Expense" project that contains OCR reading and maching learning using Python Flask Framework, Google OCR and Spacy library.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Setting up and maintaining the eReconciliation and eStatement applications to our client companies' servers..&lt;br/&gt;</value>
+    <value>- Cash Flow project was developed using ASP.NET MVC Web API CORE and Dapper.&lt;br/&gt;- Using Python Flask Framework, Google OCR and Spacy library, OCR reading "Expense" application with machine learning was developed.&lt;br/&gt;- Reconciliation and Electronic Account Statement applications were installed and maintained on customer servers.&lt;br/&gt;</value>
   </data>
   <data name="IdeconPosition" xml:space="preserve">
     <value>Technology Consultant</value>
@@ -202,7 +215,7 @@
     <value>Teşvikiye, Vali Konağı Distinct Şakayık Street No:50, 34365 Şişli/İstanbul</value>
   </data>
   <data name="NHIOExplanation" xml:space="preserve">
-    <value>I started my education life at Nilüfer Hatun Primary School until first semester of 8th grade including the kidergarten.&lt;br/&gt;&lt;b&gt;Gained Certificates:&lt;/b&gt;&lt;i&gt;&lt;br/&gt; &lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; Participation certificate for attending 23th April National Sovereignty and Children's Day Event.&lt;br/&gt; &lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; Succession and participation certificate for school's social, educational and sportive events.&lt;br/&gt; &lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;)Participation certificate for reading contest named "10 Beautiful Piece".&lt;/i&gt;</value>
+    <value>I started my education life at Nilüfer Hatun Primary School until first semester of 8th grade including the kidergarten.&lt;br/&gt;&lt;b&gt;Gained Certificates:&lt;/b&gt;&lt;br/&gt;- Participation certificate for attending 23th April National Sovereignty and Children's Day Event.&lt;br/&gt; - Succession and participation certificate for school's social, educational and sportive events.&lt;br/&gt; - Participation certificate for reading contest named "10 Beautiful Piece".&lt;/i&gt;</value>
   </data>
   <data name="NHIOPosition" xml:space="preserve">
     <value>Primary School Student</value>
@@ -214,7 +227,7 @@
     <value>Esenkent, Talat Paşa District Yeşil Irmak Street No:1, 34510 Esenyurt/İstanbul</value>
   </data>
   <data name="OkyanusExplanation" xml:space="preserve">
-    <value>Okyanus College gave me the chance of improve myself at software and hardware areas and also give me friendships that is durable forever as the first school of my high school education&lt;br/&gt;&lt;b&gt;Gained Certificates:&lt;/b&gt;&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;2 Success Certificates.&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Participation certificate to the event of "Walking on the podium with the most model." which takes place at 26th May 2012 at Ora Arena.&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Participation certificate to English Drama Club&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Participation certificate to Computer Club&lt;br/&gt;</value>
+    <value>Okyanus College where I started my high school life, gave me the opportunity to develop myself in the field of software and hardware, as well as new and solid friendships.&lt;br/&gt;Earned Certificates:&lt;br/&gt;- 2 Success Certificates.&lt;br/&gt;- Certificate of participation in the "Guiness Record for the Podium with the Most Models" held at Ora Arena on 26 May 2012.&lt;br/&gt;- English Drama Club Participation Certificate.&lt;br/&gt;- Computer Participation Certificate.&lt;br/&gt;</value>
   </data>
   <data name="OkyanusPosition" xml:space="preserve">
     <value>High School Student</value>
@@ -226,9 +239,9 @@
     <value>İçerenköy, Karaman Çiftliği Street Göksuyu Business Center No:64 Floor:3 Apartment:3, 34752 Ataşehir/İstanbul</value>
   </data>
   <data name="PragmasoftExplanation" xml:space="preserve">
-    <value>During my intern at Pragmasoft company, I had the chance of developing ASP.NET MVC WebApi project to Samsung company.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Developed a contest application using ASP.NET MVC WebApi and Entity Framework. In that application, users gains participation chance to the contest when they upload the photo of Samsung products' invoices they bought from that new Samsung product or another Samsung product. After draw, gifts and promotions are given to the contestants.</value>
+    <value>- Contest application developed for Samsung using ASP.NET MVC WebApi and Entity Framework</value>
   </data>
   <data name="PragmasoftPosition" xml:space="preserve">
-    <value>.NET Developer Intern</value>
+    <value>.NET Software Specialist Intern</value>
   </data>
 </root>

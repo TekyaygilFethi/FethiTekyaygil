@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace FethiTekyaygilWebsite.MVC.ViewComponents
 {
     [ViewComponent]
+    [ResponseCache(Duration = 3600)]
     public class FollowMeViewComponent:ViewComponent
     {
         public IViewComponentResult Invoke()

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace FethiTekyaygilWebsite.MVC.ViewComponents
 {
     [ViewComponent]
+    [ResponseCache(Duration = 3600)]
     public class CVViewComponent:ViewComponent
     {
         public IViewComponentResult Invoke()

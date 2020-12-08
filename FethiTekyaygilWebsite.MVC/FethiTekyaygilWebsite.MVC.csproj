@@ -2,9 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
+    <NoWin32Manifest>true</NoWin32Manifest>
     <!--<AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>-->
 	<!--<PublishDir>$(OutDir)_PublishedWebsites\NetCoreWebApp\</PublishDir>-->
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\AdminController.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Remove="wwwroot\lib\timeline\index.html" />
@@ -42,6 +47,7 @@
 
 
   <ItemGroup>
+    <None Include="Controllers\AdminController.cs" />
     <None Include="wwwroot\Content\Media\Developer\fethi.JPG" />
     <None Include="wwwroot\Content\Media\Education\AU.jpg" />
     <None Include="wwwroot\Content\Media\Education\BAAL.JPG" />

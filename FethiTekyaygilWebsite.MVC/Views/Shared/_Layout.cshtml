@@ -1,13 +1,14 @@
 ﻿<!DOCTYPE html>
 <html scroll-behaviour="smooth" style="height:initial">
 <head>
-    <meta charset="utf-8" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Fethi Tekyaygil">
 
-    <meta name="keyword" content=".NET, .net, dotnet, core, c#, internet, dijitalleşme, dapper, entity framework, de facto, defacto,
+    <meta name="keyword" content="fethi, tekyaygil, fethi tekyaygil, Fethi Tekyaygil, FETHİ TEKYAYGİL, FETHİ, TEKYAYGİL, .NET, .net, dotnet, core, c#, internet, dijitalleşme, dapper, entity framework, de facto, defacto,
           ggsoft, idecon, python, sql, t-sql, mssql, pc, computer, bilgisayar, engineering, mühendislik, computer engineering, bilgisayar mühendisliği,  altinbas universitesi, nilufer hatun,
-          Büyük veri">
+          Büyük veri,yapay,zeka,YAPAY,ZEKA,yapay zeka, YAPAY ZEKA">
 
 
     <meta name="author" content="fethitekyaygil.com">
@@ -31,9 +32,9 @@
 </head>
 <body style="background-color:#e4e2e2">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow" style="background-color:#33b5e5">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow" style="background-color:#33b5e5;position:fixed;z-index:2000;width:100%">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img width="20%" src="@Url.Content("~/Content/Media/Navbar/navbar.ico")" alt="Fethi Tekyaygil" /></a>
+                <a class="navbar-brand" href="#"><img width="70%" src="https://res.cloudinary.com/dpzdg2rik/image/upload/v1605614629/samples/Navbar/navbar.png" alt="Fethi Tekyaygil" /></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -49,6 +50,12 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark text-center" href="#Projects">@Localizer["ProjectsSeperator"]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark text-center" href="#Certificates">@Localizer["CertificatesSeperator"]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark text-center" href="#Events">@Localizer["EventsSeperator"]</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark text-center" href="#Languages">@Localizer["LanguagesSeperator"]</a>
@@ -98,11 +105,11 @@
         @RenderBody()
     </div>
     <br />
-    <footer class="border-top footer text-muted" style="position:inherit">
+    @*<footer class="border-top footer text-muted" style="position:inherit;background-color: #33b5e5;">
         <div class="container">
             &copy; @DateTime.Now.Year - Fethi Tekyaygil
         </div>
-    </footer>
+    </footer>*@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/jquery-unobtrusive-ajax/jquery.unobtrusive-ajax.js" defer></script>

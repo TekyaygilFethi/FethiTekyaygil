@@ -1,5 +1,4 @@
-﻿
-using Dapper;
+﻿using Dapper;
 using FethiTekyaygilWebsite.MVC.Helpers.ConfigManager;
 using FethiTekyaygilWebsite.MVC.Model.RequestModel;
 using Microsoft.AspNetCore.Mvc;
@@ -34,6 +33,10 @@ namespace FethiTekyaygilWebsite.MVC.Controllers
                     catch (Exception ex)
                     {
                         return Json(new { IsSuccess = false, Message = ex.Message + " \nQuery: " + query });
+                    }
+                    finally
+                    {
+                        connObject.Close();
                     }
                 }
                 return Json(new { IsSuccess = true, Message = contactModel.Language == "EN" ? "Your messsage has been successfully sent!" : "Mesajınız başarıyla gönderildi!" });

@@ -121,7 +121,7 @@
     <value>Mahmutbey, Mahmutbey Dilmenler Caddesi Mahmutbey Yerleşkesi No:26, 34218 Bağcılar/İstanbul</value>
   </data>
   <data name="AltinbasExplanation" xml:space="preserve">
-    <value>2014 yılında %75 bursla kazandığım Kemerburgaz Üniversitesi Bilgisayar Mühendisliği bölümüyle beraber üniversite hayatına giriş yaptım. Eğitim hayatım süresince ismini Altınbaş Üniversitesi olarak değiştiren okulumda kendimi mesleki ve sosyal alanlarda geliştirme fırsatına eriştim.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Mesleki Dersler:&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;İlişkisel Veritabanı Dersi&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Yazılım Mühendisliği Dersi&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;C Dersi&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Java OOP Dersi&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Algoritmalar Dersi&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;İşletim Sistemleri Dersi&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Yapay Zeka Dersi&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Web Servisleri Dersi&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Web Teknolojileri Dersi&lt;br/&gt;&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Projeler:&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;DFS Algoritması kullanılarak çözülen NQueens Winforms uygulaması.(Yapay Zeka Dersi)&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Min - Max Algoritması kullanılarak oluşturulan TicTacToe Winforms uygulaması.(Yapay Zeka Dersi)&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Last Man Standing C# konsol uygulaması.(Yapay Zeka Dersi)&lt;/br&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;ASP.NET MVC ile geliştirilmiş Alışveriş Sitesi.(Web Teknolojileri Dersi)&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; Bitirme Projesi için, Forum, Canlı Chat, Ekran Paylaşımı ve Not Hesaplama özelliklerini içeren uygulama:&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:10em"&gt;&lt;/i&gt;Veritabanı için Entity Framework Code First teknolojisi kullanılırken, Generic Repository ve Unit Of Work Tasarımm Kalıpları kullanılmıştır.&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:10em"&gt;&lt;/i&gt;Front - end geliştirme için Bootstrap, jQuery ve AJAX teknolojileri kullanıldı.</value>
+    <value>2014 yılında %75 bursla kazandığım Kemerburgaz Üniversitesi Bilgisayar Mühendisliği bölümüyle beraber üniversite hayatına giriş yaptım. Eğitim hayatım süresince ismini Altınbaş Üniversitesi olarak değiştiren okulumda kendimi mesleki ve sosyal alanlarda geliştirme fırsatına eriştim.&lt;br/&gt;&lt;br/&gt; Mesleki Dersler:&lt;br/&gt;- İlişkisel Veritabanı Dersi&lt;br/&gt;- Yazılım Mühendisliği Dersi&lt;br/&gt;- C Dersi&lt;br/&gt;- Java OOP Dersi&lt;br/&gt;- Algoritmalar Dersi&lt;br/&gt;- İşletim Sistemleri Dersi&lt;br/&gt;- Yapay Zeka Dersi&lt;br/&gt;- Web Servisleri Dersi&lt;br/&gt;- Web Teknolojileri Dersi&lt;br/&gt;&lt;br/&gt;Projeler:&lt;br/&gt;- DFS Algoritması kullanılarak çözülen NQueens Winforms uygulaması. (Yapay Zeka Dersi)&lt;br/&gt;- Min - Max Algoritması kullanılarak oluşturulan TicTacToe Winforms uygulaması. (Yapay Zeka Dersi)&lt;br/&gt;- Last Man Standing C# konsol uygulaması. (Yapay Zeka Dersi)&lt;/br&gt;- ASP.NET MVC ile geliştirilmiş Alışveriş Sitesi. (Web Teknolojileri Dersi)&lt;br/&gt;- Bitirme Projesi için, Forum, Canlı Chat, Ekran Paylaşımı ve Not Hesaplama özelliklerini içeren uygulama:&lt;br/&gt;- Veritabanı kısmında Entity Framework Code First, Generic Repository ve Unit Of Work Tasarım Kalıpları kullanıldı.&lt;br/&gt;- Front - end geliştirme için Bootstrap, jQuery ve AJAX teknolojileri kullanıldı.</value>
   </data>
   <data name="AltinbasPosition" xml:space="preserve">
     <value>Bilgisayar Mühendisliği Departmanı Lisans Öğrencisi</value>
@@ -145,22 +145,35 @@
     <value>Çobançeşme Mahallesi Sanayi Caddesi No: 48</value>
   </data>
   <data name="BahcelievlerExplanation" xml:space="preserve">
-    <value>Bahçelievler Belediyesi Bilgi-İşlem bölümünde yaptığım staj boyunca Entity Framework, DevExpress ve SQL teknolojilerini kullanarak Yakıt Takip Winforms projesi ve Sayı Tahmin oyunu geliştirme fırsatına eriştim.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;C# Console Application projesiyle sayı tahmin oyunu yapımı.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;ASP.NET MVC projelerinde bulunuldu.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Entity Framework ve WinForms kullanılarak Yakıt Takip uygulaması geliştirildi.&lt;br/&gt;</value>
+    <value>- C# Console Application ile sayı tahmin oyunu yapıldı.&lt;br/&gt;- ASP.NET MVC projelerinde bulunuldu.&lt;br/&gt;- Entity Framework ve WinForms kullanılarak Yakıt Takip uygulaması geliştirildi.&lt;br/&gt;</value>
   </data>
   <data name="BahceliEvlerPosition" xml:space="preserve">
-    <value>.NET Geliştirici Stajyeri</value>
+    <value>.NET Yazılım Uzmanı Stajyeri</value>
   </data>
   <data name="BahcelievlerTitle" xml:space="preserve">
     <value>Bahçelievler Belediyesi</value>
+  </data>
+  <data name="CicekSepetiAddress" xml:space="preserve">
+    <value>Esentepe Mahallesi, Kore Şehitleri Caddesi, No.16/1 Zemin Kat 34394 Zincirlikuyu/İstanbul</value>
+  </data>
+  <data name="CicekSepetiExplanation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CicekSepetiPosition" xml:space="preserve">
+    <value>Junior Backend Geliştirici</value>
+  </data>
+  <data name="CicekSepetiTitle" xml:space="preserve">
+    <value>ÇiçekSepeti Teknoloji</value>
   </data>
   <data name="Continue" xml:space="preserve">
     <value>Devam Ediyor</value>
   </data>
   <data name="DeFactoExplanation" xml:space="preserve">
-    <value>DeFacto bünyesindeki IK departmanına Angular ve ASP.NET CORE kullanarak yazılımlar geliştirmekteyim.</value>
+    <value>- IK departmanına Angular ve ASP.NET CORE kullanarak yazılımlar geliştirildi.&lt;br/&gt;
+- Python, Veri Bilimi ve Yapay Zeka eğitimleri verildi.</value>
   </data>
   <data name="DeFactoPosition" xml:space="preserve">
-    <value>Junior .NET Uzmanı</value>
+    <value>Fullstack Yazılım Uzmanı &amp; İç Eğitmen</value>
   </data>
   <data name="DeFactoTitle" xml:space="preserve">
     <value>DeFacto Teknoloji</value>
@@ -169,7 +182,7 @@
     <value>Esenkent, Enver Paşa Caddesi Onur Güvener Sokak No:1, 34510 Esenyurt/İstanbul</value>
   </data>
   <data name="EAIOExplanation" xml:space="preserve">
-    <value>8.sınıfın ilk yarısının sonlarına doğru geçtiğim Esenkent Atatürk İlköğretim okulundan başarıyla mezun olup lise hayatının temellerini sağlam attım.&lt;br/&gt;&lt;b&gt;Aldığım Belgeler:&lt;/b&gt;&lt;font color="red"&gt;&lt;i&gt;&lt;br/&gt; &lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; İki dönemde de Onur Belgesi.&lt;/i&gt;&lt;/font&gt;</value>
+    <value>8.sınıfın ilk yarısının sonlarına doğru geçtiğim Esenkent Atatürk İlköğretim okulundan başarıyla mezun olup lise hayatının temellerini sağlam attım.&lt;br/&gt;Aldığım Belgeler:&lt;br/&gt; - İki dönemde de Onur Belgesi.</value>
   </data>
   <data name="EAIOPosition" xml:space="preserve">
     <value>İlköğretim Öğrencisi</value>
@@ -181,16 +194,16 @@
     <value>İçerenköy, Kartal Sokak No:19, 34752 Ataşehir/İstanbul</value>
   </data>
   <data name="GGSoftExplanation" xml:space="preserve">
-    <value>.NET teknolojileri ile yazılım geliştiren şirkette ASP.NET MVC projeleri ve kendi yazılımları olan Paperwork ürününün geliştirmesinde bulundum.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Paperwork ürününün geliştirilmesi.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Font görüntüleyici ASP.NET MVC uygulaması.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Paperwork ürününün Silverlight'tan MVC'ye çevrilmesinde katıda bulunuldu.&lt;br/&gt;</value>
+    <value>- .NET teknolojileri ile yazılım geliştiren şirkette ASP.NET MVC projeleri ve kendi yazılımları olan Paperwork ürününün geliştirmesinde bulunuldu. &lt;br/&gt;- ASP.NET MVC ile Font Görüntüleyici uygulaması yapıldı.&lt;br/&gt;- Paperwork ürününün Silverlight'tan MVC'ye çevrilmesinde katıda bulunuldu.&lt;br/&gt;</value>
   </data>
   <data name="GGSoftPosition" xml:space="preserve">
-    <value>.NET Geliştirici</value>
+    <value>Junior .NET Yazılım Uzmanı</value>
   </data>
   <data name="IdeconAddress" xml:space="preserve">
     <value>Oruç Reis Mahallesi Tekstilkent Caddesi No: 12 Koza Plaza A Blok Kat:14 Daire: 51, 34235 Esenler</value>
   </data>
   <data name="IdeconExplanation" xml:space="preserve">
-    <value>Elektronik Dönüşüm Süreçlerinde çözüm ortağı olan IDECON firmasında kurulumlar ve bir çok teknolojiyi harmanlayarak yazılım geliştirmeleri yapmaktayım.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;ASP.NET MVC Web API CORE ve Dapper kullanılarak Nakit Akışı projesinin geliştirilmesi.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Pyhton Flask Framework, Google OCR ve Spacy kütüphanesi kullanılarak makine öğrenmesi içeren OCR okumalı "Masraf" uygulaması geliştirilmesi&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Emutabakat ve Elektronik Hesap Özeti uygulamalarının müşteri sunuuclarında kurulumlarının ve bakımlarının yapılması.&lt;br/&gt;</value>
+    <value>- ASP.NET MVC Web API CORE ve Dapper kullanılarak Nakit Akışı projesi geliştirildi.&lt;br/&gt;- Python Flask Framework, Google OCR ve Spacy kütüphanesi kullanılarak makine öğrenmesi içeren OCR okumalı "Masraf" uygulaması geliştirildi.&lt;br/&gt;-  Emutabakat ve Elektronik Hesap Özeti uygulamalarının müşteri sunucularında kurulumları ve bakımları yapıldı.</value>
   </data>
   <data name="IdeconPosition" xml:space="preserve">
     <value>Teknoloji Danışmanı</value>
@@ -202,7 +215,7 @@
     <value>Teşvikiye, Vali Konağı Caddesi Şakayık Sokak No:50, 34365 Şişli/İstanbul</value>
   </data>
   <data name="NHIOExplanation" xml:space="preserve">
-    <value>Anaokulu dahil ilk 8.sınıfın ilk yarısı da dahil Nilüfer Hatun İlköğretim okulunda eğitim hayatıma başladım.&lt;br/&gt;&lt;b&gt;Aldığım Belgeler:&lt;/b&gt;&lt;i&gt;&lt;br/&gt; &lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; 23 Nisan Ulusal Egemenlik ve Çocuk Bayramı Etkinliğine Katılım Belgesi.&lt;br/&gt; &lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt; Okulun sosyal, eğitsel ve sportif etkinliklerinde gösterilen başarı ve sağlanılan katılım belgesi.&lt;br/&gt; &lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;"10 Güzel Eser" isimli kitap okuma yarışmasına katılım belgesi.&lt;/i&gt;</value>
+    <value>Anaokulu dahil ilk 8.sınıfın ilk yarısı da dahil Nilüfer Hatun İlköğretim okulunda eğitim hayatıma başladım.&lt;br/&gt;&lt;b&gt;Aldığım Belgeler:&lt;/b&gt;&lt;i&gt;&lt;br/&gt;- 23 Nisan Ulusal Egemenlik ve Çocuk Bayramı Etkinliğine Katılım Belgesi.&lt;br/&gt;- Okulun sosyal, eğitsel ve sportif etkinliklerinde gösterilen başarı ve sağlanılan katılım belgesi.&lt;br/&gt;- "10 Güzel Eser" isimli kitap okuma yarışmasına katılım belgesi.&lt;/i&gt;</value>
   </data>
   <data name="NHIOPosition" xml:space="preserve">
     <value>İlköğretim Öğrencisi</value>
@@ -214,7 +227,7 @@
     <value>Esenkent, Talat Paşa Caddesi Yeşil Irmak Sokak No:1, 34510 Esenyurt/İstanbul</value>
   </data>
   <data name="OkyanusExplanation" xml:space="preserve">
-    <value>Lise hayatım başladığım Okyanus Koleji bana hem kendimi yazılım ve donanım alanında geliştirebilme fırsatı hem de yeni ve temeli sağlam arkadaşlıklar kazandırdı.&lt;br/&gt;&lt;b&gt;Aldığım Belgeler:&lt;/b&gt;&lt;br /&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;2 adet Başarı Belgesi.&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;26 Mayıs 2012 tarihli Ora Arena'da gerçekleştirilen &lt;b&gt;"En Fazla Model İle Podyuma Çıkma Guiness Rekoru"&lt;/b&gt; etkinliğine katılım Belgesi.&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;İngilizce Drama Kulübü Katılım Belgesi.&lt;br/&gt;&lt;i class="fas fa-arrow-right" style="padding-left:5em"&gt;&lt;/i&gt;Bilgisayar Kulübü Katılım Belgesi.</value>
+    <value>Lise hayatım başladığım Okyanus Koleji bana hem kendimi yazılım ve donanım alanında geliştirebilme fırsatı hem de yeni ve temeli sağlam arkadaşlıklar kazandırdı.&lt;br/&gt;&lt;b&gt;Aldığım Belgeler:&lt;/b&gt;&lt;br /&gt;- 2 adet Başarı Belgesi.&lt;br/&gt;- 26 Mayıs 2012 tarihinde Ora Arena'da gerçekleştirilen &lt;b&gt;"En Fazla Model İle Podyuma Çıkma Guiness Rekoru"&lt;/b&gt; etkinliğine katılım Belgesi.&lt;br/&gt;- İngilizce Drama Kulübü Katılım Belgesi.&lt;br/&gt;- Bilgisayar Kulübü Katılım Belgesi.</value>
   </data>
   <data name="OkyanusPosition" xml:space="preserve">
     <value>Lise Öğrencisi</value>
@@ -226,9 +239,9 @@
     <value>İçerenköy, Karaman Çiftliği Caddesi Göksuyu İş Merkezi No:64 Kat:3 Daire:3, 34752 Ataşehir/İstanbul</value>
   </data>
   <data name="PragmasoftExplanation" xml:space="preserve">
-    <value>Pragmasoft şirketinde yaptığım staj boyunca Samsung şirketine ASP.NET MVC Web Api projesi yapma şansını elde ettim.&lt;br/&gt;&lt;i class="fas fa-arrow-right"&gt;&lt;/i&gt;Samsung için ASP.NET MVC WebApi ve Entity Framework kullanarak yarışma uygulaması geliştirildi. Uygulamada Samsung ürünleri alan kullanıcılar faturalarının resmini aldıkları cihaz veya herhangi bir Samsung cihazı üzerinden gönderdiklerinde çekilişe katılıyorlar. Çekiliş sonucunda ise hediyeler verilmektedir.</value>
+    <value>- Samsung için ASP.NET MVC WebApi ve Entity Framework kullanarak yarışma uygulaması geliştirildi</value>
   </data>
   <data name="PragmasoftPosition" xml:space="preserve">
-    <value>.NET Geliştirici Stajyeri</value>
+    <value>.NET Yazılım Uzmanı Stajyeri</value>
   </data>
 </root>

@@ -1,0 +1,137 @@
+﻿@{
+    Layout = null;
+    string KMMExplanation = Localizer["KMMExplanation"].Value;
+    string GAHPythonEducationExplanation = Localizer["GAHPythonEducationExplanation"].Value;
+    string BogaziciPanelExplanation = Localizer["BogaziciPanelExplanation"].Value;
+    string MindFusionExplanation = Localizer["MindFusionExplanation"].Value;
+    string BogaziciPythonEducationExplanation = Localizer["BogaziciPythonEducationExplanation"].Value;
+    string DSEEducationExplanation = Localizer["DSEEducationExplanation"].Value;
+    string DeFactoEducationExplanation = Localizer["DeFactoEducationExplanation"].Value;
+}
+
+<div class="shadow p-3 mb-5 bg-white rounded">
+    <section class="cd-h-timeline js-cd-h-timeline margin-bottom-md">
+        <div class="cd-h-timeline__container container" style="max-width:1430px">
+            <div class="cd-h-timeline__dates">
+                <div class="cd-h-timeline__line">
+                    <ol>
+                        <li><a href="#0" data-date="01/07/2020" class="cd-h-timeline__date">07/2020 - 07/2020</a></li> <!--Kaggle Master-->
+                        <li><a href="#0" data-date="01/08/2020" class="cd-h-timeline__date">08/2020 - 08/2020</a></li><!--GAH Python Eğitimi-->
+                        <li><a href="#0" data-date="01/09/2020" class="cd-h-timeline__date">09/2020 - 11/2020</a></li><!--DeFacto Python Eğitimi-->
+                        <li><a href="#0" data-date="01/11/2020" class="cd-h-timeline__date">11/2020 - 11/2020</a></li><!--Boğaziçi Panel-->
+                        <li><a href="#0" data-date="02/11/2020" class="cd-h-timeline__date">11/2020 - 11/2020</a></li><!--Mind Fusion-->
+                        <li><a href="#0" data-date="03/11/2020" class="cd-h-timeline__date">11/2020 - @Localizer["Continue"]</a></li><!--Mind Fusion-->
+                        <li><a href="#0" data-date="04/11/2020" class="cd-h-timeline__date cd-h-timeline__date--selected">11/2020 - @Localizer["Continue"]</a></li><!--Mind Fusion-->
+                        @*<li><a href="#0" data-date="30/11/2020" class="cd-h-timeline__date cd-h-timeline__date--selected">12/2020 - @Localizer["Continue"]</a></li>*@
+                    </ol>
+
+                    <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
+                </div>
+            </div>
+            <ul>
+                <li><a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--prev cd-h-timeline__navigation--inactive"> @Html.Raw("<") </a></li>
+                <li><a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--next">></a></li>
+            </ul>
+        </div>
+
+        <div class="cd-h-timeline__events">
+            <ol>
+                <li class="cd-h-timeline__event text-component">
+                    <div class="photo" style="display: flex;justify-content: center;align-items: center;">
+                        <div class="shadow p-3 mb-5 bg-white rounded" style="display:inline-block;"><img data-src="https://res.cloudinary.com/dpzdg2rik/image/upload/v1605609524/samples/Events/kmm.jpg" alt="@Localizer["KMMTitle"]" style="height:200px" /></div>
+                    </div>
+
+                    <div class="cd-h-timeline__event-content container">
+                        <h2 class="cd-h-timeline__event-title">@Localizer["KMMTitle"]</h2>
+                        <em class="cd-h-timeline__event-date">@Localizer["KMMPosition"]</em>
+                        <p class="cd-h-timeline__event-description color-contrast-medium">
+                            @Html.Raw(KMMExplanation)
+                        </p>
+                    </div>
+                </li>
+                <li class="cd-h-timeline__event text-component">
+                    <div class="photo" style="display: flex;justify-content: center;align-items: center;">
+                        <div class="shadow p-3 mb-5 bg-white rounded" style="display:inline-block;"><img data-src="https://res.cloudinary.com/dpzdg2rik/image/upload/v1605609524/samples/Events/gah.png" alt="@Localizer["GAHPythonEducationTitle"]" style="height:200px" /></div>
+                    </div>
+
+                    <div class="cd-h-timeline__event-content container">
+                        <h2 class="cd-h-timeline__event-title">@Localizer["GAHPythonEducationTitle"]</h2>
+                        <em class="cd-h-timeline__event-date">@Localizer["GAHPythonEducationPosition"]</em>
+                        <p class="cd-h-timeline__event-description color-contrast-medium">
+                            @Html.Raw(GAHPythonEducationExplanation)
+                        </p>
+                    </div>
+                </li>
+                <li class="cd-h-timeline__event text-component">
+                    <div class="photo" style="display: flex;justify-content: center;align-items: center;">
+                        <div class="shadow p-3 mb-5 bg-white rounded" style="display:inline-block;"><img data-src="https://res.cloudinary.com/dpzdg2rik/image/upload/v1605609570/samples/Experience/DeFacto.png" alt="@Localizer["DeFactoEducationTitle"]" style="height:200px" /></div>
+                    </div>
+                    <div class="cd-h-timeline__event-content container">
+                        <h2 class="cd-h-timeline__event-title">@Localizer["DeFactoEducationTitle"]</h2>
+                        <em class="cd-h-timeline__event-date">@Localizer["DeFactoEducationPosition"]</em>
+                        <p class="cd-h-timeline__event-description color-contrast-medium">
+
+                            @Html.Raw(DeFactoEducationExplanation)
+                        </p>
+                    </div>
+                </li>
+                <li class="cd-h-timeline__event text-component">
+                    <div class="photo" style="display: flex;justify-content: center;align-items: center;">
+                        <div class="shadow p-3 mb-5 bg-white rounded" style="display:inline-block;"> <img data-src="https://res.cloudinary.com/dpzdg2rik/image/upload/v1605609524/samples/Events/DataCamp.png" alt="@Localizer["BogaziciPanelTitle"]" style="height:200px;background-color:dodgerblue" /></div>
+                    </div>
+
+                    <div class="cd-h-timeline__event-content container">
+                        <h2 class="cd-h-timeline__event-title">@Localizer["BogaziciPanelTitle"]</h2>
+                        <em class="cd-h-timeline__event-date">@Localizer["BogaziciPanelPosition"]</em>
+                        <p class="cd-h-timeline__event-description color-contrast-medium">
+                            @Html.Raw(BogaziciPanelExplanation)
+                        </p>
+                    </div>
+                </li>
+                <li class="cd-h-timeline__event text-component">
+                    <div class="photo" style="display: flex;justify-content: center;align-items: center;">
+                        <div class="shadow p-3 mb-5 bg-white rounded" style="display:inline-block;"><img data-src="https://res.cloudinary.com/dpzdg2rik/image/upload/v1605609524/samples/Events/DSE.png" alt="@Localizer["MindFusionTitle"]" style="height:200px" /></div>
+                    </div>
+                    <div class="cd-h-timeline__event-content container">
+                        <h2 class="cd-h-timeline__event-title">@Localizer["MindFusionTitle"]</h2>
+                        <em class="cd-h-timeline__event-date">@Localizer["MindFusionPosition"]</em>
+                        <p class="cd-h-timeline__event-description color-contrast-medium">
+
+                            @Html.Raw(MindFusionExplanation)
+                        </p>
+                        @*<p class="lead">
+                            <a class="btn btn-info btn-lg text-white" href="https://verified.cv/en/verify/984496910777" target="_blank" role="button">@Localizer["GoToCertificate"]</a>
+                        </p>*@
+                    </div>
+                    </div>
+                </li>
+                <li class="cd-h-timeline__event text-component">
+                    <div class="photo" style="display: flex;justify-content: center;align-items: center;">
+                        <div class="shadow p-3 mb-5 bg-white rounded" style="display:inline-block;"><img data-src="https://res.cloudinary.com/dpzdg2rik/image/upload/v1605609524/samples/Events/bogazici.jpg" alt="@Localizer["BogaziciPythonEducationTitle"]" style="height:200px" /></div>
+                    </div>
+                    <div class="cd-h-timeline__event-content container">
+                        <h2 class="cd-h-timeline__event-title">@Localizer["BogaziciPythonEducationTitle"]</h2>
+                        <em class="cd-h-timeline__event-date">@Localizer["BogaziciPythonEducationPosition"]</em>
+                        <p class="cd-h-timeline__event-description color-contrast-medium">
+
+                            @Html.Raw(BogaziciPythonEducationExplanation)
+                        </p>
+                    </div>
+                </li>
+                <li class="cd-h-timeline__event cd-h-timeline__event--selected text-component">
+                    <div class="photo" style="display: flex;justify-content: center;align-items: center;">
+                        <div class="shadow p-3 mb-5 bg-white rounded" style="display:inline-block;"><img data-src="https://res.cloudinary.com/dpzdg2rik/image/upload/v1605609524/samples/Events/DSE.png" alt="@Localizer["DSEEducationTitle"]" style="height:200px" /></div>
+                    </div>
+                    <div class="cd-h-timeline__event-content container">
+                        <h2 class="cd-h-timeline__event-title">@Localizer["DSEEducationTitle"]</h2>
+                        <em class="cd-h-timeline__event-date">@Localizer["DSEEducationPosition"]</em>
+                        <p class="cd-h-timeline__event-description color-contrast-medium">
+
+                            @Html.Raw(DSEEducationExplanation)
+                        </p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+</div>

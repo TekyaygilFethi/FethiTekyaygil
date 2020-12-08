@@ -3,7 +3,7 @@
     string hSeperatorLocalized = Localizer["hGExplanation"].Value;
 }
 
-<div id="carouselExampleCaption" class="carousel slide" data-ride="carousel" data-interval="false" style="margin:0 auto">
+<div id="carouselExampleCaption" class="carousel slide" data-ride="carousel" data-interval="false" style="margin:0 auto;background-color:black">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleCaption" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleCaption" data-slide-to="1"></li>
@@ -14,89 +14,76 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img data-src=@Url.Content("\\Content\\Media\\AboutMe\\bg.jpg") class="d-block" alt="..." style="background-color:rgb(118, 112, 112);opacity:0;height:20%">
-            <div class="carousel-caption" style="color:black">
+            <img data-src="https://res.cloudinary.com/dpzdg2rik/image/upload/v1605609172/samples/AboutMe/bg.jpg" class="d-block w-75" alt="..." style="background-color:rgb(118, 112, 112);opacity:0;height:20%">
+            <div class="carousel-caption" style="color:wheat">
                 <h5 style="font-size:3vw;">@Html.Raw(hSeperatorLocalized)</h5>
             </div>
         </div>
 
         <div class="carousel-item">
-            <video class="d-block w-100 h-75" src="@Url.Content("\\Content\\Media\\AboutMe\\dmc5.mp4")" id="video" loop autoplay muted width="100%"></video>
+            <video class="d-block w-75" src="https://res.cloudinary.com/dpzdg2rik/video/upload/v1605609253/samples/AboutMe/DMC3.mp4" id="video" loop autoplay muted style="margin:auto" style="margin:auto"></video>
 
             <div class="carousel-caption" style="color:wheat">
                 <h5 style="font-size:3vw;"><u>@Localizer["h1Name"]</u></h5>
-                <p style="font-size:4vw">@Localizer["h1Explanation"]</p>
+                <p style="font-size:2vw">@Localizer["h1Explanation"]</p>
             </div>
         </div>
         <div class="carousel-item">
-            @*<div data-vide-bg="@Url.Content(hobby.VideoName)" data-vide-options="loop: true, muted: true, position: 100% 100%,resizing:true"></div>*@
-            @*<img src="..." class="d-block w-100" alt="...">*@
-            <video class="d-block w-100 h-75" src="@Url.Content("\\Content\\Media\\AboutMe\\music.mp4")" id="video" loop autoplay muted width="100%"></video>
+            @*<div data-vide-bg="@Url.Content(hobby.VideoName)" data-vide-options="loop: true, muted style="margin:auto": true, position: 100% 100%,resizing:true"></div>*@
+            @*<img src="..." class="d-block w-75 w-100" alt="...">*@
+            <video class="d-block w-75" src="https://res.cloudinary.com/dpzdg2rik/video/upload/v1605609178/samples/AboutMe/music.mp4" id="video" loop autoplay muted style="margin:auto" ></video>
 
             <div class="carousel-caption" style="color:wheat">
                 <h5 style="font-size:3vw;"><u>@Localizer["h2Name"]</u></h5>
-                <p style="font-size:4vw">@Localizer["h2Explanation"]</p>
+                <p style="font-size:2vw">@Localizer["h2Explanation"]</p>
             </div>
         </div>
         <div class="carousel-item">
-            @*<div data-vide-bg="@Url.Content(hobby.VideoName)" data-vide-options="loop: true, muted: true, position: 100% 100%,resizing:true"></div>*@
-            @*<img src="..." class="d-block w-100" alt="...">*@
-            <video class="d-block w-100 h-75" src="@Url.Content("\\Content\\Media\\AboutMe\\movie.mp4")" id="video" loop autoplay muted width="100%"></video>
+            @*<div data-vide-bg="@Url.Content(hobby.VideoName)" data-vide-options="loop: true, muted style="margin:auto": true, position: 100% 100%,resizing:true"></div>*@
+            @*<img src="..." class="d-block w-75 w-100" alt="...">*@
+            <video class="d-block w-75" src="https://res.cloudinary.com/dpzdg2rik/video/upload/v1605609194/samples/AboutMe/movie.mp4" id="video" loop autoplay muted style="margin:auto" ></video>
 
             <div class="carousel-caption" style="color:wheat">
                 <h5 style="font-size:3vw;"><u>@Localizer["h3Name"]</u></h5>
-                <p style="font-size:4vw">@Localizer["h3Explanation"]</p>
+                <p style="font-size:2vw">@Localizer["h3Explanation"]</p>
             </div>
         </div>
         <div class="carousel-item">
-            @*<div data-vide-bg="@Url.Content(hobby.VideoName)" data-vide-options="loop: true, muted: true, position: 100% 100%,resizing:true"></div>*@
-            @*<img src="..." class="d-block w-100" alt="...">*@
-            <video class="d-block w-100 h-75" src="@Url.Content("\\Content\\Media\\AboutMe\\book.mp4")" id="video" loop autoplay muted width="100%"></video>
+            @*<div data-vide-bg="@Url.Content(hobby.VideoName)" data-vide-options="loop: true, muted style="margin:auto": true, position: 100% 100%,resizing:true"></div>*@
+            @*<img src="..." class="d-block w-75 w-100" alt="...">*@
+            <video class="d-block w-75" src="https://res.cloudinary.com/dpzdg2rik/video/upload/v1605609178/samples/AboutMe/book.mp4" id="video" loop autoplay muted style="margin:auto" ></video>
 
             <div class="carousel-caption" style="color:wheat">
                 <h5 style="font-size:3vw;"><u>@Localizer["h4Name"]</u></h5>
-                <p style="font-size:4vw">@Localizer["h4Explanation"]</p>
+                <p style="font-size:2vw">@Localizer["h4Explanation"]</p>
             </div>
         </div>
         <div class="carousel-item">
-            @*<div data-vide-bg="@Url.Content(hobby.VideoName)" data-vide-options="loop: true, muted: true, position: 100% 100%,resizing:true"></div>*@
-            @*<img src="..." class="d-block w-100" alt="...">*@
-            <video class="d-block w-100 h-75" src="@Url.Content("\\Content\\Media\\AboutMe\\tiyatro.mp4")" id="video" loop autoplay muted width="100%"></video>
+            @*<div data-vide-bg="@Url.Content(hobby.VideoName)" data-vide-options="loop: true, muted style="margin:auto": true, position: 100% 100%,resizing:true"></div>*@
+            @*<img src="..." class="d-block w-75 w-100" alt="...">*@
+            <video class="d-block w-75" src="https://res.cloudinary.com/dpzdg2rik/video/upload/v1605609184/samples/AboutMe/tiyatro.mp4" id="video" loop autoplay muted style="margin:auto" ></video>
 
             <div class="carousel-caption" style="color:wheat">
                 <h5 style="font-size:3vw;"><u>@Localizer["h5Name"]</u></h5>
-                <p style="font-size:4vw">@Localizer["h5Explanation"]</p>
+                <p style="font-size:2vw">@Localizer["h5Explanation"]</p>
             </div>
         </div>
         <div class="carousel-item">
-            @*<div data-vide-bg="@Url.Content(hobby.VideoName)" data-vide-options="loop: true, muted: true, position: 100% 100%,resizing:true"></div>*@
-            @*<img src="..." class="d-block w-100" alt="...">*@
-            <video class="d-block w-100 h-75" src="@Url.Content("\\Content\\Media\\AboutMe\\dizi.mp4")" id="video" loop autoplay muted width="100%"></video>
+            @*<div data-vide-bg="@Url.Content(hobby.VideoName)" data-vide-options="loop: true, muted style="margin:auto": true, position: 100% 100%,resizing:true"></div>*@
+            @*<img src="..." class="d-block w-75 w-100" alt="...">*@
+            <video class="d-block w-75" src="https://res.cloudinary.com/dpzdg2rik/video/upload/v1605609176/samples/AboutMe/dizi.mp4" id="video" loop autoplay muted style="margin:auto" ></video>
 
             <div class="carousel-caption" style="color:wheat">
                 <h5 style="font-size:3vw;"><u>@Localizer["h6Name"]</u></h5>
-                <p style="font-size:4vw">@Localizer["h6Explanation"]</p>
+                <p style="font-size:2vw">@Localizer["h6Explanation"]</p>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaption" role="button" data-slide="prev">
+    <a class="carousel-control-prev" href="#carouselExampleCaption" role="button" data-slide="prev" style="width:5% !important">
         <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color:rgb(51, 181, 229);"></span>
         <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleCaption" role="button" data-slide="next">
+    <a class="carousel-control-next" href="#carouselExampleCaption" role="button" data-slide="next" style="width:5% !important">
         <span class="carousel-control-next-icon" aria-hidden="true" style="background-color:rgb(51, 181, 229);"></span>
         <span class="sr-only">Next</span>
     </a>

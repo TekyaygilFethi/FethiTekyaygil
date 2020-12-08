@@ -117,11 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CertificatesSeperator" xml:space="preserve">
+    <value>Sertifikalar &amp; Başarılar</value>
+  </data>
   <data name="ContactMeSeperator" xml:space="preserve">
     <value>Bana Ulaşın!</value>
   </data>
   <data name="DeveloperSeperator" xml:space="preserve">
     <value>Ben Kimim?</value>
+  </data>
+  <data name="EventsSeperator" xml:space="preserve">
+    <value>Etkinlikler</value>
   </data>
   <data name="FollowMeSeperator" xml:space="preserve">
     <value>Beni Takip Edin</value>
@@ -131,6 +137,9 @@
   </data>
   <data name="ProjectsSeperator" xml:space="preserve">
     <value>Projelerim</value>
+  </data>
+  <data name="StreamsSeperator" xml:space="preserve">
+    <value>Yayınlar</value>
   </data>
   <data name="SupportSeperator" xml:space="preserve">
     <value>Destek</value>
