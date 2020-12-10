@@ -141,6 +141,9 @@
   <data name="LanguagesSeperator" xml:space="preserve">
     <value>Dillerim</value>
   </data>
+  <data name="MyStreams" xml:space="preserve">
+    <value>Yayınlarım</value>
+  </data>
   <data name="ProjectsSeperator" xml:space="preserve">
     <value>Projelerim</value>
   </data>

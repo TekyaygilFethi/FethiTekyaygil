@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{ 
+    string broadcastLink = Context.Request.Path.Value.Contains("en-US") ? "/en-US/Videos":"/tr-TR/Videos";
+}
+
+<!DOCTYPE html>
 <html scroll-behaviour="smooth" style="height:initial">
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
@@ -20,12 +24,17 @@
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link href="~/lib/mdbootstrap/css/mdb.min.css" rel="stylesheet" />
         <link href="~/lib/mdbootstrap/css/style.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        @*<link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">*@
         <!--#endregion-->
         <!--#region HR Style-->
         <!--#endregion-->
 
         <link href="~/lib/hr/hr.css" rel="stylesheet" />
+        <style>
+            .nav-item .nav-link {
+                font-size:13px
+            }
+        </style>
         @RenderSection("Styles", required: false)
     </noscript>
 
@@ -34,7 +43,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow" style="background-color:#33b5e5;position:fixed;z-index:2000;width:100%">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img width="70%" src="https://res.cloudinary.com/dpzdg2rik/image/upload/v1605614629/samples/Navbar/navbar.png" alt="Fethi Tekyaygil" /></a>
+                <a class="navbar-brand" href="#"><img src="https://res.cloudinary.com/dpzdg2rik/image/upload/v1605614629/samples/Navbar/navbar.png" alt="Fethi Tekyaygil" /></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -80,6 +89,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark text-center" href="#CV">CV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark text-center" href="@broadcastLink">@Localizer["MyStreams"]</a>
                         </li>
                         <li>
                             <ul class="navbar-nav ml-auto">

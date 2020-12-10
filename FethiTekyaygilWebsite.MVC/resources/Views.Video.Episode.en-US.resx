@@ -117,43 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CertificatesSeperator" xml:space="preserve">
-    <value>Certificates &amp; Achievements</value>
-  </data>
-  <data name="CommunicationSkillsSeperator" xml:space="preserve">
-    <value>My Communication Skills</value>
-  </data>
-  <data name="ContactMeSeperator" xml:space="preserve">
-    <value>Contact Me</value>
-  </data>
-  <data name="DeveloperSeperator" xml:space="preserve">
-    <value>About Me</value>
-  </data>
-  <data name="EventsSeperator" xml:space="preserve">
-    <value>Events</value>
-  </data>
-  <data name="FollowMeSeperator" xml:space="preserve">
-    <value>Follow Me</value>
-  </data>
-  <data name="HobbiesSeperator" xml:space="preserve">
-    <value>My Hobbies</value>
-  </data>
-  <data name="LanguagesSeperator" xml:space="preserve">
-    <value>My Languages</value>
-  </data>
-  <data name="MyStreams" xml:space="preserve">
-    <value>My Streams</value>
-  </data>
-  <data name="ProjectsSeperator" xml:space="preserve">
-    <value>My Projects</value>
-  </data>
-  <data name="SupportSeperator" xml:space="preserve">
-    <value>Support</value>
-  </data>
-  <data name="TimelineSeperator" xml:space="preserve">
-    <value>Timeline</value>
-  </data>
-  <data name="WorkSkillsSeperator" xml:space="preserve">
-    <value>My Vocational Skills</value>
+  <data name="OtherEpisodes" xml:space="preserve">
+    <value>Other Episodes</value>
   </data>
 </root>
