@@ -1,8 +1,8 @@
 ﻿@model FethiTekyaygilWebsite.MVC.Model.VideoModels.EpisodeModel
+@using FethiTekyaygilWebsite.MVC.Helpers.UrlConfig
 @{
     Layout = "~/Views/Shared/_VideoLayout.cshtml";
     string prefix = Context.Request.Path.HasValue ? Context.Request.Path.Value.Substring(0, 6) : "tr-TR";
-    var chatUrl = "https://www.youtube.com/live_chat?v=" + Model.VideoUrl.Substring(Model.VideoUrl.LastIndexOf('/') + 1) + "&embed_domain=www.fethitekyaygil.com";
 }
 
 <br />
@@ -33,7 +33,7 @@
                                     <div class="row mx-n2 mb-7">
                                         <div class="col-md-6 px-2">
                                             <div class="product-image mb-2">
-                                                <a href="@prefix/Videos/AllVideos?ShowID=@Model.ShowID" class="d-inline-block position-relative stretched-link" tabindex="0">
+                                                <a href="@prefix/all-videos?ShowID=@Model.ShowID" class="d-inline-block position-relative stretched-link" tabindex="0">
                                                     <img class="img-fluid" src="@Model.ShowImageUrl" alt="Image Description">
                                                 </a>
                                             </div>
@@ -41,25 +41,12 @@
                                         <div class="col-md-6 px-2">
                                             <div>
                                                 <div class="product-meta font-size-12">
-                                                    <span><a href="@prefix/Videos/AllVideos?CommunityID=@Model.CommunityID" class="h-g-primary" tabindex="0">@Model.CommunityName</a></span>
+                                                    <span><a href="@prefix/all-videos?CommunityID=@Model.CommunityID" class="h-g-primary" tabindex="0">@Model.CommunityName</a></span>
                                                 </div>
                                                 <div class="product-title font-size-19 font-weight-bold mb-0">
-                                                    <a href="@prefix/Videos/AllVideos?ShowID=@Model.ShowID" tabindex="0" style="display:block">@Model.ShowName</a>
+                                                    <a href="@prefix/all-videos?ShowID=@Model.ShowID" tabindex="0" style="display:block">@Model.ShowName</a>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-content">
-                                    <div class="tab-pane fade show active" id="pills-one-code-features-example1" role="tabpanel" aria-labelledby="pills-one-code-features-example1-tab">
-                                        <h6 class="font-size-24 font-weight-medium text-white border-bottom mb-3 pb-2 border-gray-5800">@Localizer["Chat"]</h6>
-                                        <div class="font-size-1 mb-2">
-
-                                            <iframe width="300"
-                                                    height="400"
-                                                    src=@chatUrl>
-                                            </iframe>
-
                                         </div>
                                     </div>
                                 </div>
@@ -69,7 +56,7 @@
                                         @foreach (var otherEpisode in Model.OtherEpisodes)
                                         {<div class="font-size-1 mb-2">
 
-                                                <a href="@prefix/Videos/Episode?ID=@otherEpisode.EpisodeID" class="text-gray-1300 h-color-white">
+                                                <a href="@prefix/videos/@otherEpisode.EpisodeID/@Url.FriendlyUrl(otherEpisode.EpisodeName)" class="text-gray-1300 h-color-white">
                                                     <span>@otherEpisode.EpisodeName</span>
                                                 </a>
 

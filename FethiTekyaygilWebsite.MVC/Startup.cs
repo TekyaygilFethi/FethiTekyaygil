@@ -107,8 +107,33 @@ namespace FethiTekyaygilWebsite.MVC
                     subApp.UseMvc(mvcRoutes =>
                     {
                         mvcRoutes.MapRoute(
-                    name: "default",
-                    template: "{culture=tr-TR}/{controller=Home}/{action=Index}/{id?}");
+                            name: "default",
+                            template: "{culture=tr-TR}/{controller=Home}/{action=Index}/{id?}");
+
+                        mvcRoutes.MapRoute(
+                         name: "default2",
+                         template: "{culture=tr-TR}/homepage",
+                         defaults: new { controller = "Home", action = "Index" });
+
+                        mvcRoutes.MapRoute(
+                            name: "videoDefault",
+                            template: "{culture=tr-TR}/videos",
+                            defaults: new { controller = "Videos", action = "Index" });
+
+                        mvcRoutes.MapRoute(
+                        name: "episodeDefault",
+                            template: "{culture=tr-TR}/videos/{id}/{title}",
+                            defaults: new { controller = "Videos", action = "Episode" });
+
+                    //mvcRoutes.MapRoute(
+                    //       name: "episodeDefault",
+                    //       template: "{culture=tr-TR}/episode/{id}",
+                    //       defaults: new { controller = "Videos", action = "Episode" });
+
+                        mvcRoutes.MapRoute(
+                          name: "allEpisodeDefault",
+                          template: "{culture=tr-TR}/videos/all",
+                          defaults: new { controller = "Videos", action = "AllVideos" });
                     });
                 });
             });

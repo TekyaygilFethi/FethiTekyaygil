@@ -1,5 +1,5 @@
 ﻿@model FethiTekyaygilWebsite.MVC.Model.VideoModels.AllVideosModel
-
+@using FethiTekyaygilWebsite.MVC.Helpers.UrlConfig
 @{
     Layout = "~/Views/Shared/_VideoLayout.cshtml";
 
@@ -19,7 +19,7 @@
                 <div class="container px-md-6">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb dark font-size-1">
-                            <li class="breadcrumb-item"><a href="@prefix/Videos/Index" class="text-gray-1300">@Localizer["VideoIndex"]</a></li>
+                            <li class="breadcrumb-item"><a href="@prefix/videos" class="text-gray-1300">@Localizer["VideoIndex"]</a></li>
                             <li class="breadcrumb-item text-white active" aria-current="page">@Localizer["AllVideos"]</li>
                         </ol>
                     </nav>
@@ -28,7 +28,7 @@
                             <div class="w-md-352rem space-bottom-2">
                                 <div class="bg-gray-3100 px-3 pt-4 pb-6 mb-4">
                                     <div class="mx-1">
-                                        <form class="input-group input-group-merge mb-3 pb-1" action="@prefix/Videos/AllVideos">
+                                        <form class="input-group input-group-merge mb-3 pb-1" action="@prefix/videos/all">
                                             <input type="search" class="form-control font-size-1 font-secondary bg-gray-3800 border-gray-3800 rounded-0" name="Name" placeholder="Search..." aria-label="Search an app" aria-describedby="searchApp">
                                             <div class="input-group-append">
                                                 <button type="submit" style="background-color:transparent;border:0px">
@@ -46,7 +46,7 @@
                                                 @foreach (var community in Model.Communities)
                                                 {
                                                     <li class="pr-1 pb-1">
-                                                        <a class="h-bg-3 bg-gray-5100 d-flex align-items-center justify-content-center text-center" href="@prefix/Videos/AllVideos?CommunityID=@community.ID" style="height:6.212rem;width:6.250rem">
+                                                        <a class="h-bg-3 bg-gray-5100 d-flex align-items-center justify-content-center text-center" href="@prefix/videos/all?CommunityID=@community.ID" style="height:6.212rem;width:6.250rem">
                                                             <div class="text-lh-1">
                                                                 <div class="font-size-21 font-weight-semi-bold letter">@community.Name</div>
                                                             </div>
@@ -61,7 +61,7 @@
                                                 @foreach (var show in Model.Shows)
                                                 {
                                                     <li class="pr-1 pb-1">
-                                                        <a class="h-bg-3 bg-gray-5100 d-flex align-items-center justify-content-center text-center" href="@prefix/Videos/AllVideos?ShowID=@show.ID" style="height:6.212rem;width:6.250rem">
+                                                        <a class="h-bg-3 bg-gray-5100 d-flex align-items-center justify-content-center text-center" href="@prefix/videos/all?ShowID=@show.ID" style="height:6.212rem;width:6.250rem">
                                                             <div class="text-lh-1">
                                                                 <div class="font-size-21 font-weight-semi-bold letter">@show.Name</div>
                                                             </div>
@@ -92,16 +92,16 @@
                                                     <div class="col px-2">
                                                         <div class="product mb-4 mb-md-0 ">
                                                             <div class="product-image mb-2">
-                                                                <a class="d-block position-relative stretched-link" href="@prefix/Videos/Episode?ID=@episode.ID">
+                                                                <a class="d-block position-relative stretched-link" href="@prefix/videos/@episode.ID/@Url.FriendlyUrl(episode.Name)">
                                                                     <img class="img-fluid" src="@episode.ThumbnailUrl" alt="@episode.Name" style="width:183px;height:77px">
                                                                 </a>
                                                             </div>
                                                             <div class="product-meta font-size-12">
-                                                                <span><a href="@prefix/Videos/AllVideos?CommunityID=@episode.CommunityID" class="h-g-primary" tabindex="0">@episode.CommunityName</a></span>
-                                                                <span><a href="@prefix/Videos/AllVideos?showID=@episode.ShowID" class="h-g-primary" tabindex="0">@episode.ShowName</a></span>
+                                                                <span><a href="@prefix/videos/all?CommunityID=@episode.CommunityID" class="h-g-primary" tabindex="0">@episode.CommunityName</a></span>
+                                                                <span><a href="@prefix/videos/all?showID=@episode.ShowID" class="h-g-primary" tabindex="0">@episode.ShowName</a></span>
                                                             </div>
                                                             <h6 class="font-size-1 font-weight-bold mb-0 product-title d-inline-block">
-                                                                <a href="@prefix/Videos/Episode?ID=@episode.ID">@episode.Name</a>
+                                                                <a href="@prefix/videos/@episode.ID/@Url.FriendlyUrl(episode.Name)">@episode.Name</a>
                                                             </h6>
                                                         </div>
                                                     </div>
@@ -123,7 +123,7 @@
                                             @if (Model.Episodes.Count() > 20)
                                             {
                                                 <li class="page-item">
-                                                    <a class="page-link" href="@prefix/Videos/AllVideos?Page=@nextPage">Next Page<i class="fas fa-long-arrow-alt-right ml-2 font-size-11"></i></a>
+                                                    <a class="page-link" href="@prefix/videos/all?Page=@nextPage">Next Page<i class="fas fa-long-arrow-alt-right ml-2 font-size-11"></i></a>
                                                 </li>
                                             }
                                         </ul>

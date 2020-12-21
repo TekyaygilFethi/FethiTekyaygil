@@ -86,7 +86,7 @@ namespace FethiTekyaygilWebsite.MVC.Controllers
             return View(vim);
         }
 
-        public IActionResult Episode(int id)
+        public IActionResult Episode(string title,int id)
         {
             EpisodeModel em = null;
             using (var connObject = new SqlConnection(configuration.GetConnectionString("MsSQL")))
