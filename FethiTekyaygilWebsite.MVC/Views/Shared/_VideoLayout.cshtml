@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{ 
+    string prefix = Context.Request.Path.HasValue ? Context.Request.Path.Value.Substring(0, 6) : "tr-TR";
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -10,24 +14,28 @@
 
     <script defer>document.getElementsByTagName("html")[0].className += " js";</script>
     <noscript id="deferred-styles">
-        <link rel="shortcut icon" href="~/lib/videotemplate/favicon.ico">
+        <link rel="shortcut icon" href="~/favicon.ico">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="~/lib/videotemplate/assets/vendor/font-awesome/css/all.min.css">
         <link rel="stylesheet" href="~/lib/videotemplate/assets/vendor/slick-carousel/slick/slick.css">
-        <link rel="stylesheet" href="~/lib/videotemplate/assets/css/theme.css">
         <link href="~/lib/hr/hr.css" rel="stylesheet" />
+        <link rel="stylesheet" href="~/lib/videotemplate/assets/css/theme.css">
         <link rel="stylesheet" href="~/lib/videotemplate/assets/vendor/font-awesome/css/all.min.css">
         <link rel="stylesheet" href="~/lib/videotemplate/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
-
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <style>
             .nav-link-toggle::after {
                 content: none;
+            }
+
+            a:hover {
+                color: white !important;
             }
         </style>
         @RenderSection("Styles", required: false)
     </noscript>
 </head>
-<body>
+<body style="background-color:#e4e2e2">
     <header id="header" class="header left-aligned-navbar"
             data-hs-header-options='{
       "fixMoment": 1000,
@@ -72,7 +80,7 @@
                     </div>
                     <!-- End Unfold (Sidebar) -->
                     <!-- Logo -->
-                    <a class="navbar-brand w-auto mr-xl-5 mr-wd-8" href="@Url.Action("Index","Videos")" aria-label="Vodi">
+                    <a class="navbar-brand w-auto mr-xl-5 mr-wd-8" href="@prefix/Videos/Index" aria-label="Vodi">
                         <img width="70%" src="https://res.cloudinary.com/dpzdg2rik/image/upload/v1605614629/samples/Navbar/navbar.png" alt="Fethi Tekyaygil" />
                     </a>
                     <!-- End Logo -->
@@ -82,28 +90,12 @@
                             <ul class="navbar-nav">
                                 <!-- Pages -->
                                 <li class="navbar-nav-item">
-                                    <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle font-secondary" href="@Url.Action("Index","Home")" aria-labelledby="pagesSubMenu">@Localizer["ReturnToMainPage"]</a>
+                                    <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle font-secondary" href="@prefix/Home/Index" aria-labelledby="pagesSubMenu">@Localizer["ReturnToMainPage"]</a>
                                 </li>
 
                                 <li class="navbar-nav-item">
-                                    <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle font-secondary" href="@Url.Action("AllVideos","Videos")" aria-labelledby="pagesSubMenu">@Localizer["AllVideos"]</a>
+                                    <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle font-secondary" href="@prefix/Videos/AllVideos" aria-labelledby="pagesSubMenu">@Localizer["AllVideos"]</a>
                                 </li>
-
-                                @*<li>
-                                        <ul class="navbar-nav ml-auto">
-                                            <li class="nav-item">
-                                                <div class="dropdown" align="right">
-                                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display:contents">
-                                                        <img src=@Url.Content("/Content/Media/Language/"+(Context.Request.Path.Value.Contains("en-US")?"EN.png":"TR.png")) alt="lang" />
-                                                    </button>
-                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                        <a class="dropdown-item text-center" id="TRLang"><img class="lng" src=@Url.Content("/Content/Media/Language/TR.png") alt="tr" /></a>
-                                                        <a class="dropdown-item text-center" id="ENLang"><img class="lng" src=@Url.Content("/Content/Media/Language/EN.png") alt="en" /></a>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>*@
                                 <!-- End Pages -->
                             </ul>
                         </div>
@@ -111,23 +103,23 @@
                     <!-- End Navigation -->
 
                     <div class="d-flex align-items-center ml-auto">
-                        <form class="d-none d-xl-block">
-                            <label class="sr-only" for="searchproduct">Search</label>
-                            <div class="input-group">
-                                <input type="email" class="search-form-control form-control py-2 pl-4 min-width-250 rounded-pill" name="email" id="searchproduct-item" placeholder="Search..." aria-label="Search..." aria-describedby="searchProduct1" required="">
+                        <label class="sr-only" for="searchproduct">Search</label>
+                        <div class="input-group">
+                            <form action="@prefix/Videos/AllVideos">
+                                <input class="search-form-control form-control py-2 pl-4 min-width-250 rounded-pill" name="Name" id="searchproduct-item" placeholder="Search..." aria-label="Search..." aria-describedby="searchProduct1" required="">
                                 <div class="input-group-append position-absolute top-0 bottom-0 right-0  z-index-4">
-                                    <button class="d-flex py-2 px-3 border-0 bg-transparent align-items-center" type="button" id="searchProduct1">
+                                    <button class="d-flex py-2 px-3 border-0 bg-transparent align-items-center" type="submit" id="searchProduct1">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" style="fill: #656565;">
                                             <path d="M7 0C11-0.1 13.4 2.1 14.6 4.9 15.5 7.1 14.9 9.8 13.9 11.4 13.7 11.7 13.6 12 13.3 12.2 13.4 12.5 14.2 13.1 14.4 13.4 15.4 14.3 16.3 15.2 17.2 16.1 17.5 16.4 18.2 16.9 18 17.5 17.9 17.6 17.9 17.7 17.8 17.8 17.2 18.3 16.7 17.8 16.4 17.4 15.4 16.4 14.3 15.4 13.3 14.3 13 14.1 12.8 13.8 12.5 13.6 12.4 13.5 12.3 13.3 12.2 13.3 12 13.4 11.5 13.8 11.3 14 10.7 14.4 9.9 14.6 9.2 14.8 8.9 14.9 8.6 14.9 8.3 14.9 8 15 7.4 15.1 7.1 15 6.3 14.8 5.6 14.8 4.9 14.5 2.7 13.6 1.1 12.1 0.4 9.7 0 8.7-0.2 7.1 0.2 6 0.3 5.3 0.5 4.6 0.9 4 1.8 2.4 3 1.3 4.7 0.5 5.2 0.3 5.7 0.2 6.3 0.1 6.5 0 6.8 0.1 7 0ZM7.3 1.5C7.1 1.6 6.8 1.5 6.7 1.5 6.2 1.6 5.8 1.7 5.4 1.9 3.7 2.5 2.6 3.7 1.9 5.4 1.7 5.8 1.7 6.2 1.6 6.6 1.4 7.4 1.6 8.5 1.8 9.1 2.4 11.1 3.5 12.3 5.3 13 5.9 13.3 6.6 13.5 7.5 13.5 7.7 13.5 7.9 13.5 8.1 13.5 8.6 13.4 9.1 13.3 9.6 13.1 11.2 12.5 12.4 11.4 13.1 9.8 13.6 8.5 13.6 6.6 13.1 5.3 12.2 3.1 10.4 1.5 7.3 1.5Z"></path>
                                         </svg>
                                     </button>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
+
                         <div class="d-inline-flex ml-md-5">
                             <ul class="d-flex list-unstyled mb-0 align-items-center">
                                 <li class="col d-xl-none position-static px-2">
-                                    <!-- Search -->
                                     <div class="hs-unfold mr-2 position-static">
                                         <a class="js-hs-unfold-invoker btn btn-icon btn-ghost-secondary" href="javascript:;"
                                            data-hs-unfold-options='{
@@ -142,7 +134,7 @@
 
                                         <div id="searchClassic" class="hs-unfold-content dropdown-menu w-100 border-0 rounded-0 px-3 mt-0 right-0 left-0 mt-n2">
                                             <form class="input-group input-group-sm input-group-merge">
-                                                <input type="text" class="form-control search-form-control rounded-pill" placeholder="Search..." aria-label="Search...">
+                                                <input type="text" class="form-control search-form-control rounded-pill" placeholder="Search..." aria-label="Search..." id="search">
                                                 <div class="input-group-append">
                                                     <button type="button" class="btn">
                                                         <i class="fas fa-search"></i>
@@ -151,20 +143,23 @@
                                             </form>
                                         </div>
                                     </div>
-                                    <!-- End Search -->
                                 </li>
 
                             </ul>
                         </div>
                     </div>
+
+
+
+
                     <div class="d-flex align-items-center ml-auto">
                         <div class="dropdown" align="right">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display:contents">
                                 <img src=@Url.Content("/Content/Media/Language/"+(Context.Request.Path.Value.Contains("en-US")?"EN.png":"TR.png")) alt="lang" />
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item text-center" id="TRLang"><img class="lng" src=@Url.Content("/Content/Media/Language/TR.png") alt="tr" /></a>
-                                <a class="dropdown-item text-center" id="ENLang"><img class="lng" src=@Url.Content("/Content/Media/Language/EN.png") alt="en" /></a>
+                                <a class="dropdown-item text-center hovered" id="TRLang"><img class="lng" src=@Url.Content("/Content/Media/Language/TR.png") alt="tr" /></a>
+                                <a class="dropdown-item text-center hovered" id="ENLang"><img class="lng" src=@Url.Content("/Content/Media/Language/EN.png") alt="en" /></a>
                             </div>
                         </div>
                     </div>
@@ -174,7 +169,9 @@
         </div>
     </header>
 
-    @RenderBody()
+    <div class="container-fluid" id="body">
+        @RenderBody()
+    </div>
 
     <footer class="">
         <div style="background-color:#33b5e5">
@@ -188,7 +185,11 @@
         </div>
     </footer>
 
-    <script src="~/lib/videotemplate/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"defer></script>
+    <script src="~/lib/jquery-unobtrusive-ajax/jquery.unobtrusive-ajax.js" defer></script>
+
+    @*<script src="~/lib/videotemplate/assets/vendor/jquery/dist/jquery.min.js"></script>*@
     <script src="~/lib/videotemplate/assets/vendor/jquery-migrate/dist/jquery-migrate.min.js" defer></script>
     <script src="~/lib/videotemplate/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" defer></script>
@@ -201,6 +202,10 @@
     <script src="~/lib/videotemplate/assets/vendor/hs-unfold/dist/hs-unfold.min.js" defer></script>
     <script src="~/lib/videotemplate/assets/vendor/hs-header/dist/hs-header.min.js" defer></script>
     <script src="~/lib/videotemplate/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js" defer></script>
+
+    @*<script src="https://code.jquery.com/jquery-1.12.4.js" defer></script>*@
+    @*<script src="~/lib/jquery-unobtrusive-ajax/jquery.unobtrusive-ajax.js" defer></script>*@
+
 
     <script>
         $(document).on('ready', function () {
@@ -220,14 +225,35 @@
 
                 // initialization of unfold
                 var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
+
+
+
             });
+
+            $(function () {
+
+                $.ajax({
+                    url: '@Url.Action("GetAvailableCompleteNames","Videos")',
+					method: "GET",
+                    contentType: "application/json",
+                    success: function (response) {
+                        if (response.isSuccess) {
+                            
+                            $('#searchproduct-item').autocomplete({
+                                source: response.data
+                            })
+                        }
+					}
+				});
+
+
+                
+            })
 
 
             $('#TRLang').click(function () {
                 if (!window.location.pathname.includes("tr-TR")) {
-                    var winloc = window.location.origin + "/tr-TR" + window.location.pathname;
-                    winloc.replace('/en-US', '')
-                    window.location.replace(winloc);
+                    window.location = window.location.origin + "/tr-TR/" + (window.location.pathname.replace('/en-US/', '').replace('/tr-TR/', ''));
                     //window.location.href = window.location.origin + "/tr-TR";
                 }
                 else {
@@ -237,14 +263,13 @@
 
             $('#ENLang').click(function () {
                 if (!window.location.pathname.includes("en-US")) {
-                    var winloc = window.location.origin + "/en-US" + window.location.pathname;
-                    winloc.replace('/tr-TR', '')
-                    window.location.replace(winloc);
+                    window.location = window.location.origin + "/en-US/" + (window.location.pathname.replace('/en-US/', '').replace('/tr-TR/', ''));
                 } else {
                     alert("You've already chosen a selected language!");
 
                 }
             });
+
 
         })
 

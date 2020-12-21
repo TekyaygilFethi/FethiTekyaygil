@@ -1,6 +1,10 @@
 ﻿@model List<FethiTekyaygilWebsite.MVC.Model.POCO.Contact>
 @{
     Layout = null;
+
+    string prefix = Context.Request.Path.HasValue ? Context.Request.Path.Value.Substring(0, 6) : "tr-TR";
+    int currentPage = int.Parse(ViewData["CurrentPage"].ToString()) + 1;
+
 }
 
 <!DOCTYPE html>
@@ -15,25 +19,35 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-sm-6">
-                <div class="input-group mb-3">
-                    @*@Html.BeginForm("Filter", "Admin", FormMethod.Post){*@
-                    <input type="text" id="filterArea" class="form-control" placeholder="Filter" aria-label="Filter" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <a class="btn btn-outline-secondary" role="button" id="btnSearch">Search</a>
+                <form action="@Url.Action("Messages","Admin")" method="get">
+                    <div class="input-group mb-3">
+                        <input type="text" id="filterArea" class="form-control" placeholder="Filter" aria-label="Filter" name="filterText" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" role="button" type="submit" id="btnSearch">Search</button>
+                        </div>
+                        <input type="hidden" name="page" value="@currentPage" />
                     </div>
-
-                </div>
+                </form>
             </div>
             <div class="col-sm-6  pl-5">
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Page
+                        @currentPage
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         @for (int i = 0; i <= Model.Count() / 10; i++)
                         {
-                            i += 1;
-                            <a class="dropdown-item" href="@Url.Action("ChangePage", "Admin", new { page = i })">@i</a>
+                            int pageVis = i + 1;
+
+                            if (i != int.Parse(ViewData["CurrentPage"].ToString()))
+                            {
+
+                                <a class="dropdown-item" href="@prefix/Messages?page=@i">@pageVis</a>
+                            }
+                            else
+                            {
+                                <a class="dropdown-item">@pageVis</a>
+                            }
                         }
                     </div>
                 </div>

@@ -14,7 +14,7 @@
         speed: 75,               // typing speed (ms) [default:75]
         speed_vary: true,       // 'human like' speed variation [default:false]
 
-        beep: true,              // beep while typing (Web Audio API) [default:false]
+        beep: false,              // beep while typing (Web Audio API) [default:false]
 
         mistype: false,          // mistype rate: 1:N per char [default:false]
         locale: 'en',            // keyboard layout (to fit mistype); supported: 'en' (english) or 'de' (german) [default:'en']
@@ -43,7 +43,7 @@
         speed: 90,               // typing speed (ms) [default:75]
         speed_vary: false,       // 'human like' speed variation [default:false]
 
-        beep: true,              // beep while typing (Web Audio API) [default:false]
+        beep: false,              // beep while typing (Web Audio API) [default:false]
 
         mistype: false,          // mistype rate: 1:N per char [default:false]
         locale: 'en',            // keyboard layout (to fit mistype); supported: 'en' (english) or 'de' (german) [default:'en']

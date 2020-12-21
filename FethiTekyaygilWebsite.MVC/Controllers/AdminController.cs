@@ -28,10 +28,12 @@ namespace FethiTekyaygilWebsite.MVC.Controllers
             .Build();
         }
 
-        [AdminFilter]
+        //[AdminFilter]
+        [Microsoft.AspNetCore.Authorization.Authorize]
         [Route("Messages")]
         public IActionResult Messages(string filterText = null, int page = 0)
         {
+            ViewData["CurrentPage"] = page;
             var list = GetContacts(filterText, page);
 
             return View(list);
@@ -43,7 +45,14 @@ namespace FethiTekyaygilWebsite.MVC.Controllers
 
             using (var connObject = new SqlConnection(configuration.GetConnectionString("MsSQL")))
             {
-                string query = $"SELECT * FROM ContactTable ORDER BY SendDate DESC";
+                string query = $"SELECT * FROM ContactTable";
+
+                if (filterText != null)
+                {
+                    page = 0;
+                    query += " WHERE Email LIKE '%" + filterText + "%' OR Message LIKE '%" + filterText + "%' OR Name LIKE '%" + filterText + "%' OR SendDate LIKE '%" + filterText + "%'";
+                }
+                 query+=$" ORDER BY SendDate DESC OFFSET {page*10} ROWS FETCH NEXT {10} ROWS ONLY";
 
                 connObject.Open();
 
@@ -99,19 +108,18 @@ namespace FethiTekyaygilWebsite.MVC.Controllers
                 }
             }
             return null;
-            //return Json(new { redirectToUrl = Url.Action("Messages", "Admin") });
         }
 
 
         [Route("LoginPage")]
         public IActionResult LoginPage()
         {
-
+            return View();
         }
 
 
         [Route("Login"), HttpPost]
-        public async Task<JsonResult> Login([FromBody]LoginModel loginModel)
+        public async Task<IActionResult> Login(LoginModel loginModel)
         {
             if (ModelState.IsValid)
             {
@@ -152,10 +160,10 @@ namespace FethiTekyaygilWebsite.MVC.Controllers
 
                                     ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
 
-                                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+                                    await HttpContext.SignInAsync(principal);
 
 
-                                    return Json(new { IsSuccess = true });
+                                    return RedirectToAction("Messages");
                                     //userID = (string)reader[0];
                                 }
                             }
@@ -163,7 +171,7 @@ namespace FethiTekyaygilWebsite.MVC.Controllers
                     }
                     catch (Exception ex)
                     {
-                        return Json(new { IsSuccess = false, Message = ex.Message + " \nQuery: " + query });
+                        return RedirectToAction("Error","Home");
                     }
                     finally
                     {

@@ -93,14 +93,6 @@
 </div>
 @await Component.InvokeAsync("FollowMe")
 <br />
-<div class="mytextdiv" id="Support">
-    <div class="mytexttitle">
-        @Localizer["SupportSeperator"] &nbsp;
-    </div>
-    <div class="divider"></div>
-</div>
-@await Component.InvokeAsync("Support")
-<br />
 <div class="mytextdiv" id="CV">
     <div class="mytexttitle">
         CV&nbsp;
@@ -108,6 +100,15 @@
     <div class="divider"></div>
 </div>
 @await Component.InvokeAsync("CV")
+<br />
+<div class="mytextdiv" id="Support">
+    <div class="mytexttitle">
+        @Localizer["SupportSeperator"] &nbsp;
+    </div>
+    <div class="divider"></div>
+</div>
+@await Component.InvokeAsync("Support")
+
 
 
 @section Scripts
@@ -167,7 +168,7 @@
 
             $('#TRLang').click(function () {
                 if (!window.location.pathname.includes("tr-TR")) {
-                    window.location.replace(window.location.origin + "/tr-TR");
+                    window.location = window.location.origin + "/tr-TR/";
                     //window.location.href = window.location.origin + "/tr-TR";
                 }
                 else {
@@ -177,7 +178,7 @@
 
             $('#ENLang').click(function () {
                 if (!window.location.pathname.includes("en-US")) {
-                    window.location.replace(window.location.origin + "/en-US");
+                    window.location = window.location.origin + "/en-US";
                 } else {
                     alert("You've already chosen a selected language!");
 

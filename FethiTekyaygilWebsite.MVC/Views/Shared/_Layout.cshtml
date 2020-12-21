@@ -1,7 +1,6 @@
-﻿@{ 
-    string broadcastLink = Context.Request.Path.Value.Contains("en-US") ? "/en-US/Videos":"/tr-TR/Videos";
+﻿@{
+    string prefix = (Context.Request.Path.HasValue && Context.Request.Path.Value.Length > 6) ? Context.Request.Path.Value.Substring(0, 6) : "tr-TR";
 }
-
 <!DOCTYPE html>
 <html scroll-behaviour="smooth" style="height:initial">
 <head>
@@ -24,6 +23,7 @@
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link href="~/lib/mdbootstrap/css/mdb.min.css" rel="stylesheet" />
         <link href="~/lib/mdbootstrap/css/style.min.css" rel="stylesheet" />
+        <link href="~/lib/freelancer/css/freelancer.min.css" rel="stylesheet" />
         @*<link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">*@
         <!--#endregion-->
         <!--#region HR Style-->
@@ -32,7 +32,7 @@
         <link href="~/lib/hr/hr.css" rel="stylesheet" />
         <style>
             .nav-item .nav-link {
-                font-size:13px
+                font-size: 13px
             }
         </style>
         @RenderSection("Styles", required: false)
@@ -48,7 +48,7 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                
+
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-2 align-items-center">
                         <li class="nav-item">
@@ -85,20 +85,20 @@
                             <a class="nav-link text-dark text-center" href="#FollowMe">@Localizer["FollowMeSeperator"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark text-center" href="#Support">@Localizer["SupportSeperator"]</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link text-dark text-center" href="#CV">CV</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark text-center" href="@broadcastLink">@Localizer["MyStreams"]</a>
+                            <a class="nav-link text-dark text-center" href="#Support">@Localizer["SupportSeperator"]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark text-center" href="@prefix/Videos/Index">@Localizer["MyStreams"]</a>
                         </li>
                         <li>
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item">
                                     <div class="dropdown" align="right">
                                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display:contents">
-                                            <img data-src=@Url.Content("/Content/Media/Language/"+(Context.Request.Path.Value.Contains("en-US")?"EN.png":"TR.png")) alt="lang" />
+                                            <img src=@Url.Content("/Content/Media/Language/"+(Context.Request.Path.Value.Contains("en-US")?"EN.png":"TR.png")) alt="lang" />
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <a class="dropdown-item text-center" id="TRLang"><img class="lng" src=@Url.Content("/Content/Media/Language/TR.png") alt="tr" /></a>
@@ -118,10 +118,10 @@
     </div>
     <br />
     @*<footer class="border-top footer text-muted" style="position:inherit;background-color: #33b5e5;">
-        <div class="container">
-            &copy; @DateTime.Now.Year - Fethi Tekyaygil
-        </div>
-    </footer>*@
+            <div class="container">
+                &copy; @DateTime.Now.Year - Fethi Tekyaygil
+            </div>
+        </footer>*@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/jquery-unobtrusive-ajax/jquery.unobtrusive-ajax.js" defer></script>

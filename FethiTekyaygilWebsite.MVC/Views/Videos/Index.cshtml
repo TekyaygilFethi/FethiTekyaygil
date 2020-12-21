@@ -6,260 +6,277 @@
     string upcomingLiveChatUrl = "";
     if (isLive)
     {
-        liveChatUrl = "https://www.youtube.com/live_chat?v=" + Model.LiveVideo.VideoUrl.Substring(Model.LiveVideo.VideoUrl.LastIndexOf('/') + 1) + "&embed_domain=localhost";
+        liveChatUrl = "https://www.youtube.com/live_chat?v=" + Model.LiveVideo.VideoUrl.Substring(Model.LiveVideo.VideoUrl.LastIndexOf('/') + 1) + "&embed_domain=www.fethitekyaygil.com";
     }
 
     bool isUpcomingLive = Model.UpcomingLiveVideo != null;
     if (isUpcomingLive)
     {
-        upcomingLiveChatUrl = "https://www.youtube.com/live_chat?v=" + Model.UpcomingLiveVideo.VideoUrl.Substring(Model.UpcomingLiveVideo.VideoUrl.LastIndexOf('/') + 1) + "&embed_domain=localhost";
+        upcomingLiveChatUrl = "https://www.youtube.com/live_chat?v=" + Model.UpcomingLiveVideo.VideoUrl.Substring(Model.UpcomingLiveVideo.VideoUrl.LastIndexOf('/') + 1) + "&embed_domain=www.fethitekyaygil.com";
     }
-
-    @section Styles{
-        <style>
-            .hovered:hover{
-                cursor:pointer
-            }
-        </style>
-    }
+    string prefix = Context.Request.Path.HasValue ? Context.Request.Path.Value.Substring(0, 6) : "tr-TR";
 }
-    <main id="content">
-        @if (isLive)
-        {
-            <div class="mytextdiv">
-                <div class="mytexttitle">
-                    @Localizer["LiveVideo"] &nbsp;
-                </div>
-                <div class="divider"></div>
-            </div>
-
-            <section class="space-2" style="background-color:black" id="liveArea">
-                <div class="row">
-                    <div class="col-md-9">
-                        <div class="row no-gutters mb-5 mb-lg-1">
-                            <div class="col-lg">
-                                <div class="mb-4 mb-md-0 pr-lg-5 pr-wd-0">
-                                    <h6 class="font-size-26 text-white font-weight-medium font-secondary mb-5 text-lh-sm"><img src="https://res.cloudinary.com/dpzdg2rik/image/upload/v1607557374/samples/Videos/Live/EminentGaseousIbadanmalimbe_dhdm5r.gif" style="width:2%" class="ml-4" /> @Model.LiveVideo.Name</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mb-6 mb-md-0">
-                            <div class="mb-5 pb-1">
-                                <iframe class="w-100" height="500" src="@Model.LiveVideo.VideoUrl" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe>
-                            </div>
-                            <p class="mb-6 ml-4 mb-lg-10 font-size-15 text-gray-1800 pr-lg-6 text-lh-lg">@Model.LiveVideo.Description</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md">
-                        <div class="pl-md-2 ml-md-1">
-                            <div class="product">
-                                <div class="row mx-n2 mb-7">
-                                    <div class="col-md-6 px-2">
-                                        <div class="product-image mb-2">
-                                            <a href="@Url.Action("AllVideos","Videos",new { ShowID=Model.LiveVideo.ShowID})" class="d-inline-block position-relative stretched-link" tabindex="0">
-                                                <img class="img-fluid" src="@Model.LiveVideo.ShowImageUrl" alt="Image Description">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 px-2">
-                                        <div>
-                                            <div class="product-meta font-size-12">
-                                                <span><a href="@Url.Action("AllVideos","Videos",new { CommunityID=Model.LiveVideo.CommunityID})" class="h-g-primary" tabindex="0">@Model.LiveVideo.CommunityName</a></span>
-                                            </div>
-                                            <div class="product-title font-size-19 font-weight-bold mb-0">
-                                                <a href="@Url.Action("AllVideos","Videos",new { ShowID=Model.LiveVideo.ShowID})" tabindex="0" style="display:block">@Model.LiveVideo.ShowName</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="pills-one-code-features-example1" role="tabpanel" aria-labelledby="pills-one-code-features-example1-tab">
-                                    <h6 class="font-size-24 font-weight-medium text-white border-bottom mb-3 pb-2 border-gray-5800">@Localizer["Chat"]</h6>
-                                    <div class="font-size-1 mb-2">
-
-                                        <iframe width="320"
-                                                height="400"
-                                                src=@liveChatUrl>
-                                        </iframe>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+@section Styles{
+    <style>
+        .hovered:hover {
+            cursor: pointer
         }
+    </style>
+}
+<main id="content">
+    @if (isLive)
+    {
+        <div class="mytextdiv">
+            <div class="mytexttitle">
+                @Localizer["LiveVideo"] &nbsp;
+            </div>
+            <div class="dividerhr"></div>
+        </div>
+        <div class="card" id="contactCard">
+            <div class="card-body">
+                <section class="space-2" style="background-color:black" id="liveArea">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="row no-gutters mb-5 mb-lg-1">
+                                <div class="col-lg">
+                                    <div class="mb-4 mb-md-0 pr-lg-5 pr-wd-0">
+                                        <h6 class="font-size-26 text-white font-weight-medium font-secondary mb-5 text-lh-sm"><img src="https://res.cloudinary.com/dpzdg2rik/image/upload/v1607557374/samples/Videos/Live/EminentGaseousIbadanmalimbe_dhdm5r.gif" style="width:2%" class="ml-4" /> @Model.LiveVideo.Name</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-6 mb-md-0">
+                                <div class="mb-5 pb-1">
+                                    <iframe class="w-100" height="500" src="@Model.LiveVideo.VideoUrl" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe>
+                                </div>
+                                <p class="mb-6 ml-4 mb-lg-10 font-size-15 text-gray-1800 pr-lg-6 text-lh-lg">@Model.LiveVideo.Description</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md">
+                            <div class="pl-md-2 ml-md-1">
+                                <div class="product">
+                                    <div class="row mx-n2 mb-7">
+                                        <div class="col-md-6 px-2">
+                                            <div class="product-image mb-2">
+                                                <a href="@prefix/Videos/AllVideos?ShowID=@Model.LiveVideo.ShowID" class="d-inline-block position-relative stretched-link" tabindex="0">
+                                                    <img class="img-fluid" src="@Model.LiveVideo.ShowImageUrl" alt="Image Description">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 px-2">
+                                            <div>
+                                                <div class="product-meta font-size-12">
+                                                    <span><a href="@prefix/Videos/AllVideos?CommunityID=@Model.LiveVideo.CommunityID" class="h-g-primary" tabindex="0">@Model.LiveVideo.CommunityName</a></span>
+                                                </div>
+                                                <div class="product-title font-size-19 font-weight-bold mb-0">
+                                                    <a href="@prefix/Videos/AllVideos?ShowID=@Model.LiveVideo.ShowID" tabindex="0" style="display:block">@Model.LiveVideo.ShowName</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="pills-one-code-features-example1" role="tabpanel" aria-labelledby="pills-one-code-features-example1-tab">
+                                        <h6 class="font-size-24 font-weight-medium text-white border-bottom mb-3 pb-2 border-gray-5800">@Localizer["Chat"]</h6>
+                                        <div class="font-size-1 mb-2">
+
+                                            <iframe width="300"
+                                                    height="400"
+                                                    src=@liveChatUrl>
+                                            </iframe>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    }
+    <br />
+    @if (isUpcomingLive)
+    {
+        <div class="mytextdiv">
+            <div class="mytexttitle">
+                @Localizer["UpcomingLiveVideo"] &nbsp;
+            </div>
+            <div class="dividerhr"></div>
+        </div>
+        <div class="card" id="contactCard">
+            <div class="card-body">
+                <section class="space-2" style="background-color:black" id="upcomingLiveArea">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="row no-gutters mb-5 mb-lg-1">
+                                <div class="col-lg">
+                                    <div class="mb-4 mb-md-0 pr-lg-5 pr-wd-0">
+                                        <h6 class="font-size-26 text-white font-weight-medium font-secondary mb-5 text-lh-sm"><img src="https://res.cloudinary.com/dpzdg2rik/image/upload/v1607595024/samples/Videos/Live/24S3_qsppl3.gif" style="width:7%" class="ml-4 mb-3" /> @Model.UpcomingLiveVideo.Name</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-6 mb-md-0">
+                                <div class="mb-5 pb-1">
+                                    <iframe class="w-100" height="500" src="@Model.UpcomingLiveVideo.VideoUrl" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe>
+                                </div>
+                                <p class="mb-6 ml-4 mb-lg-10 font-size-15 text-gray-1800 pr-lg-6 text-lh-lg">@Model.UpcomingLiveVideo.Description</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md">
+                            <div class="pl-md-2 ml-md-1">
+                                <div class="product">
+                                    <div class="row mx-n2 mb-7">
+                                        <div class="col-md-6 px-2">
+                                            <div class="product-image mb-2">
+                                                <a href="@prefix/Videos/AllVideos?ShowID=@Model.UpcomingLiveVideo.ShowID" class="d-inline-block position-relative stretched-link" tabindex="0">
+                                                    <img class="img-fluid" src="@Model.UpcomingLiveVideo.ShowImageUrl" alt="Image Description">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 px-2">
+                                            <div>
+                                                <div class="product-meta font-size-12">
+                                                    <span><a href="@prefix/Videos/AllVideos?CommunityID=@Model.UpcomingLiveVideo.CommunityID" class="h-g-primary" tabindex="0">@Model.UpcomingLiveVideo.CommunityName</a></span>
+                                                </div>
+                                                <div class="product-title font-size-19 font-weight-bold mb-0">
+                                                    <a href=".@prefix/Videos/AllVideos?ShowID=@Model.UpcomingLiveVideo.ShowID" tabindex="0" style="display:block">@Model.UpcomingLiveVideo.ShowName</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="pills-one-code-features-example1" role="tabpanel" aria-labelledby="pills-one-code-features-example1-tab">
+                                        <h6 class="font-size-24 font-weight-medium text-white border-bottom mb-3 pb-2 border-gray-5800">@Localizer["Chat"]</h6>
+                                        <div class="font-size-1 mb-2">
+
+                                            <iframe width="300"
+                                                    height="400"
+                                                    src=@upcomingLiveChatUrl>
+                                            </iframe>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
         <br />
-        <div class="mytextdiv">
-            <div class="mytexttitle">
-                @Localizer["ShowcaseSeperator"] &nbsp;
-            </div>
-            <div class="divider"></div>
+    }
+    <br />
+    <div class="mytextdiv">
+        <div class="mytexttitle">
+            @Localizer["ShowcaseSeperator"] &nbsp;
         </div>
-        <div class="home-slider position-relative mb-7">
+        <div class="dividerhr"></div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="home-slider position-relative mb-7">
 
-            <div class="row no-gutters">
-                <br />
-                @foreach (var showcaseItem in Model.ShowcaseVideos)
-                {
-                    <div class="col-lg-4" style="border-right:2px solid #e5e5e5" border-left:2px solid #e5e5e5">
-                        <div class="slider-movie bg-img-hero d-flex flex-column justify-content-end overflow-hidden h-700rem mb-5 mb-lg-0" style="background-image: url(@showcaseItem.VideoThumbnail);background-size:contain;background-position-y:center;background-color:black;">
-                            <div class="slider-movie__hover d-flex flex-column z-index-2 px-4 pb-6 pb-lg-4 transition-1">
-                                <div class="mx-1">
-                                    <div class="slider-movie__hover-watch-now d-flex justify-content-center d-xl-none mb-7">
-                                        <a href="@Url.Action("Episode","Videos",new { id=showcaseItem.VideoID})">
-                                            <div class="watch-now-btn d-inline-block rounded-circle py-5 px-5 mb-2 pb-1 mx-1" style="background: linear-gradient(30deg, #2a4999 0%, #2c9cd4 100%);">
-                                                <div class="d-flex justify-content-center ml-1">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49px" height="54px">
-                                                        <path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M2.000,51.000 C-0.150,46.056 0.424,8.178 2.000,5.000 C3.282,2.414 5.732,0.351 9.000,1.000 C19.348,3.054 45.393,19.419 48.000,25.000 C49.019,27.182 48.794,28.758 48.000,31.000 C46.967,33.919 13.512,54.257 9.000,54.000 C6.740,53.873 3.005,53.311 2.000,51.000 Z"></path>
-                                                    </svg>
+                <div class="row no-gutters">
+                    <br />
+                    @foreach (var showcaseItem in Model.ShowcaseVideos)
+                    {
+                        <div class="col-lg-4" style="border-right:2px solid #e5e5e5" border-left:2px solid #e5e5e5">
+                            <div class="slider-movie bg-img-hero d-flex flex-column justify-content-end overflow-hidden h-700rem mb-5 mb-lg-0" style="background-image: url(@showcaseItem.VideoThumbnail);background-size:contain;background-position-y:center;background-color:black;">
+                                <div class="slider-movie__hover d-flex flex-column z-index-2 px-4 pb-6 pb-lg-4 transition-1">
+                                    <div class="mx-1">
+                                        <div class="slider-movie__hover-watch-now d-flex justify-content-center d-xl-none mb-7">
+                                            <a href="@prefix/Videos/Episode?id=@showcaseItem.VideoID">
+                                                <div class="watch-now-btn d-inline-block rounded-circle py-5 px-5 mb-2 pb-1 mx-1" style="background: linear-gradient(30deg, #2a4999 0%, #2c9cd4 100%);">
+                                                    <div class="d-flex justify-content-center ml-1">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49px" height="54px">
+                                                            <path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M2.000,51.000 C-0.150,46.056 0.424,8.178 2.000,5.000 C3.282,2.414 5.732,0.351 9.000,1.000 C19.348,3.054 45.393,19.419 48.000,25.000 C49.019,27.182 48.794,28.758 48.000,31.000 C46.967,33.919 13.512,54.257 9.000,54.000 C6.740,53.873 3.005,53.311 2.000,51.000 Z"></path>
+                                                        </svg>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="text-white font-size-24">@Localizer["Watch"]</div>
+                                                <div class="text-white font-size-24">@Localizer["Watch"]</div>
+                                            </a>
+                                        </div>
+                                        <a href="@prefix/Videos/Episode?ID=@showcaseItem.VideoID">
+                                            <h6 class="display-9 text-white mb-2 d-block">@showcaseItem.VideoName</h6>
                                         </a>
-                                    </div>
-                                    <a href="../single-movies/single-movies-v4.html">
-                                        <h6 class="display-9 text-white mb-2 d-block">@showcaseItem.VideoName</h6>
-                                    </a>
-                                    <div class="text-white font-size-12 mb-2">
-                                        <span><a href="../single-movies/single-movies-v4.html" class="text-white">@showcaseItem.VideoShow</a></span>
-                                        <span> | </span>
-                                        <a href="../single-movies/single-movies-v4.html" class="text-white">@showcaseItem.VideoCommunity</a>
-                                    </div>
-                                    <div class="movie__description-wrap">
-                                        <div class="movie__description d-xl-none">
-                                            <p class="text-white font-size-17">@showcaseItem.VideoDescription</p>
+                                        <div class="text-white font-size-12 mb-2">
+                                            <span><a href="@prefix/Videos/AllVideos?ShowID=@showcaseItem.VideoShowID" class="text-white">@showcaseItem.VideoShow</a></span>
+                                            <span> | </span>
+                                            <a href="@prefix/Videos/AllVideos?CommunityID=@showcaseItem.VideoCommunityID" class="text-white">@showcaseItem.VideoCommunity</a>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                }
-            </div>
-        </div>
-
-        <div class="mytextdiv">
-            <div class="mytexttitle">
-                @Localizer["Communities"] &nbsp;
-            </div>
-            <div class="divider"></div>
-        </div>
-        <section class="bg-gray-2000 dark space-2" @*style="background-color:#e5e5e5"*@>
-            <div class="container px-md-4">
-                <!-- Tab Content -->
-
-                @foreach (var comItem in Model.DropdownCommunities)
-                {
-                    <div class="tab-content slick__tab">
-                        <div class="tab-pane fade show active" id="pills-one-code-features-example2" role="tabpanel" aria-labelledby="pills-one-code-features-example2-tab">
-                            <div class="row">
-                                <div class="col-md-7 col-lg-8 col-xl-9">
-                                    <div class="js-slick-carousel slick slick-gutters-2"
-                                         data-hs-slick-carousel-options='{"prevArrow":"<span class=\" fas fa-chevron-left slick-arrow slick-arrow-v1 left slick-arrow-right rounded-circle position-absolute\"></span>","nextArrow":"<span class=\"fas fa-chevron-right slick-arrow slick-arrow-v1 right slick-arrow-right rounded-circle position-absolute\"></span>","slidesToShow":6,"responsive":[{"breakpoint":1199,"settings":{"slidesToShow":3}},{"breakpoint":768,"settings":{"slidesToShow":1}}]}'>
-                                        @foreach (var show in comItem.Shows)
-                                        {
-                                            <div class="product">
-                                                <div class="product-image mb-2">
-                                                    <a href="@Url.Action("AllEpisodes","Videos",new { ShowID=show.ShowId})" class="d-inline-block position-relative stretched-link hovered"><img class="img-fluid" src="@show.ShowImageUrl" alt="Image Description" style="height:240px"></a>
-                                                </div>
-                                                <div class="product-meta font-size-12 mb-1">
-                                                    <span><a href="#" class="h-g-primary">@show.VideoDate</a></span>
-                                                </div>
-                                                <div class="product-title font-weight-bold font-size-1"><a href="@Url.Action("AllEpisodes","Videos",new { ShowID=show.ShowId})">@show.ShowName</a></div>
+                                        <div class="movie__description-wrap">
+                                            <div class="movie__description d-xl-none">
+                                                <p class="text-white font-size-17">@showcaseItem.VideoDescription</p>
                                             </div>
-                                        }
-                                    </div>
-                                </div>
-                                <div class="col-md-5 col-lg-4 col-xl-3 d-flex">
-                                    <header class="max-w-370 mt-auto mb-xl-8 title-dash">
-                                        <h1 class="display-7 mb-3 font-weight-semi-bold">@comItem.CommunityName</h1>
-                                        <div class="mt-11">
-                                            <a href="@Url.Action("AllEpisodes","Videos",new { CommunityID=comItem.CommunityID})" class="h-w-primary text-gray-1300 d-inline-flex align-items-center pt-2 font-secondary font-weight-medium font-size-13">
-                                                @Localizer["View All"]
-                                                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="4" height="7"><path d="M3.979,3.703 C3.987,3.785 3.966,3.869 3.903,3.934 L1.038,6.901 C0.921,7.023 0.724,7.029 0.598,6.916 L0.143,6.506 C0.017,6.393 0.011,6.203 0.128,6.082 L2.190,3.946 C2.276,3.829 2.356,3.691 2.356,3.548 C2.356,3.214 1.947,2.885 1.947,2.885 L1.963,2.877 L0.080,0.905 C-0.036,0.784 -0.029,0.592 0.095,0.479 L0.547,0.068 C0.671,-0.045 0.867,-0.039 0.983,0.083 L3.823,3.057 C3.867,3.102 3.876,3.161 3.885,3.218 C3.945,3.267 3.988,3.334 3.988,3.416 L3.988,3.681 C3.988,3.690 3.979,3.694 3.979,3.703 Z" fill="rgb(148, 156, 176)" /></svg>
-                                            </a>
                                         </div>
-                                    </header>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                }
-            </div>
-        </section>
-
-
-        @if (isUpcomingLive)
-        {
-            <div class="mytextdiv">
-                <div class="mytexttitle">
-                    @Localizer["UpcomingLiveVideo"] &nbsp;
+                    }
                 </div>
-                <div class="divider"></div>
             </div>
-            <section class="space-2" style="background-color:black" id="upcomingLiveArea">
-                <div class="row">
-                    <div class="col-md-9">
-                        <div class="row no-gutters mb-5 mb-lg-1">
-                            <div class="col-lg">
-                                <div class="mb-4 mb-md-0 pr-lg-5 pr-wd-0">
-                                    <h6 class="font-size-26 text-white font-weight-medium font-secondary mb-5 text-lh-sm"><img src="https://res.cloudinary.com/dpzdg2rik/image/upload/v1607595024/samples/Videos/Live/24S3_qsppl3.gif" style="width:7%" class="ml-4 mb-3" /> @Model.UpcomingLiveVideo.Name</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mb-6 mb-md-0">
-                            <div class="mb-5 pb-1">
-                                <iframe class="w-100" height="500" src="@Model.UpcomingLiveVideo.VideoUrl" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe>
-                            </div>
-                            <p class="mb-6 ml-4 mb-lg-10 font-size-15 text-gray-1800 pr-lg-6 text-lh-lg">@Model.UpcomingLiveVideo.Description</p>
-                        </div>
-                    </div>
+        </div>
+    </div>
+    <br />
+    <div class="mytextdiv">
+        <div class="mytexttitle">
+            @Localizer["Communities"] &nbsp;
+        </div>
+        <div class="dividerhr"></div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <section class="bg-white-2000 dark space-2" @*style="background-color:#e5e5e5"*@>
+                <div class="container px-md-4">
+                    <!-- Tab Content -->
 
-                    <div class="col-md">
-                        <div class="pl-md-2 ml-md-1">
-                            <div class="product">
-                                <div class="row mx-n2 mb-7">
-                                    <div class="col-md-6 px-2">
-                                        <div class="product-image mb-2">
-                                            <a href="../single-episodes/single-episodes-v1.html" class="d-inline-block position-relative stretched-link" tabindex="0">
-                                                <img class="img-fluid" src="@Model.UpcomingLiveVideo.ShowImageUrl" alt="Image Description">
-                                            </a>
+                    @foreach (var comItem in Model.DropdownCommunities)
+                    {
+                        <div class="tab-content slick__tab">
+                            <div class="tab-pane fade show active" id="pills-one-code-features-example2" role="tabpanel" aria-labelledby="pills-one-code-features-example2-tab">
+                                <div class="row">
+                                    <div class="col-md-7 col-lg-8 col-xl-9">
+                                        <div class="js-slick-carousel slick slick-gutters-2"
+                                             data-hs-slick-carousel-options='{"prevArrow":"<span class=\" fas fa-chevron-left slick-arrow slick-arrow-v1 left slick-arrow-right rounded-circle position-absolute\"></span>","nextArrow":"<span class=\"fas fa-chevron-right slick-arrow slick-arrow-v1 right slick-arrow-right rounded-circle position-absolute\"></span>","slidesToShow":6,"responsive":[{"breakpoint":1199,"settings":{"slidesToShow":3}},{"breakpoint":768,"settings":{"slidesToShow":1}}]}'>
+                                            @foreach (var show in comItem.Shows)
+                                            {
+                                                <div class="product">
+                                                    <div class="product-image mb-2">
+                                                        <a href="@prefix/Videos/AllVideos?ShowID=@show.ShowId" class="d-inline-block position-relative stretched-link hovered"><img class="img-fluid" src="@show.ShowImageUrl" alt="Image Description" style="height:240px"></a>
+                                                    </div>
+                                                    <div class="product-meta font-size-12 mb-1">
+                                                        <span><a href="#" class="h-g-primary">@show.VideoDate</a></span>
+                                                    </div>
+                                                    <div class="product-title font-weight-bold font-size-1"><a href="@prefix/Videos/AllVideos?ShowID=@show.ShowId">@show.ShowName</a></div>
+                                                </div>
+                                            }
                                         </div>
                                     </div>
-                                    <div class="col-md-6 px-2">
-                                        <div>
-                                            <div class="product-meta font-size-12">
-                                                <span><a href="../single-episodes/single-episodes-v1.html" class="h-g-primary" tabindex="0">@Model.UpcomingLiveVideo.CommunityName</a></span>
+                                    <div class="col-md-5 col-lg-4 col-xl-3 d-flex">
+                                        <header class="max-w-370 mt-auto mb-xl-8 title-dash">
+                                            <h1 class="display-7 mb-3 font-weight-semi-bold" style="color:black">@comItem.CommunityName</h1>
+                                            <div class="mt-11">
+                                                <a href="@prefix/Videos/AllVideos?CommunityID=@comItem.CommunityID" class="h-w-primary text-gray-1300 d-inline-flex align-items-center pt-2 font-secondary font-weight-medium font-size-13">
+                                                    @Localizer["ViewAll"]
+                                                    <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="4" height="7"><path d="M3.979,3.703 C3.987,3.785 3.966,3.869 3.903,3.934 L1.038,6.901 C0.921,7.023 0.724,7.029 0.598,6.916 L0.143,6.506 C0.017,6.393 0.011,6.203 0.128,6.082 L2.190,3.946 C2.276,3.829 2.356,3.691 2.356,3.548 C2.356,3.214 1.947,2.885 1.947,2.885 L1.963,2.877 L0.080,0.905 C-0.036,0.784 -0.029,0.592 0.095,0.479 L0.547,0.068 C0.671,-0.045 0.867,-0.039 0.983,0.083 L3.823,3.057 C3.867,3.102 3.876,3.161 3.885,3.218 C3.945,3.267 3.988,3.334 3.988,3.416 L3.988,3.681 C3.988,3.690 3.979,3.694 3.979,3.703 Z" fill="rgb(148, 156, 176)" /></svg>
+                                                </a>
                                             </div>
-                                            <div class="product-title font-size-19 font-weight-bold mb-0">
-                                                <a href="../single-episodes/single-episodes-v1.html" tabindex="0" style="display:block">@Model.UpcomingLiveVideo.ShowName</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="pills-one-code-features-example1" role="tabpanel" aria-labelledby="pills-one-code-features-example1-tab">
-                                    <h6 class="font-size-24 font-weight-medium text-white border-bottom mb-3 pb-2 border-gray-5800">@Localizer["Chat"]</h6>
-                                    <div class="font-size-1 mb-2">
-
-                                        <iframe width="320"
-                                                height="400"
-                                                src=@upcomingLiveChatUrl>
-                                        </iframe>
-
+                                        </header>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+
+                    }
                 </div>
             </section>
-        }
-    </main>
+        </div>
+    </div>
+    <br />
+
+</main>

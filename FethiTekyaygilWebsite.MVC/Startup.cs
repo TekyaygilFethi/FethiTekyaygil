@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO.Compression;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Internal;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Localization.Routing;
 using Microsoft.AspNetCore.Mvc;
@@ -41,6 +43,12 @@ namespace FethiTekyaygilWebsite.MVC
 
             //services.AddDbContext<GenericDatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MsSQL")));
 
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            .AddCookie(o =>
+            {
+                o.LoginPath = "/Admin/LoginPage/";
+                o.ExpireTimeSpan = TimeSpan.FromMinutes(120);
+            });
 
             services.AddLocalization(o =>
             {
@@ -72,6 +80,7 @@ namespace FethiTekyaygilWebsite.MVC
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseAuthentication();
 
             var supportedCultures = new List<CultureInfo>
                     {
@@ -88,20 +97,22 @@ namespace FethiTekyaygilWebsite.MVC
             var requestProvider = new RouteDataRequestCultureProvider();
             localizationOptions.RequestCultureProviders.Insert(0, requestProvider);
 
+
             app.UseRouter(routes =>
             {
                 routes.MapMiddlewareRoute("{culture=tr-TR}/{*mvcRoute}", subApp =>
                 {
                     subApp.UseRequestLocalization(localizationOptions);
+
                     subApp.UseMvc(mvcRoutes =>
                     {
                         mvcRoutes.MapRoute(
-                        name: "default",
-                        template: "{culture=tr-TR}/{controller=Home}/{action=Index}/{id?}");
+                    name: "default",
+                    template: "{culture=tr-TR}/{controller=Home}/{action=Index}/{id?}");
                     });
                 });
             });
-            app.UseMvc();
+            //app.UseMvc();
         }
     }
 }

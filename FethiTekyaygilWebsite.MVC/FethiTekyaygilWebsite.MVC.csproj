@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Controllers\AdminController.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Remove="wwwroot\lib\timeline\index.html" />
   </ItemGroup>
 
@@ -47,7 +43,6 @@
 
 
   <ItemGroup>
-    <None Include="Controllers\AdminController.cs" />
     <None Include="wwwroot\Content\Media\Developer\fethi.JPG" />
     <None Include="wwwroot\Content\Media\Education\AU.jpg" />
     <None Include="wwwroot\Content\Media\Education\BAAL.JPG" />

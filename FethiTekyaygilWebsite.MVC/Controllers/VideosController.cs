@@ -38,6 +38,7 @@ namespace FethiTekyaygilWebsite.MVC.Controllers
                                         c.ID as VideoCommunityID
                                         FROM VideoTable as v JOIN ShowTable as s ON v.ShowID=s.ID 
                                         JOIN CommunityTable as c ON s.CommunityID=c.ID
+                                        WHERE v.IsLive=0 and v.IsScheduled=0
                                         ORDER BY v.Date DESC";
 
                 string dropdownCommunitiesQuery = @"SELECT c.ID as CommunityID, c.Name as CommunityName FROM CommunityTable c";
@@ -71,13 +72,13 @@ namespace FethiTekyaygilWebsite.MVC.Controllers
                                         JOIN LinkTable l ON v.LinkID=l.ID
                                         JOIN CommunityTable as c ON s.CommunityID=c.ID";
 
-                string liveVideoQuery = baseLiveQuery+ " WHERE IsLive=1";
+                string liveVideoQuery = baseLiveQuery + " WHERE IsLive=1";
 
-                vim.LiveVideo=connObject.Query<LiveVideo>(liveVideoQuery).FirstOrDefault();
+                vim.LiveVideo = connObject.Query<LiveVideo>(liveVideoQuery).FirstOrDefault();
 
                 string upcomingLiveVideoQuery = baseLiveQuery + " WHERE IsScheduled=1";
 
-                vim.UpcomingLiveVideo= connObject.Query<LiveVideo>(upcomingLiveVideoQuery).FirstOrDefault();
+                vim.UpcomingLiveVideo = connObject.Query<LiveVideo>(upcomingLiveVideoQuery).FirstOrDefault();
 
                 connObject.Close();
             }
@@ -115,6 +116,39 @@ namespace FethiTekyaygilWebsite.MVC.Controllers
             }
 
             return View(em);
+        }
+
+        public IActionResult GetAvailableCompleteNames()
+        {
+            JsonResult returnJson = null;
+            using (var connObject = new SqlConnection(configuration.GetConnectionString("MsSQL")))
+            {
+                List<string> availableCompleteNames = new List<string>();
+                try
+                {
+                    var episodeNamesQry = "SELECT Name FROM VideoTable";
+                    var showNameQry = "SELECT Name FROM ShowTable";
+                    var communityNameQry = "SELECT Name FROM CommunityTable";
+
+
+                    availableCompleteNames.AddRange(connObject.Query<string>(episodeNamesQry));
+                    availableCompleteNames.AddRange(connObject.Query<string>(showNameQry));
+                    availableCompleteNames.AddRange(connObject.Query<string>(communityNameQry));
+
+
+                    returnJson= Json(new { IsSuccess = true, data = availableCompleteNames });
+                }
+                catch (Exception ex)
+                {
+                    returnJson = Json(new { IsSuccess = false, data = ex.Message });
+                }
+                finally
+                {
+                    connObject.Close();
+                }
+
+                return returnJson;
+            }
         }
 
         public IActionResult AllVideos(AllVideosFilter filter)

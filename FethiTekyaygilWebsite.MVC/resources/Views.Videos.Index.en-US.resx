@@ -117,10 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AllVideos" xml:space="preserve">
-    <value>Tüm Yayınlar</value>
+  <data name="Chat" xml:space="preserve">
+    <value>Chat</value>
   </data>
-  <data name="ReturnToMainPage" xml:space="preserve">
-    <value>Ana Websiteye Dön</value>
+  <data name="Communities" xml:space="preserve">
+    <value>Communities</value>
+  </data>
+  <data name="Live Video" xml:space="preserve">
+    <value>Live Broadcast</value>
+  </data>
+  <data name="ShowcaseSeperator" xml:space="preserve">
+    <value>Showcase</value>
+  </data>
+  <data name="UpcomingLiveVideo" xml:space="preserve">
+    <value>Upcoming Live Broadcast</value>
+  </data>
+  <data name="ViewAll" xml:space="preserve">
+    <value>View All</value>
+  </data>
+  <data name="Watch" xml:space="preserve">
+    <value>Watch</value>
   </data>
 </root>
